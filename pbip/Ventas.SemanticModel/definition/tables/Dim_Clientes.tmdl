@@ -1,0 +1,10 @@
+table Dim_Clientes
+	lineageTag: c0bfa4cd-88c5-4c0d-ac67-f792a05ca8fb
+
+	partition Dim_Clientes = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaBase & "\Dim_Clientes.csv"), [Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None])
+				in
+				    Origen

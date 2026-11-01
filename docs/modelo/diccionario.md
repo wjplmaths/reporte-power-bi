@@ -77,3 +77,19 @@ Los nombres de columna son los **reales de origen**, con tildes y espacios; el m
 ## Riesgos detectados
 - La tabla de hechos tiene IDs de cliente hasta 713, pero `Dim_Clientes` solo tiene 442 clientes. **No se verificó** si todos los IDs de la tabla de hechos existen en `Dim_Clientes`. Hay que comprobarlo en Desktop (relación con huérfanos).
 - La `Fecha de Envío` llega hasta enero de 2024, fuera del calendario 2020-2023. No debe usarse como relación activa con `Calendario`.
+
+## Consultas de conexión (OE1, sin transformar)
+Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas declaradas en el modelo.
+
+| Consulta | Origen | Función M | Carga |
+|---|---|---|---|
+| `RutaBase` | Parámetro de texto con la ruta de `data/raw` | — | No |
+| `GDrive_Fuente` | Google Drive (enlace en `docs/requerimiento/Enlace G_Drive.txt`) | `Web.Page` | No |
+| `Fact_Ventas` | `Fact_Ventas.xlsx`, hoja `Fact_Ventas` | `Excel.Workbook` | Sí |
+| `Dim_Clientes` | `Dim_Clientes.csv` (UTF-8, coma, 5 columnas) | `Csv.Document` | Sí |
+| `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
+| `Tabla 1` | `GDrive_Fuente`, `Table 1` (vendedores) | `Web.Page` | Sí |
+| `Tabla 2` a `Tabla 5` | `GDrive_Fuente`, `Table 2` a `Table 5` (metas 2020 a 2023) | `Web.Page` | Sí |
+| `Tabla 6` | Wikipedia, `Table 6` (Organización Territorial) | `Web.Page` | Sí |
+
+En OE2 se renombran: `Tabla 1` a `Dim_Vendedores`, `Tabla 2` a `Tabla 5` a `Metas_2020` a `Metas_2023` (sin carga) y `Tabla 6` a `Dim_Territorios`.

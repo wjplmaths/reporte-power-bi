@@ -1,0 +1,11 @@
+table 'Tabla 6'
+	lineageTag: ce9bea94-cb67-4e31-8b98-13f73fd37d57
+
+	partition 'Tabla 6' = m
+		mode: import
+		source =
+				let
+				    Origen = Web.Page(Web.Contents("https://es.wikipedia.org/wiki/Nicaragua")),
+				    Datos = Origen{[Id="Table 6"]}[Data]
+				in
+				    Datos

@@ -1,0 +1,10 @@
+table Dim_Productos
+	lineageTag: ae4ba91c-c12f-4d5a-a2d3-ff5f6a6419df
+
+	partition Dim_Productos = m
+		mode: import
+		source =
+				let
+				    Origen = Csv.Document(File.Contents(RutaBase & "\Dim_Productos.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None])
+				in
+				    Origen

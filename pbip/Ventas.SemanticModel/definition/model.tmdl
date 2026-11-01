@@ -1,0 +1,17 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+
+ref table Fact_Ventas
+ref table Dim_Clientes
+ref table Dim_Productos
+ref table 'Tabla 1'
+ref table 'Tabla 2'
+ref table 'Tabla 3'
+ref table 'Tabla 4'
+ref table 'Tabla 5'
+ref table 'Tabla 6'
+
+ref expression RutaBase
+ref expression GDrive_Fuente

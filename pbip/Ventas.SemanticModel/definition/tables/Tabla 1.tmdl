@@ -1,0 +1,11 @@
+table 'Tabla 1'
+	lineageTag: c16d54a7-0d56-4155-904a-134c85439bdf
+
+	partition 'Tabla 1' = m
+		mode: import
+		source =
+				let
+				    Origen = GDrive_Fuente,
+				    Datos = Origen{[Id="Table 1"]}[Data]
+				in
+				    Datos

@@ -1,0 +1,10 @@
+/// Carpeta que contiene los archivos de data/raw. Cambiar aqui si el proyecto se mueve de ruta.
+expression RutaBase = "C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 22020e9e-506a-42a9-9918-f8cfc9b3a5f9
+
+expression GDrive_Fuente =
+		let
+		    Origen = Web.Page(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/edit?gid=1022144234"))
+		in
+		    Origen
+	lineageTag: e09a58c0-d4fd-4ad5-88d9-0d644fadcf58

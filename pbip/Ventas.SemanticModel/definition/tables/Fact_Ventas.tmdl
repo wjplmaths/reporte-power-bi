@@ -1,0 +1,11 @@
+table Fact_Ventas
+	lineageTag: 7f941c90-8284-4051-9460-c6b78abddd9a
+
+	partition Fact_Ventas = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents(RutaBase & "\Fact_Ventas.xlsx"), null, true),
+				    Hoja = Origen{[Item="Fact_Ventas",Kind="Sheet"]}[Data]
+				in
+				    Hoja

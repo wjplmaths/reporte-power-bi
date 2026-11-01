@@ -5,11 +5,11 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Marcar `[x]` solo cuando
 **Contexto:** informe de ventas nacionales 2020-2023 con control de cumplimiento de metas por vendedor, comportamiento por Año/Trimestre/Mes y comparativos con períodos anteriores.
 
 ## OE1 – Conexión a diferentes fuentes de datos
-- [ ] Conectar al archivo xls `Fact_Ventas` (en `data/raw/` es `.xlsx`)
-- [ ] Conectar al csv `Dim_Clientes`
-- [ ] Conectar al csv `Dim_Productos`
-- [ ] Conectar al archivo en línea G.Drive (Vendedores + Metas_Mensuales), importado como tipo **Web**
-- [ ] Conectar al enlace Web de Wikipedia y extraer la tabla *Organización Territorial – Tabla 6*
+- [ ] Conectar al archivo xls `Fact_Ventas` (en `data/raw/` es `.xlsx`) — *consulta creada en pbip, falta validar en Desktop*
+- [ ] Conectar al csv `Dim_Clientes` — *consulta creada en pbip, falta validar en Desktop*
+- [ ] Conectar al csv `Dim_Productos` — *consulta creada en pbip, falta validar en Desktop*
+- [ ] Conectar al archivo en línea G.Drive (Vendedores + Metas_Mensuales), importado como tipo **Web** — *consultas `Tabla 1` a `Tabla 5` creadas con `Web.Page`, falta validar en Desktop*
+- [ ] Conectar al enlace Web de Wikipedia y extraer la tabla *Organización Territorial – Tabla 6* — *consulta `Tabla 6` creada, falta confirmar el índice de tabla en Desktop*
 
 ## OE2 – Transformación de datos
 ### Fact_Ventas
