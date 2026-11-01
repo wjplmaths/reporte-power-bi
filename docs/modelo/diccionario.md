@@ -79,7 +79,7 @@ Los nombres de columna son los **reales de origen**, con tildes y espacios; el m
 - La `Fecha de Envío` llega hasta enero de 2024, fuera del calendario 2020-2023. No debe usarse como relación activa con `Calendario`.
 
 ## Consultas de conexión (OE1, sin transformar)
-Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas declaradas en el modelo.
+Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas declaradas en el modelo. El enlace de G.Drive es público: contiene el libro `Vendedores + Metas_Mensuales.xlsx` con 5 hojas (Vendedores, Metas 2020, Metas 2021, Metas 2022, Metas 2023). La hoja Vendedores trae `ID Vendedor`, `Nombre Completo` y `Primer Nombre`.
 
 | Consulta | Origen | Función M | Carga |
 |---|---|---|---|
@@ -90,6 +90,6 @@ Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas decla
 | `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
 | `Tabla 1` | `GDrive_Fuente`, `Table 1` (vendedores) | `Web.Page` | Sí |
 | `Tabla 2` a `Tabla 5` | `GDrive_Fuente`, `Table 2` a `Table 5` (metas 2020 a 2023) | `Web.Page` | Sí |
-| `Tabla 6` | Wikipedia, `Table 6` (Organización Territorial) | `Web.Page` | Sí |
+| `Tabla 6` | Wikipedia, `Table 5` en el Navegador (Organización Territorial) | `Web.Page` | Sí |
 
 En OE2 se renombran: `Tabla 1` a `Dim_Vendedores`, `Tabla 2` a `Tabla 5` a `Metas_2020` a `Metas_2023` (sin carga) y `Tabla 6` a `Dim_Territorios`.

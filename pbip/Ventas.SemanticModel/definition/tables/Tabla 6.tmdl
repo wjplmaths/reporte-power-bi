@@ -6,6 +6,6 @@ table 'Tabla 6'
 		source =
 				let
 				    Origen = Web.Page(Web.Contents("https://es.wikipedia.org/wiki/Nicaragua")),
-				    Datos = Origen{[Id="Table 6"]}[Data]
+				    Datos = Origen{[Id="Table 5"]}[Data]
 				in
 				    Datos
