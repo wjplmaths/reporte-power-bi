@@ -1,0 +1,24 @@
+# Power BI (PBIP): estado local y caché, se regeneran
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+**/.pbi/unappliedChanges.json
+
+# Respaldos y temporales de Power BI / Office
+*.pbix.bak
+*.tmp
+~$*
+.~lock.*
+
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores y Claude Code (config local)
+.vscode/
+.idea/
+.claude/settings.local.json
+
+# Secretos
+.env
+*.pfx

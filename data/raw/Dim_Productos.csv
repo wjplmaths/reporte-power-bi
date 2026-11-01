@@ -1,0 +1,228 @@
+ID Producto,Producto,Marca,Costo Unitario,Grupo Contribución,Grupo Margen,Color,Tiempo de Espera (dias),Es articulo refrigerado
+214,Unidad de disco externa: lanzador de misiles (verde),Conexión TI,20.94,Media Contribución,Medio Margen,Verde,14,Artículo Seco
+215,Unidad de disco externa: lanzacohetes (gris),Conexión TI,15.48,Media Contribución,Medio Margen,Gris,14,Artículo Seco
+216,Periscopio de cubo de oficina (negro),Conexión TI,11.87,Baja Contribución,Medio Margen,Negro,14,Artículo Seco
+218,Unidad flash USB para alimentos - sushi roll,Conexión TI,3.34,Media Contribución,Alto Margen,N/A,14,Artículo Seco
+219,CPU de jugador - Diseños temáticos de películas,Conexión TI,1500.98,Alta Contribución,Bajo Margen,N/A,14,Artículo Seco
+222,Unidad de disco externa: 1 TB,Conexión TI,25.9,Alta Contribución,Alto Margen,N/A,14,Artículo Seco
+224,Unidad de disco externa: rebanada de pizza de 1 TB,Conexión TI,30.21,Alta Contribución,Alto Margen,N/A,14,Artículo Seco
+225,Unidad flash USB para alimentos - batido,Conexión TI,1.8,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+227,Unidad flash USB para alimentos - banana,Conexión TI,1.71,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+230,Unidad flash USB de alimentos - barra de chocolate,Conexión TI,2.07,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+233,Unidad flash USB de alimentos - cookie,Conexión TI,1.35,Baja Contribución,Alto Margen,N/A,14,Artículo Seco
+234,Unidad flash USB de alimentos - donut,Conexión TI,2.19,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+237,Unidad flash USB para alimentos: cóctel de camarones,Conexión TI,1.45,Baja Contribución,Alto Margen,N/A,14,Artículo Seco
+240,Unidad flash USB de alimentos - galleta de la fortuna,Conexión TI,2.16,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+241,Unidad flash USB para alimentos: paquete de variedad de postre 5 unidades,Conexión TI,4.84,Media Contribución,Alto Margen,N/A,14,Artículo Seco
+244,Taza de broma de DBA: ¿te importa si me uno a ti? (Blanco) - 10 pz,Conexión TI,15.15,Media Contribución,Medio Margen,Blanco,12,Artículo Seco
+247,Taza de broma de DBA: ¿te importa si me uno a ti? (Negro) - 10 pz,Conexión TI,15.57,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+248,Taza de broma DBA - daaaaaa-ta (Blanco),Conexión TI,2.4,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+250,Taza de broma DBA - daaaaaa-ta (negro),Conexión TI,2.51,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+251,Taza de broma de DBA: puede ser un DBA si (Blanco),Conexión TI,2.42,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+254,Taza de broma de DBA: puede ser un DBA si (negro),Conexión TI,2.6,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+256,Taza de broma DBA - depende (Blanco),Conexión TI,2.59,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+258,Taza de broma DBA - depende (negro),Conexión TI,2.47,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+260,Taza de broma de DBA - Te pondré en orden (Blanco),Conexión TI,2.78,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+261,Taza de broma de DBA - Te pondré en orden (Negro),Conexión TI,2.12,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+263,Taza de broma DBA - SELECCIONE cafeína de la taza (Blanco),Conexión TI,2.01,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+264,Taza de broma DBA - SELECCIONE cafeína de la taza (negro),Conexión TI,2.44,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+265,Taza de broma de DBA: dos tipos de DBA (blanco),Conexión TI,2.51,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+268,Taza de broma DBA: dos tipos de DBA (negro),Conexión TI,2.68,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+271,Taza de broma para desarrolladores: 31 de octubre = 25 de diciembre (blanco),Conexión TI,2.31,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+272,Taza de broma para desarrolladores: 31 de octubre = 25 de diciembre (negro),Conexión TI,2.64,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+274,Parche de broma para desarrolladores: es un problema de hardware (Blanco),Conexión TI,0.27,Baja Contribución,Alto Margen,Blanco,12,Artículo Seco
+276,Parche de broma para desarrolladores: es un problema de hardware (negro),Conexión TI,0.58,Baja Contribución,Alto Margen,Negro,12,Artículo Seco
+278,Developer joke big patch: la diversión era inesperada en este momento (Blanco),Conexión TI,0.87,Baja Contribución,Alto Margen,Blanco,12,Artículo Seco
+281,Taza de broma para desarrolladores: la diversión fue inesperada en este momento (Negro),Conexión TI,1.84,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+283,Taza de broma para desarrolladores: cuando su martillo es C ++ (blanco),Conexión TI,2.13,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+286,Taza de broma para desarrolladores: cuando su martillo es C ++ (negro),Conexión TI,2.11,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+287,Parche de broma para desarrolladores: la herencia es la forma OO de hacerse rico (Blanco),Conexión TI,0.91,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+288,Parche de broma para desarrolladores: la herencia es la forma OO de hacerse rico (Negro),Conexión TI,1.15,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+289,"Desarrollador broma parche - (cadera, cadera, matriz) (Blanco)",Conexión TI,1.06,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+290,"Developer joke patch - (cadera, cadera, matriz) (negro)",Conexión TI,1.02,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+292,Taza de broma para desarrolladores: comprender la recursividad requiere comprender la recursividad (Blanco),Conexión TI,1.95,Baja Contribución,Medio Margen,Blanco,12,Artículo Seco
+293,Parche de broma para desarrolladores: comprender la recursividad requiere comprender la recursividad (Negro),Conexión TI,1.07,Baja Contribución,Medio Margen,Negro,12,Artículo Seco
+294,Kit electrónico de broma para desarrolladores: hay 10 tipos de personas en el mundo (Blanco),Conexión TI,150.24,Alta Contribución,Medio Margen,Blanco,12,Artículo Seco
+297,Kit electrónico de broma para desarrolladores: hay 10 tipos de personas en el mundo (Negro),Conexión TI,150.69,Alta Contribución,Medio Margen,Negro,12,Artículo Seco
+299,Kit electrónico de broma para desarrolladores: un foo entra en un bar (Blanco),Conexión TI,150.15,Alta Contribución,Medio Margen,Blanco,12,Artículo Seco
+301,Desarrollador broma pequeño kit electrónico - un foo entra en un bar (Negro),Conexión TI,62.28,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+302,Desarrollador broma taza electrónica: este código fue generado por una herramienta (Blanco),Conexión TI,30.46,Media Contribución,Medio Margen,Blanco,12,Artículo Seco
+303,Desarrollador broma taza electrónica: este código fue generado por una herramienta (Negro),Conexión TI,28.5,Media Contribución,Bajo Margen,Negro,12,Artículo Seco
+306,Developer joke electronic kit 3 tazas - los desarrolladores de C viejos nunca mueren (Blanco),Conexión TI,65.96,Media Contribución,Medio Margen,Blanco,12,Artículo Seco
+309,Taza electrónica de broma del desarrollador: los desarrolladores antiguos de C nunca mueren (Negro),Conexión TI,32.76,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+311,IT broma taza electrónica - teclado no encontrado ... presione F1 para continuar (Blanco),Conexión TI,18.1,Media Contribución,Medio Margen,Blanco,12,Artículo Seco
+313,Broma electrónica 3 tazas - teclado no encontrado ... presione F1 para continuar (Negro),Conexión TI,45.93,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+316,Taza electrónica de broma de TI: ese comportamiento es por diseño (Blanco),Conexión TI,25.53,Media Contribución,Medio Margen,Blanco,12,Artículo Seco
+319,Taza de broma de TI: ese comportamiento es por diseño (negro),Conexión TI,8.28,Media Contribución,Alto Margen,Negro,12,Artículo Seco
+320,IT broma electrónica kit 3 tazas - hardware: parte de la computadora que se puede patear (Blanco),Conexión TI,70.6,Media Contribución,Medio Margen,Blanco,12,Artículo Seco
+322,IT broma mug - hardware: parte de la computadora que se puede patear (Negro),Conexión TI,20.67,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+325,Coche de juguete RC con control remoto (negro) escala 1/50,Veluz,13.08,Media Contribución,Medio Margen,Negro,14,Artículo Seco
+326,Coche de juguete RC con control remoto (Rojo) escala 1/30,Veluz,12.65,Alta Contribución,Alto Margen,Rojo,14,Artículo Seco
+327,Coche de juguete RC con control remoto (Azul) escala 1/50,Veluz,15.4,Media Contribución,Medio Margen,Azul,14,Artículo Seco
+328,Coche de juguete RC con control remoto (Verde) escala 1/50,Veluz,9.75,Baja Contribución,Medio Margen,Verde,14,Artículo Seco
+331,Coche sedán de juguete RC con control remoto (Amarillo) escala 1/30,Veluz,70.46,Media Contribución,Medio Margen,Amarillo,14,Artículo Seco
+332,Coche sedán de juguete RC con control remoto (rosa) escala 1/50,Veluz,14.91,Media Contribución,Medio Margen,Rosa,14,Artículo Seco
+334,RC cupé de juguete americano vintage con control remoto (rojo) escala 1/50,Veluz,8.65,Baja Contribución,Medio Margen,Rojo,14,Artículo Seco
+336,RC cupé de juguete americano vintage con control remoto (negro) escala 1/50,Veluz,13.34,Media Contribución,Medio Margen,Negro,14,Artículo Seco
+338,Camión monstruo RC de rueda grande con control remoto (negro) escala 1/50,Veluz,11.2,Baja Contribución,Medio Margen,Negro,14,Artículo Seco
+340,Coche sedán de juguete (negro) escala 1/50,Veluz,1.51,Baja Contribución,Alto Margen,Negro,14,Artículo Seco
+342,Coche sedán de juguete para montar (rojo) escala 1/12,Veluz,12.83,Baja Contribución,Bajo Margen,Rojo,14,Artículo Seco
+343,Coche sedán de juguete  para montar (azul) escala 1/12,Veluz,12.2,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+346,Coche sedán de juguete para montar (verde) escala 1/12,Veluz,14.35,Baja Contribución,Bajo Margen,Verde,14,Artículo Seco
+348,Paseo en coche sedán de juguete (amarillo) escala 1/12,Veluz,14.25,Baja Contribución,Bajo Margen,Amarillo,14,Artículo Seco
+349,Coche sedán de juguete para montar (rosa) escala 1/12,Veluz,14.59,Baja Contribución,Bajo Margen,Rosa,14,Artículo Seco
+350,Viaja en un coupé de juguete americano vintage (rojo) escala 1/12,Veluz,9.31,Baja Contribución,Medio Margen,Rojo,14,Artículo Seco
+352,Viaja en un coupé de juguete americano antiguo (negro) escala 1/12,Veluz,10.83,Baja Contribución,Medio Margen,Negro,14,Artículo Seco
+354,Camión monstruo de rueda grande para montar (negro) escala 1/12,Veluz,10.11,Baja Contribución,Medio Margen,Negro,14,Artículo Seco
+356,The Gu camiseta roja etiqueta XML camiseta (Blanco) 3XS,Northwind,7.24,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+357,The Gu camiseta roja etiqueta XML camiseta (Blanco) XXS,Northwind,7.49,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+360,The Gu camiseta roja etiqueta XML camiseta (Blanco) XS,Northwind,7.26,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+361,"Calcetines ""The Gu"" (Blanco) S",Northwind,1.11,Baja Contribución,Alto Margen,Blanco,7,Artículo Seco
+364,"Calcetines ""The Gu"" (Blanco) M",Northwind,1.9,Baja Contribución,Medio Margen,Blanco,7,Artículo Seco
+366,"Calcetines rojos ""The Gu"" (Blanco) L",Northwind,1.69,Baja Contribución,Medio Margen,Blanco,7,Artículo Seco
+368,"Calcetines ""The Gu"" (Blanco) XL",Northwind,1.85,Baja Contribución,Medio Margen,Blanco,7,Artículo Seco
+370,The Gu camiseta roja etiqueta XML camiseta (Blanco) XXL,Northwind,19.25,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+372,The Gu camiseta roja etiqueta XML camiseta (Blanco) 3XL,Northwind,20.98,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+373,The Gu camiseta roja etiqueta XML camiseta (Blanco) 4XL,Northwind,18.63,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+376,The Gu camisa roja etiqueta XML camiseta (Blanco) 5XL,Northwind,17.82,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+377,The Gu camiseta roja etiqueta XML camiseta (Blanco) 6XL,Northwind,19.37,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+380,The Gu camiseta roja etiqueta XML camiseta (Blanco) 7XL,Northwind,19.54,Media Contribución,Medio Margen,Blanco,7,Artículo Seco
+382,The Gu camiseta roja etiqueta XML camiseta (Negro) 3XS,Northwind,18.42,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+385,The Gu camiseta roja etiqueta XML camiseta (Negro) XXS,Northwind,7.28,Media Contribución,Alto Margen,Negro,7,Artículo Seco
+387,The Gu camiseta roja etiqueta XML camiseta (Negro) XS,Northwind,15.84,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+388,The Gu camiseta roja etiqueta XML camiseta (Negro) S,Northwind,18.48,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+390,The Gu camiseta roja etiqueta XML camiseta (Negro) M,Northwind,18.3,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+393,The Gu camiseta roja etiqueta XML camiseta (Negro) L,Northwind,21.67,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+394,The Gu camiseta roja etiqueta XML camiseta (Negro) XL,Northwind,18.12,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+395,The Gu camiseta roja etiqueta XML camiseta (Negro) XXL,Northwind,19.94,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+397,The Gu camiseta roja etiqueta XML camiseta (Negro) 3XL,Northwind,18.75,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+399,The Gu camiseta roja etiqueta XML camiseta (Negro) 4XL,Northwind,19.17,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+401,The Gu camiseta roja etiqueta XML camiseta (Negro) 5XL,Northwind,18.65,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+404,The Gu camiseta roja etiqueta XML camiseta (Negro) 6XL,Northwind,19.87,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+407,The Gu camiseta roja etiqueta XML camiseta (Negro) 7XL,Northwind,19.08,Media Contribución,Medio Margen,Negro,7,Artículo Seco
+408,Alien officer hoodie (negro) XL,Conexión TI,16.59,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+411,Alien officer hoodie (negro) XXL,Conexión TI,17.36,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+414,Alien officer hoodie (negro) 3XL,Conexión TI,17.06,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+416,Alien officer hoodie (negro) 4XL,Conexión TI,16.8,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+419,Alien officer hoodie (negro) 5XL,Conexión TI,16.11,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+422,Chaqueta de acción de superhéroe (azul) 3XS,Northwind,10.66,Media Contribución,Medio Margen,Azul,12,Artículo Seco
+425,Chaqueta de acción de superhéroe (azul) XXS,Northwind,15.66,Baja Contribución,Medio Margen,Azul,12,Artículo Seco
+428,Chaqueta de acción de superhéroe (azul) XS,Northwind,19.71,Baja Contribución,Bajo Margen,Azul,12,Artículo Seco
+430,Chaqueta de acción de superhéroe (azul) S,Northwind,19.66,Baja Contribución,Bajo Margen,Azul,12,Artículo Seco
+433,Chaqueta de acción de superhéroe (azul) M,Northwind,15.93,Baja Contribución,Medio Margen,Azul,12,Artículo Seco
+434,Chaqueta de acción de superhéroe (azul) L,Northwind,15.02,Baja Contribución,Medio Margen,Azul,12,Artículo Seco
+437,Chaqueta de acción de superhéroe (azul) XL,Northwind,15.24,Baja Contribución,Medio Margen,Azul,12,Artículo Seco
+438,Chaqueta de acción de superhéroe (azul) XXL,Northwind,20.34,Baja Contribución,Bajo Margen,Azul,12,Artículo Seco
+441,Chaqueta de acción de superhéroe (azul) 3XL,Northwind,24.29,Baja Contribución,Bajo Margen,Azul,12,Artículo Seco
+443,Chaqueta de acción de superhéroe (azul) 4XL,Northwind,24.57,Baja Contribución,Bajo Margen,Azul,12,Artículo Seco
+444,Chaqueta de acción de superhéroe (azul) 5XL,Northwind,20.14,Media Contribución,Medio Margen,Azul,12,Artículo Seco
+447,Zapatillas de dinosaurio con batería (Verde) S,Zoofarm,20.12,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+449,Zapatillas de dinosaurio con batería (verde) M,Zoofarm,8.36,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+451,Zapatillas de dinosaurio con batería (Verde) L,Zoofarm,8.77,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+454,Zapatillas de dinosaurio con batería (verde) XL,Zoofarm,8,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+456,Zapatillas de ogro con pilas (verde) S,Zoofarm,8.01,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+458,Zapatillas de ogro con pilas (verde) M,Zoofarm,8.07,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+461,Zapatillas de ogro con pilas (verde) L,Zoofarm,8.57,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+463,Zapatillas de ogro con pilas (verde) XL,Zoofarm,8.94,Media Contribución,Medio Margen,Verde,12,Artículo Seco
+464,Zapatillas de tiburón de felpa (gris) S,Zoofarm,8.61,Media Contribución,Medio Margen,Gris,12,Artículo Seco
+465,Zapatillas de tiburón de felpa (gris) M,Zoofarm,8.7,Media Contribución,Medio Margen,Gris,12,Artículo Seco
+468,Zapatillas de tiburón de felpa (gris) L,Zoofarm,8.47,Media Contribución,Medio Margen,Gris,12,Artículo Seco
+470,Zapatillas de tiburón de felpa (gris) XL,Zoofarm,8.28,Media Contribución,Medio Margen,Gris,12,Artículo Seco
+473,Gorila peludo con zapatillas de ojos grandes (Negro) S,Zoofarm,8.88,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+475,Gorila peludo con zapatillas de ojos grandes (Negro) M,Zoofarm,8.7,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+476,Gorila peludo con zapatillas de ojos grandes (Negro) L,Zoofarm,8.45,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+478,Gorila peludo con zapatillas de ojos grandes (Negro) XL,Zoofarm,8.04,Media Contribución,Medio Margen,Negro,12,Artículo Seco
+479,Animal con zapatillas de pies grandes (Marrón) S,Zoofarm,8.15,Media Contribución,Medio Margen,Café,12,Artículo Seco
+480,Animal con zapatillas de pies grandes (Marrón) M,Zoofarm,8,Media Contribución,Medio Margen,Café,12,Artículo Seco
+481,Animal con zapatillas de pies grandes (Marrón) L,Zoofarm,8.89,Media Contribución,Medio Margen,Café,12,Artículo Seco
+482,Animal con zapatillas de pies grandes (Marrón) XL,Zoofarm,8.2,Media Contribución,Medio Margen,Café,12,Artículo Seco
+483,Calcetines de animales peludos (rosa) S,Zoofarm,5.94,Media Contribución,Alto Margen,Rosa,12,Artículo Seco
+485,Calcetines de animales peludos (rosa) M,Zoofarm,5.23,Media Contribución,Alto Margen,Rosa,12,Artículo Seco
+487,Calcetines de animales peludos (rosa) L,Zoofarm,9.97,Baja Contribución,Medio Margen,Rosa,12,Artículo Seco
+489,Calcetines de animales peludos (rosa) XL,Zoofarm,5.37,Media Contribución,Alto Margen,Rosa,12,Artículo Seco
+492,Máscara de zombie de Halloween (marrón claro) S,Veluz,10.48,Baja Contribución,Medio Margen,Café,12,Artículo Seco
+495,Máscara de zombie de Halloween (marrón claro) M,Veluz,10.77,Baja Contribución,Medio Margen,Café,12,Artículo Seco
+498,Máscara de zombie de Halloween (marrón claro) L,Veluz,10,Baja Contribución,Medio Margen,Café,12,Artículo Seco
+501,Coche electrónico manejable a escala 1/6 para niños (Marrón),Veluz,280.37,Alta Contribución,Bajo Margen,Café,12,Artículo Seco
+503,Scooter electrónico de largo alcance,Veluz,210.26,Alta Contribución,Bajo Margen,Gris,12,Artículo Seco
+504,Coche electrónico manejable a escala 1/6 para niños (gris),Veluz,200.37,Alta Contribución,Bajo Margen,Gris,12,Artículo Seco
+507,Coche electrónico para niños a escala 1/5 (gris),Veluz,170.1,Alta Contribución,Bajo Margen,Gris,12,Artículo Seco
+508,Coche electrónico para niños a escala 1/5 (gris) - Limitado,Veluz,175.44,Alta Contribución,Bajo Margen,Gris,12,Artículo Seco
+510,Pack de 12 figuras de acción electrónicas (variedad),Veluz,170.8,Alta Contribución,Bajo Margen,N/A,2,Artículo Seco
+512,Pack de 12 figuras de acción electrónicas (masculinas),Veluz,160.35,Alta Contribución,Bajo Margen,N/A,2,Artículo Seco
+513,Pack de 12 figuras de acción electrónicas (hembra),Veluz,160.95,Alta Contribución,Bajo Margen,N/A,2,Artículo Seco
+514,Máquina industrial de plástico de burbujas de tamaño pequeño,Empaca Todo,179.18,Alta Contribución,Bajo Margen,N/A,14,Artículo Seco
+516,Rollo de envoltura de burbujas de tamaño mediano 20 m (paquete),Empaca Todo,20.36,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+518,Rollo de plástico de burbujas de gran tamaño 50m,Empaca Todo,17.22,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+519,10 mm Plástico de burbujas de doble cara 10m,Empaca Todo,18.64,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+521,Plástico de burbujas de doble cara de 10 mm 20 m,Empaca Todo,9.56,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+524,Plástico de burbujas de doble cara de 10 mm 50m,Empaca Todo,12.03,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+525,Envoltura de burbujas de doble cara de 20 mm Paquete de 10 m,Empaca Todo,14.82,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+528,"Plástico de burbujas de doble cara de 25 mm, 8 m",Empaca Todo,15.44,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+530,Plástico de burbujas de doble cara de 20 mm 50m,Empaca Todo,16.93,Baja Contribución,Bajo Margen,N/A,14,Artículo Seco
+533,32 mm de doble cara de plástico de burbujas 10m,Empaca Todo,10.52,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+536,32 mm de doble cara de plástico de burbujas 5m,Empaca Todo,7.98,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+539,Plástico de burbujas de doble cara de 5 mm 50m,Empaca Todo,9.97,Baja Contribución,Bajo Margen,N/A,14,Artículo Seco
+541,Envoltura de burbujas antiestática de 10 mm (azul) 10 m,Empaca Todo,8.48,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+543,Envoltura de burbujas antiestática de 10 mm (azul) 20 m,Empaca Todo,10.14,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+545,Plástico antiestático de 5 mm (azul) 50m,Empaca Todo,10.95,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+547,Envoltura de burbujas antiestática de 20 mm (azul) 10 m,Empaca Todo,10.92,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+548,Envoltura de burbujas antiestática de 20 mm (azul) 20 m,Empaca Todo,12.04,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+549,Envoltura de burbujas antiestática de 20 mm (azul) 50 m,Empaca Todo,9.09,Baja Contribución,Medio Margen,Azul,14,Artículo Seco
+552,Plástico antiestático de 32 mm (azul) 10 m,Empaca Todo,12.36,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+553,Envoltura de burbujas antiestática de 34 mm (azul) 20 m,Empaca Todo,9.72,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+554,Envoltura de burbujas antiestática de 32 mm (azul) 15 m,Empaca Todo,11.93,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+555,Reemplazo del dispensador de plástico de burbujas (negro) 1.5m,Empaca Todo,13.56,Baja Contribución,Bajo Margen,Negro,14,Artículo Seco
+557,Reemplazo del dispensador de plástico de burbujas (azul) 1.5m,Empaca Todo,12.26,Baja Contribución,Bajo Margen,Azul,14,Artículo Seco
+559,Reemplazo del dispensador de plástico de burbujas (rojo) 1.5m,Empaca Todo,10.25,Baja Contribución,Bajo Margen,Rojo,14,Artículo Seco
+560,Embalaje de envío (Marrón) 413x285x187mm,Empaca Todo,5.4,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+563,Embalaje de envío (Marrón) 500x310x310mm,Empaca Todo,9.31,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+566,Embalaje de envío (Marrón) 229x229x229mm,Empaca Todo,5.17,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+568,Embalaje de envío (Marrón) 279x254x217mm 50 kg,Empaca Todo,7.9,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+570,Embalaje de envío (Marrón) 356x229x229mm 50 kg,Empaca Todo,7.33,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+572,Embalaje de envío (Marrón) 457x279x279mm,Empaca Todo,6.2,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+573,Embalaje de envío (Marrón) 480x270x320mm,Empaca Todo,5.38,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+576,Embalaje de envío (Marrón) 305x305x305mm,Empaca Todo,7.74,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+578,Embalaje de envío (Marrón) 356x356x279mm 40 kg,Empaca Todo,9.58,Baja Contribución,Bajo Margen,Café,14,Artículo Seco
+580,Embalaje de envío (Marrón) 457x457x457mm 30 kg,Empaca Todo,9.64,Baja Contribución,Medio Margen,Café,14,Artículo Seco
+583,Buzón Express 50kg (Blanco) 350x280x130mm,Empaca Todo,5.2,Baja Contribución,Medio Margen,Blanco,14,Artículo Seco
+586,Bolsa de correos Courier de 30 kg (Blanco) 300x190x95mm,Empaca Todo,8.11,Baja Contribución,Medio Margen,Blanco,14,Artículo Seco
+588,Cinta de embalaje transparente 48 mm x 75 m,Empaca Todo,4.25,Baja Contribución,Alto Margen,N/A,14,Artículo Seco
+589,Cinta de embalaje transparente 48 mm x 100 m,Empaca Todo,7.51,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+592,Cinta de envío frágil negra y naranja 48mmx75m,Empaca Todo,7.46,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+595,Cinta de envío frágil negra y naranja 48mmx100m,Empaca Todo,7.21,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+598,Cristal negro y naranja con cinta de despacho cuidado 48mmx75m,Empaca Todo,5.98,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+601,Vidrio negro y naranja con cinta de envío de cuidado 48mmx100m,Empaca Todo,6.46,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+602,Mango negro y naranja con cinta de envío de cuidado 48mmx75m,Empaca Todo,7.35,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+603,Mango negro y naranja con cinta de envío de cuidado 48mmx100m (2),Empaca Todo,6.94,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+604,Cinta de envío negra y naranja de esta manera hacia arriba 48 mm x 75 m,Empaca Todo,8.98,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+606,Cinta de envío negra y naranja de esta manera hacia arriba 48 mm x 100 m,Empaca Todo,6.69,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+608,Cinta de envío pesada negra y amarilla 48mmx75m,Empaca Todo,8.79,Baja Contribución,Medio Margen,Amarillo,14,Artículo Seco
+611,Cinta de envío pesada negra y amarilla 48mmx100m,Empaca Todo,5.1,Baja Contribución,Medio Margen,Amarillo,14,Artículo Seco
+613,Cinta de envío urgente roja y blanca 48mmx75m,Empaca Todo,8.22,Baja Contribución,Medio Margen,N/A,14,Artículo Seco
+614,Cinta de despacho pesada urgente roja y blanca 48mmx100m,Empaca Todo,9.73,Baja Contribución,Bajo Margen,N/A,14,Artículo Seco
+616,Dispensador de cinta (negro),Empaca Todo,13.42,Baja Contribución,Bajo Margen,Negro,20,Artículo Seco
+617,Dispensador de cinta (rojo),Empaca Todo,8.88,Baja Contribución,Medio Margen,Rojo,20,Artículo Seco
+618,Máquina dispensadora de cinta industrial (Azul),Empaca Todo,170.05,Alta Contribución,Bajo Margen,Azul,20,Artículo Seco
+619,Kit marcador permanente negro 5 mm plumín (negro) 5 mm,Empaca Todo,20.74,Baja Contribución,Bajo Margen,Negro,14,Artículo Seco
+620,Kit marcador permanente azul 5 mm plumín (azul) 5 mm,Empaca Todo,18.97,Media Contribución,Medio Margen,Azul,14,Artículo Seco
+623,Kit marcador permanente rojo 5 mm plumín (rojo) 5 mm,Empaca Todo,18.75,Media Contribución,Medio Margen,Rojo,14,Artículo Seco
+626,Cuchillo de embalaje con hoja de inserción de metal (amarillo) 9 mm,Empaca Todo,18.05,Media Contribución,Medio Margen,Amarillo,14,Artículo Seco
+627,Cuchillo de embalaje con hoja de inserción de metal (amarillo) 18 mm,Empaca Todo,24.1,Baja Contribución,Bajo Margen,Amarillo,14,Artículo Seco
+630,Pequeñas cuchillas de repuesto de 9 mm 9 mm,Empaca Todo,12.2,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+633,Hojas de repuesto grandes de 18 mm (calidad diamante),Empaca Todo,120.89,Alta Contribución,Medio Margen,N/A,14,Artículo Seco
+634,Película de colchón de aire 200 mm x 100 mm 35 m,Empaca Todo,18.71,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+636,Película de colchón de aire 200 mm x 200 mm 35 m,Empaca Todo,15.23,Media Contribución,Medio Margen,N/A,14,Artículo Seco
+639,Reemplazo de la máquina de colchón de aire (azul),Empaca Todo,19.3,Media Contribución,Medio Margen,Azul,20,Artículo Seco
+642,Bolsa de 100 L de relleno vacío (Blanco) 100L (paquete),Empaca Todo,18.78,Media Contribución,Medio Margen,Blanco,14,Artículo Seco
+645,Bolsa de 200 L de relleno vacío (Blanco) 200L,Empaca Todo,10.55,Baja Contribución,Medio Margen,Blanco,14,Artículo Seco
+647,Bolsa de 300 L de relleno vacío (Blanco) 300L,Empaca Todo,13.15,Media Contribución,Medio Margen,Blanco,14,Artículo Seco
+650,Bolsa de relleno vacío 400 L (blanco) 400L,Empaca Todo,15.09,Baja Contribución,Bajo Margen,Blanco,14,Artículo Seco
+653,Novedad chocolates de chile 250g,DeliFood,7.33,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+656,Novedad chocolates con chile 500g,DeliFood,3.76,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+659,Escarabajos de chocolate 250g,DeliFood,5.1,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+660,Equidnas de chocolate 250g,DeliFood,5.47,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+663,Ranas de chocolate 250g,DeliFood,5.62,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+666,Tiburones de chocolate 250g,DeliFood,5.29,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+667,Bolas de nieve de chocolate blanco 250g,DeliFood,4.81,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado
+670,Rocas lunares de chocolate blanco 250g,DeliFood,5.62,Baja Contribución,Medio Margen,N/A,3,Artículo Refrigerado

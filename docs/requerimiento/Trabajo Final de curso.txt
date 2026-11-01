@@ -1,0 +1,9 @@
+Estimado Estudiante,
+
+Adjunto encontrará el trabajo final de curso, en el cual debe implementar todo lo aprendido durante cada módulo.
+
+En la guía están los pasos a seguir y un ejemplo del informe final deseado.
+
+Nota: No es necesario realizar el informe exactamente con los formatos (colores y tema) del ejemplo, pero si seguir los pasos para que en su conjunto, el modelo funcione correctamente y se logre completar el requerimiento propuesto.
+
+Éxitos!
