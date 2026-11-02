@@ -1,0 +1,1 @@
+Captura de Desktop: 'Se encontraron problemas ... Property FromColumn of object relationship 0495765e-9418-46a4-88c5-198d0f010935 refers to an object which cannot be found'. Mensaje del usuario: 'Aparece este error'.

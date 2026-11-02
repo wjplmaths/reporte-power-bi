@@ -9,3 +9,4 @@
 - 2026-11-01 · [05 – Corrección de las consultas Tabla 1 a Tabla 5 (G.Drive)](changelog/05-gdrive-tablas.md) · OE1
 - 2026-11-01 · [06 – Se quita el parámetro RutaBase](changelog/06-quitar-rutabase.md) · OE1
 - 2026-11-01 · [07 – Transformación de Fact_Ventas, Dim_Clientes y Dim_Productos](changelog/07-transformacion-tablas-locales.md) · OE2
+- 2026-11-01 · [08 – Corrección del error de relación al abrir el proyecto](changelog/08-corregir-relacion-fecha.md) · OE2
