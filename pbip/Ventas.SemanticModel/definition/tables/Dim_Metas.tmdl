@@ -3,6 +3,7 @@ table Dim_Metas
 
 	column ID_Vendedor
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 8374e2ff-3d7b-4b78-8e07-57c275fc29f6
 		summarizeBy: none
@@ -12,6 +13,7 @@ table Dim_Metas
 
 	column Fecha
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: 929a75d7-51bb-430d-9bd2-2a6818dbf6ee
 		summarizeBy: none

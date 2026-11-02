@@ -3,6 +3,7 @@ table Fact_Ventas
 
 	column 'ID Transacción'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 90458f75-a642-409e-a65c-2144ae93d6c5
 		summarizeBy: none
@@ -12,6 +13,7 @@ table Fact_Ventas
 
 	column 'ID Vendedor'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: d5b09600-03c5-4acc-a293-54a6c082fe07
 		summarizeBy: none
@@ -21,6 +23,7 @@ table Fact_Ventas
 
 	column 'ID Cliente'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 5fa5fea7-4275-412b-a761-0cad64a57b4f
 		summarizeBy: none
@@ -30,6 +33,7 @@ table Fact_Ventas
 
 	column 'ID Producto'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 77c6b214-659a-4643-822d-60e1d643acc2
 		summarizeBy: none
@@ -39,6 +43,7 @@ table Fact_Ventas
 
 	column 'Fecha de Venta'
 		dataType: dateTime
+		isHidden
 		formatString: Long Date
 		lineageTag: f87f15ed-83bd-49a5-84e4-3bd26f45e3ee
 		summarizeBy: none

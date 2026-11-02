@@ -14,3 +14,4 @@
 - 2026-11-01 · [10 – Revisión de Dim_Territorios con la tabla real de Wikipedia](changelog/10-revisar-dim-territorios.md) · OE2
 - 2026-11-01 · [11 – Tabla calculada Calendario](changelog/11-calendario.md) · OE3
 - 2026-11-01 · [12 – Formato de fecha de Calendario según la imagen de la guía](changelog/12-calendario-formato-fecha.md) · OE3
+- 2026-11-01 · [13 – Relaciones del modelo](changelog/13-relaciones.md) · OE3

@@ -66,7 +66,7 @@ Los nombres de columna son los **reales de origen**, con tildes y espacios; el m
 
 - No hay ID `null` en el archivo actual. Mismo caso que en clientes.
 
-## Relaciones previstas (a confirmar en OE3)
+## Relaciones previstas (implementadas, ver `diagrama-relaciones.md`)
 - `Fact_Ventas[ID Cliente]` → `Dim_Clientes[ID Cliente]` (muchos a uno)
 - `Fact_Ventas[ID Producto]` → `Dim_Productos[ID Producto]` (muchos a uno)
 - `Fact_Ventas[ID Vendedor]` → `Dim_Vendedores` (muchos a uno)

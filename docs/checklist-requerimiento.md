@@ -62,7 +62,7 @@ Para cada una de las cuatro consultas:
 - [ ] Columna `Mes_Num` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
 - [ ] Columna `Mes_Corto` (con `FORMAT`) — *aplicado en TMDL (changelog 11), falta validar en Desktop*
 - [ ] Columna `Mes_Largo` (con `FORMAT`) — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Verificar relaciones y modelado correctos entre todas las consultas, incluyendo `Calendario`
+- [ ] Verificar relaciones y modelado correctos entre todas las consultas, incluyendo `Calendario` — *7 relaciones definidas en TMDL (changelog 13), falta validar en Desktop*
 
 ## OE4 – DAX
 - [ ] Crear la consulta/tabla contenedora `Medidas`

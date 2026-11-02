@@ -1,13 +1,13 @@
 table Calendario
-	dataCategory: Time
 	lineageTag: d978f7f5-cc7c-4cb2-a189-7ffbfbf5696e
+	dataCategory: Time
 
 	column Date
 		dataType: dateTime
+		isKey
 		formatString: d/M/yyyy
 		lineageTag: 4eabf344-6c26-4b0c-90d8-e421beff70df
 		summarizeBy: none
-		isKey
 		sourceColumn: [Date]
 
 		annotation SummarizationSetBy = Automatic
@@ -44,8 +44,8 @@ table Calendario
 		dataType: string
 		lineageTag: 1df0a1ee-60a0-4e54-88ef-eb26cd451ec1
 		summarizeBy: none
-		sortByColumn: Mes_Num
 		sourceColumn: [Mes_Corto]
+		sortByColumn: Mes_Num
 
 		annotation SummarizationSetBy = Automatic
 
@@ -53,8 +53,8 @@ table Calendario
 		dataType: string
 		lineageTag: ebdb42b7-3071-45c5-bc19-d7a13e78bd7a
 		summarizeBy: none
-		sortByColumn: Mes_Num
 		sourceColumn: [Mes_Largo]
+		sortByColumn: Mes_Num
 
 		annotation SummarizationSetBy = Automatic
 
@@ -71,3 +71,4 @@ table Calendario
 				)
 
 	annotation PBI_ResultType = Table
+

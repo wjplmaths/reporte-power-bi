@@ -3,6 +3,7 @@ table Dim_Territorios
 
 	column Departamento
 		dataType: string
+		dataCategory: StateOrProvince
 		lineageTag: 25d07bcc-73dc-4684-aeb7-1c9ef5935a3f
 		summarizeBy: none
 		sourceColumn: Departamento

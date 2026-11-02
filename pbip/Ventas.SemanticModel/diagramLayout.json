@@ -11,7 +11,7 @@
         {
           "location": {
             "x": 0,
-            "y": 171
+            "y": 179.5
           },
           "nodeIndex": "Dim_Clientes",
           "nodeLineageTag": "c0bfa4cd-88c5-4c0d-ac67-f792a05ca8fb",
@@ -24,7 +24,7 @@
         {
           "location": {
             "x": 284,
-            "y": 171
+            "y": 179.5
           },
           "nodeIndex": "Dim_Productos",
           "nodeLineageTag": "ae4ba91c-c12f-4d5a-a2d3-ff5f6a6419df",
@@ -37,7 +37,7 @@
         {
           "location": {
             "x": 568,
-            "y": 171
+            "y": 179.5
           },
           "nodeIndex": "Fact_Ventas",
           "nodeLineageTag": "7f941c90-8284-4051-9460-c6b78abddd9a",
@@ -50,7 +50,7 @@
         {
           "location": {
             "x": 2272,
-            "y": 171
+            "y": 179.5
           },
           "nodeIndex": "Dim_Territorios",
           "nodeLineageTag": "ce9bea94-cb67-4e31-8b98-13f73fd37d57",
@@ -63,7 +63,7 @@
         {
           "location": {
             "x": 2556,
-            "y": 17
+            "y": 25.5
           },
           "nodeIndex": "Dim_Metas",
           "nodeLineageTag": "4681cebf-a18f-49d0-a5ae-896f870f4f6a",
@@ -76,12 +76,25 @@
         {
           "location": {
             "x": 2840,
-            "y": 29
+            "y": 37.5
           },
           "nodeIndex": "Dim_Vendedores",
           "nodeLineageTag": "2f9adb2d-0143-4dd8-9127-9a68065955d3",
           "size": {
             "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3124,
+            "y": 9.5
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "d978f7f5-cc7c-4cb2-a189-7ffbfbf5696e",
+          "size": {
+            "height": 224,
             "width": 234
           },
           "zIndex": 0

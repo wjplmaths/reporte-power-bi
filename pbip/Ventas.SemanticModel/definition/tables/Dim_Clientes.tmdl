@@ -3,6 +3,7 @@ table Dim_Clientes
 
 	column 'ID Cliente'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: f2e9d31c-655e-4e12-b13e-ef73b625236c
 		summarizeBy: sum
@@ -36,6 +37,7 @@ table Dim_Clientes
 
 	column Departamento
 		dataType: string
+		dataCategory: StateOrProvince
 		lineageTag: 3650ca9b-4f3b-4126-94c3-5fd31aa5f250
 		summarizeBy: none
 		sourceColumn: Departamento

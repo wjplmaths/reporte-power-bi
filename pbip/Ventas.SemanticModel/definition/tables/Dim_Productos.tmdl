@@ -3,6 +3,7 @@ table Dim_Productos
 
 	column 'ID Producto'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 5eb02f58-94e4-44d9-85f7-98ed598b8851
 		summarizeBy: sum

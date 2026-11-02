@@ -3,6 +3,7 @@ table Dim_Vendedores
 
 	column 'ID Vendedor'
 		dataType: int64
+		isHidden
 		formatString: 0
 		lineageTag: 91ccbb2e-aead-46ce-8e78-ff6b0be4dc8f
 		summarizeBy: none
