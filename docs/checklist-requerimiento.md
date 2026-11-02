@@ -91,11 +91,11 @@ Para cada una de las cuatro consultas:
 - [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num` — *creado en PBIR con el identificador real del visual (changelog 20), falta validar en Desktop*
 
 ### Página de Análisis de Tendencia
-- [ ] Tarjetas (nuevas): Facturación Total y Facturación Total del Año Anterior
-- [ ] KPI: ventas actuales vs ventas del período anterior
-- [ ] Gráfico de columnas agrupadas y líneas: Meta vs Total Facturado por mes, con línea de % de cumplimiento
-- [ ] Eje X con jerarquía Año-Trimestre-Mes
-- [ ] Reutilizar las segmentaciones de la página anterior
+- [ ] Tarjetas (nuevas): Facturación Total y Facturación Total del Año Anterior — *creado en PBIR (changelog 23), falta validar en Desktop*
+- [ ] KPI: ventas actuales vs ventas del período anterior — *creado en PBIR (changelog 23), falta validar en Desktop*
+- [ ] Gráfico de columnas agrupadas y líneas: Meta vs Total Facturado por mes, con línea de % de cumplimiento — *creado en PBIR (changelog 23), falta validar en Desktop*
+- [ ] Eje X con jerarquía Año-Trimestre-Mes — *creado en PBIR (changelog 23), falta validar en Desktop*
+- [ ] Reutilizar las segmentaciones de la página anterior — *creado en PBIR (changelog 23), falta validar en Desktop*
 
 ### Entrega
 - [ ] Publicar y compartir el enlace del proyecto en el grupo de trabajo

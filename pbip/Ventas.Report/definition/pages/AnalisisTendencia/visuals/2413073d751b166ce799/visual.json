@@ -1,0 +1,96 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "2413073d751b166ce799",
+    "position":  {
+                     "x":  640,
+                     "y":  96,
+                     "z":  4,
+                     "height":  150,
+                     "width":  620,
+                     "tabOrder":  4
+                 },
+    "visual":  {
+                   "visualType":  "kpi",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Indicator":  {
+                                                                      "projections":  [
+                                                                                          {
+                                                                                              "field":  {
+                                                                                                            "Measure":  {
+                                                                                                                            "Expression":  {
+                                                                                                                                               "SourceRef":  {
+                                                                                                                                                                 "Entity":  "Medidas"
+                                                                                                                                                             }
+                                                                                                                                           },
+                                                                                                                            "Property":  "Total Facturado"
+                                                                                                                        }
+                                                                                                        },
+                                                                                              "queryRef":  "Medidas.Total Facturado",
+                                                                                              "nativeQueryRef":  "Total Facturado"
+                                                                                          }
+                                                                                      ]
+                                                                  },
+                                                    "TrendAxis":  {
+                                                                      "projections":  [
+                                                                                          {
+                                                                                              "field":  {
+                                                                                                            "Column":  {
+                                                                                                                           "Expression":  {
+                                                                                                                                              "SourceRef":  {
+                                                                                                                                                                "Entity":  "Calendario"
+                                                                                                                                                            }
+                                                                                                                                          },
+                                                                                                                           "Property":  "Año"
+                                                                                                                       }
+                                                                                                        },
+                                                                                              "queryRef":  "Calendario.Año",
+                                                                                              "nativeQueryRef":  "Año"
+                                                                                          }
+                                                                                      ]
+                                                                  },
+                                                    "Goal":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "Medidas"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Ventas del Año Anterior"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "Medidas.Ventas del Año Anterior",
+                                                                                         "nativeQueryRef":  "Ventas del Año Anterior"
+                                                                                     }
+                                                                                 ]
+                                                             }
+                                                }
+                             },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Total Facturado vs año anterior\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
+}

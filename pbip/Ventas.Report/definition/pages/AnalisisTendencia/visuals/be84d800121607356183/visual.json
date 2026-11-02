@@ -1,0 +1,67 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "be84d800121607356183",
+    "position":  {
+                     "x":  20,
+                     "y":  96,
+                     "z":  2,
+                     "height":  150,
+                     "width":  300,
+                     "tabOrder":  2
+                 },
+    "visual":  {
+                   "visualType":  "cardVisual",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Data":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "Medidas"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Total Facturado"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "Medidas.Total Facturado",
+                                                                                         "nativeQueryRef":  "Total Facturado"
+                                                                                     }
+                                                                                 ]
+                                                             }
+                                                }
+                             },
+                   "objects":  {
+                                   "value":  [
+                                                 {
+                                                     "properties":  {
+                                                                        "fontSize":  {
+                                                                                         "expr":  {
+                                                                                                      "Literal":  {
+                                                                                                                      "Value":  "26D"
+                                                                                                                  }
+                                                                                                  }
+                                                                                     },
+                                                                        "labelDisplayUnits":  {
+                                                                                                  "expr":  {
+                                                                                                               "Literal":  {
+                                                                                                                               "Value":  "1000000D"
+                                                                                                                           }
+                                                                                                           }
+                                                                                              },
+                                                                        "labelPrecision":  {
+                                                                                               "expr":  {
+                                                                                                            "Literal":  {
+                                                                                                                            "Value":  "2L"
+                                                                                                                        }
+                                                                                                        }
+                                                                                           }
+                                                                    }
+                                                 }
+                                             ]
+                               },
+                   "drillFilterOtherVisuals":  true
+               }
+}

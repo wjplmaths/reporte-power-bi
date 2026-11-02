@@ -1,8 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
-  "pageOrder": [
-    "Inicio",
-    "AnalisisGeneral"
-  ],
-  "activePageName": "AnalisisGeneral"
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
+    "pageOrder":  [
+                      "Inicio",
+                      "AnalisisGeneral",
+                      "AnalisisTendencia"
+                  ],
+    "activePageName":  "AnalisisGeneral"
 }

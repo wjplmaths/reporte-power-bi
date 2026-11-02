@@ -1,83 +1,88 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "dc3a8f8200499969ebf4",
-  "position": {
-    "x": 529.6758739677382,
-    "y": 16.466607480862326,
-    "z": 1000,
-    "height": 79.5886028241679,
-    "width": 730.01959831822978,
-    "tabOrder": 1000
-  },
-  "visual": {
-    "visualType": "ChicletSlicer1448559807354",
-    "query": {
-      "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calendario"
-                    }
-                  },
-                  "Property": "Mes_Corto"
-                }
-              },
-              "queryRef": "Calendario.Mes_Corto",
-              "nativeQueryRef": "Mes_Corto",
-              "active": true
-            }
-          ]
-        }
-      }
-    },
-    "objects": {
-      "general": [
-        {
-          "properties": {
-            "columns": {
-              "expr": {
-                "Literal": {
-                  "Value": "12L"
-                }
-              }
-            },
-            "rows": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Mes'"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
-  }
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "dc3a8f8200499969ebf4",
+    "position":  {
+                     "x":  529.6758739677382,
+                     "y":  16.466607480862326,
+                     "z":  1000,
+                     "height":  79.5886028241679,
+                     "width":  730.01959831822978,
+                     "tabOrder":  1000
+                 },
+    "visual":  {
+                   "visualType":  "ChicletSlicer1448559807354",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "Calendario"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "Mes_Corto"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "Calendario.Mes_Corto",
+                                                                                             "nativeQueryRef":  "Mes_Corto",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 }
+                                                }
+                             },
+                   "objects":  {
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+                                                                          "columns":  {
+                                                                                          "expr":  {
+                                                                                                       "Literal":  {
+                                                                                                                       "Value":  "12L"
+                                                                                                                   }
+                                                                                                   }
+                                                                                      },
+                                                                          "rows":  {
+                                                                                       "expr":  {
+                                                                                                    "Literal":  {
+                                                                                                                    "Value":  "1L"
+                                                                                                                }
+                                                                                                }
+                                                                                   }
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Mes\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               },
+    "syncGroup":  {
+                      "groupName":  "Mes_Corto",
+                      "fieldChanges":  true,
+                      "filterChanges":  true
+                  }
 }
