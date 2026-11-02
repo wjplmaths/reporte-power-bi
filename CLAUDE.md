@@ -29,3 +29,6 @@ El entregable final es un .pbix que generará el usuario desde Power BI Desktop.
 4. Si cambió el modelo, actualiza docs/modelo/diccionario.md.
 5. Guarda el prompt recibido en prompts/NN-slug.md.
 6. Haz commit: "feat(OEx): descripción corta" (o fix/docs).
+
+## Autor del documento:
+Heydy Mairena
