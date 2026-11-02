@@ -48,8 +48,44 @@
                                                                                               "nativeQueryRef":  "Total Facturado"
                                                                                           }
                                                                                       ]
+                                                                  },
+                                                    "TrendLine":  {
+                                                                      "projections":  [
+                                                                                          {
+                                                                                              "field":  {
+                                                                                                            "Column":  {
+                                                                                                                           "Expression":  {
+                                                                                                                                              "SourceRef":  {
+                                                                                                                                                                "Entity":  "Calendario"
+                                                                                                                                                            }
+                                                                                                                                          },
+                                                                                                                           "Property":  "Año"
+                                                                                                                       }
+                                                                                                        },
+                                                                                              "queryRef":  "Calendario.Año",
+                                                                                              "nativeQueryRef":  "Año"
+                                                                                          }
+                                                                                      ]
                                                                   }
-                                                }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Column":  {
+                                                                                                      "Expression":  {
+                                                                                                                         "SourceRef":  {
+                                                                                                                                           "Entity":  "Calendario"
+                                                                                                                                       }
+                                                                                                                     },
+                                                                                                      "Property":  "Año"
+                                                                                                  }
+                                                                                   },
+                                                                         "direction":  "Ascending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
                              },
                    "objects":  {
                                    "indicator":  [
@@ -117,6 +153,20 @@
                                                                                           },
                                                                            "Property":  "Ventas del Año Anterior"
                                                                        }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "15600561143b91fc82f8",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "Calendario"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "Año"
+                                                                      }
                                                        },
                                              "type":  "Advanced"
                                          }
