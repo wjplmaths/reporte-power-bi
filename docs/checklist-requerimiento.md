@@ -8,7 +8,7 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Marcar `[x]` solo cuando
 - [ ] Conectar al archivo xls `Fact_Ventas` (en `data/raw/` es `.xlsx`) — *consulta creada en pbip, falta validar en Desktop*
 - [ ] Conectar al csv `Dim_Clientes` — *consulta creada en pbip, falta validar en Desktop*
 - [ ] Conectar al csv `Dim_Productos` — *consulta creada en pbip, falta validar en Desktop*
-- [ ] Conectar al archivo en línea G.Drive (Vendedores + Metas_Mensuales), importado como tipo **Web** — *consultas `Tabla 1` a `Tabla 5` creadas con `Web.Page`, falta validar en Desktop*
+- [ ] Conectar al archivo en línea G.Drive (Vendedores + Metas_Mensuales), importado como tipo **Web** — *consultas `Tabla 1` a `Tabla 5` creadas con `Web.Page`; `Table N` daba error en Desktop, ahora se elige cada tabla por contenido; falta validar en Desktop*
 - [ ] Conectar al enlace Web de Wikipedia y extraer la tabla *Organización Territorial – Tabla 6* — *consulta `Tabla 6` creada eligiendo la tabla por contenido (`Table 5` daba error en Desktop), falta validar en Desktop*
 
 ## OE2 – Transformación de datos

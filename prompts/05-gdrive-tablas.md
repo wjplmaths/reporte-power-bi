@@ -1,0 +1,1 @@
+Captura de Power BI Desktop: Tabla 1 a Tabla 5 fallan con Expression.Error: La clave no coincidió con ninguna fila de la tabla (Id=Table 1). Mensaje del usuario: "Desde la tabla 1 hasta la tabla 5 tienen esos errores".

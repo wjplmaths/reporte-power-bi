@@ -6,6 +6,6 @@ table 'Tabla 2'
 		source =
 				let
 				    Origen = GDrive_Fuente,
-				    Datos = Origen{[Id="Table 2"]}[Data]
+				    Datos = fnBuscarTabla(Origen, {"ID_vendedor", "1/1/2020"})
 				in
 				    Datos

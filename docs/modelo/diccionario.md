@@ -84,14 +84,19 @@ Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas decla
 | Consulta | Origen | Función M | Carga |
 |---|---|---|---|
 | `RutaBase` | Parámetro de texto con la ruta de `data/raw` | — | No |
+| `fnBuscarTabla` | Función auxiliar: devuelve la tabla de `Web.Page` que contiene todos los textos pedidos | — | No |
 | `GDrive_Fuente` | Google Drive (enlace en `docs/requerimiento/Enlace G_Drive.txt`) | `Web.Page` | No |
 | `Fact_Ventas` | `Fact_Ventas.xlsx`, hoja `Fact_Ventas` | `Excel.Workbook` | Sí |
 | `Dim_Clientes` | `Dim_Clientes.csv` (UTF-8, coma, 5 columnas) | `Csv.Document` | Sí |
 | `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
-| `Tabla 1` | `GDrive_Fuente`, `Table 1` (vendedores) | `Web.Page` | Sí |
-| `Tabla 2` a `Tabla 5` | `GDrive_Fuente`, `Table 2` a `Table 5` (metas 2020 a 2023) | `Web.Page` | Sí |
+| `Tabla 1` | `GDrive_Fuente`, tabla que contiene `ID Vendedor` (vendedores) | `Web.Page` | Sí |
+| `Tabla 2` a `Tabla 5` | `GDrive_Fuente`, tabla que contiene `ID_vendedor` y `1/1/AAAA` (metas 2020 a 2023) | `Web.Page` | Sí |
 | `Tabla 6` | Wikipedia, tabla elegida por contenido (columna `Cabecera`): Organización Territorial | `Web.Page` | Sí |
 
 En OE2 se renombran: `Tabla 1` a `Dim_Vendedores`, `Tabla 2` a `Tabla 5` a `Metas_2020` a `Metas_2023` (sin carga) y `Tabla 6` a `Dim_Territorios`.
 ### Estructura esperada de `Tabla 6` (según el HTML de Wikipedia, 2026-11-01)
 Fila de título "Departamentos de Nicaragua", encabezados `Departamento | ISO:NI | Cabecera | Población (2023) | Superficie (km²) | Densidad`, 17 filas de departamentos y una fila final de fuente ("* Fuente: Estimación del 2023 - INIDE") que se elimina en OE2. Los departamentos usan "Costa Caribe Norte" y "Costa Caribe Sur", igual que `Dim_Clientes` tras su limpieza.
+### Estructura del libro de G.Drive (leída de su exportación a xlsx, 2026-11-01)
+- **Vendedores:** 19 filas de datos, columnas `ID Vendedor`, `Nombre Completo`, `Primer Nombre`.
+- **Metas 2020 a Metas 2023:** columna `ID_vendedor` (con v minúscula) y una columna por mes, con encabezados de texto `1/1/AAAA`, `1/2/AAAA`... (día/mes/año). El valor es la meta mensual del vendedor, con decimales largos. Hay que anular la dinamización de las columnas de mes (OE2).
+- Vista web (`Web.Page`): se espera una columna extra de numeración de filas y una fila de letras de columna. Eso explica "Columna 1" y las filas superiores de la guía; no se pudo ver desde aquí.
