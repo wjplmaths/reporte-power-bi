@@ -6,6 +6,8 @@ table 'Tabla 6'
 		source =
 				let
 				    Origen = Web.Page(Web.Contents("https://es.wikipedia.org/wiki/Nicaragua")),
-				    Datos = Origen{[Id="Table 5"]}[Data]
+				    // Los Id de Web.Page ("Table N") no coinciden entre el HTML y Desktop; se elige la tabla por su contenido (columna "Cabecera")
+				    Candidatas = Table.SelectRows(Origen, each try (List.Contains(Table.ColumnNames([Data]), "Cabecera") or List.AnyTrue(List.Transform(Table.ToColumns([Data]), (c) => List.Contains(c, "Cabecera")))) otherwise false),
+				    Datos = Candidatas{0}[Data]
 				in
 				    Datos

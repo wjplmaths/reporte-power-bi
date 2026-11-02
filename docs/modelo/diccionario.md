@@ -90,6 +90,8 @@ Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas decla
 | `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
 | `Tabla 1` | `GDrive_Fuente`, `Table 1` (vendedores) | `Web.Page` | Sí |
 | `Tabla 2` a `Tabla 5` | `GDrive_Fuente`, `Table 2` a `Table 5` (metas 2020 a 2023) | `Web.Page` | Sí |
-| `Tabla 6` | Wikipedia, `Table 5` en el Navegador (Organización Territorial) | `Web.Page` | Sí |
+| `Tabla 6` | Wikipedia, tabla elegida por contenido (columna `Cabecera`): Organización Territorial | `Web.Page` | Sí |
 
 En OE2 se renombran: `Tabla 1` a `Dim_Vendedores`, `Tabla 2` a `Tabla 5` a `Metas_2020` a `Metas_2023` (sin carga) y `Tabla 6` a `Dim_Territorios`.
+### Estructura esperada de `Tabla 6` (según el HTML de Wikipedia, 2026-11-01)
+Fila de título "Departamentos de Nicaragua", encabezados `Departamento | ISO:NI | Cabecera | Población (2023) | Superficie (km²) | Densidad`, 17 filas de departamentos y una fila final de fuente ("* Fuente: Estimación del 2023 - INIDE") que se elimina en OE2. Los departamentos usan "Costa Caribe Norte" y "Costa Caribe Sur", igual que `Dim_Clientes` tras su limpieza.
