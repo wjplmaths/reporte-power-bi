@@ -87,8 +87,8 @@ Para cada una de las cuatro consultas:
 - [ ] Formato condicional en `% Cumplimiento`: menor a 60% rojo, 60% a 79% amarillo, mayor a 80% verde — *reglas por color en PBIR; los íconos son un paso manual (changelog 18)*
 - [ ] Medidor: Total Facturado vs Meta, con etiqueta personalizada en el valor que muestre el % de avance — *medidor creado; la etiqueta personalizada es un paso manual (changelog 18)*
 - [ ] Gráfico de barras agrupadas: Top 5 clientes por facturación — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] Chiclet Slicer (AppSource) por Año — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num` — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] Chiclet Slicer (AppSource) por Año — *segmentación nativa provisional; el paso a Chiclet es manual (changelog 19)*
+- [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num` — *segmentación nativa provisional; el paso a Chiclet es manual (changelog 19)*
 
 ### Página de Análisis de Tendencia
 - [ ] Tarjetas (nuevas): Facturación Total y Facturación Total del Año Anterior

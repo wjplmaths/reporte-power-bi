@@ -11,14 +11,16 @@
       "type": "SharedResources"
     }
   },
-  "publicCustomVisuals": [
-    "ChicletSlicer1448562802762"
-  ],
   "resourcePackages": [
     {
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
+        {
+          "name": "icono-ventas.jpeg",
+          "path": "icono-ventas.jpeg",
+          "type": "Image"
+        },
         {
           "name": "icono-facturacion9358770855875156.jpeg",
           "path": "icono-facturacion9358770855875156.jpeg",
@@ -39,6 +41,9 @@
     }
   ],
   "settings": {
-    "useEnhancedTooltips": false
+    "useEnhancedTooltips": false,
+    "queryLimitOption": "None",
+    "customMemoryLimit": "1048576",
+    "customTimeoutLimit": "225"
   }
 }

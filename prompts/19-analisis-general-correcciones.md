@@ -1,0 +1,1 @@
+Capturas de Desktop de la pagina Analisis General: los elementos de la parte superior (segmentaciones Chiclet de Año y Mes_Corto) muestran 'Hay un problema con el objeto visual'. Mensaje del usuario: 'los elementos de la parte superior no se pueden visualizar'.

@@ -6,7 +6,7 @@
                      "y":  218,
                      "z":  7,
                      "height":  482,
-                     "width":  450,
+                     "width":  380,
                      "tabOrder":  7
                  },
     "visual":  {
@@ -26,8 +26,9 @@
                                                                                                                           "Property":  "Departamento"
                                                                                                                       }
                                                                                                        },
+                                                                                             "queryRef":  "Dim_Clientes.Departamento",
                                                                                              "nativeQueryRef":  "Departamento",
-                                                                                             "queryRef":  "Dim_Clientes.Departamento"
+                                                                                             "active":  true
                                                                                          }
                                                                                      ]
                                                                  },
@@ -44,8 +45,8 @@
                                                                                                                        "Property":  "Total Facturado"
                                                                                                                    }
                                                                                                    },
-                                                                                         "nativeQueryRef":  "Total Facturado",
-                                                                                         "queryRef":  "Medidas.Total Facturado"
+                                                                                         "queryRef":  "Medidas.Total Facturado",
+                                                                                         "nativeQueryRef":  "Total Facturado"
                                                                                      }
                                                                                  ]
                                                              }
@@ -74,5 +75,37 @@
                                                             ]
                                               },
                    "drillFilterOtherVisuals":  true
-               }
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "87ddd515e8c0d4a3bccd",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "Dim_Clientes"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "Departamento"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "fef45250b803b69091b9",
+                                             "field":  {
+                                                           "Measure":  {
+                                                                           "Expression":  {
+                                                                                              "SourceRef":  {
+                                                                                                                "Entity":  "Medidas"
+                                                                                                            }
+                                                                                          },
+                                                                           "Property":  "Total Facturado"
+                                                                       }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
 }

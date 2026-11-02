@@ -26,13 +26,60 @@
                                                                                                                        "Property":  "Utilidad Total"
                                                                                                                    }
                                                                                                    },
-                                                                                         "nativeQueryRef":  "Utilidad Total",
-                                                                                         "queryRef":  "Medidas.Utilidad Total"
+                                                                                         "queryRef":  "Medidas.Utilidad Total",
+                                                                                         "nativeQueryRef":  "Utilidad Total"
                                                                                      }
                                                                                  ]
                                                              }
                                                 }
                              },
-                   "drillFilterOtherVisuals":  true
-               }
+                   "drillFilterOtherVisuals":  true,
+                   "objects":  {
+                                   "value":  [
+                                                 {
+                                                     "properties":  {
+                                                                        "fontSize":  {
+                                                                                         "expr":  {
+                                                                                                      "Literal":  {
+                                                                                                                      "Value":  "26D"
+                                                                                                                  }
+                                                                                                  }
+                                                                                     },
+                                                                        "labelDisplayUnits":  {
+                                                                                                  "expr":  {
+                                                                                                               "Literal":  {
+                                                                                                                               "Value":  "1000000D"
+                                                                                                                           }
+                                                                                                           }
+                                                                                              },
+                                                                        "labelPrecision":  {
+                                                                                               "expr":  {
+                                                                                                            "Literal":  {
+                                                                                                                            "Value":  "2L"
+                                                                                                                        }
+                                                                                                        }
+                                                                                           }
+                                                                    }
+                                                 }
+                                             ]
+                               }
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "945e11118a26da04dba6",
+                                             "field":  {
+                                                           "Measure":  {
+                                                                           "Expression":  {
+                                                                                              "SourceRef":  {
+                                                                                                                "Entity":  "Medidas"
+                                                                                                            }
+                                                                                          },
+                                                                           "Property":  "Utilidad Total"
+                                                                       }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
 }

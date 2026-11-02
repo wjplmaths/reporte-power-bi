@@ -27,7 +27,7 @@
                                                                                                          "url":  {
                                                                                                                      "expr":  {
                                                                                                                                   "ResourcePackageItem":  {
-                                                                                                                                                              "ItemName":  null,
+                                                                                                                                                              "ItemName":  "icono-ventas.jpeg",
                                                                                                                                                               "PackageType":  1,
                                                                                                                                                               "PackageName":  "RegisteredResources"
                                                                                                                                                           }
