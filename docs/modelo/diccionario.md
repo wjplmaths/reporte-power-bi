@@ -119,3 +119,17 @@ Aún sin validar en Desktop. Ahora las hojas de G.Drive se leen como CSV exporta
 - El CSV trae las metas redondeadas a 2 decimales; el libro xlsx original trae más decimales.
 
 **Dim_Territorios** (antes `Tabla 6`, 4 columnas, 17 filas): `Departamento` (texto), `Cabecera` (texto), `Población (2023)` (entero), `Superficie (km²)` (decimal). Se quitaron `ISO:NI` y `Densidad`.
+
+## Calendario (OE3, tabla calculada)
+Aún sin validar en Desktop. Tabla de fechas con 1 461 filas (2020-01-01 a 2023-12-31), definida con `ADDCOLUMNS(CALENDAR(...))`.
+
+| Columna | Tipo | Ejemplo | Notas |
+|---|---|---|---|
+| `Date` | Fecha | 2020-01-01 | Llave de la tabla (`isKey`). La tabla está marcada como tabla de fechas (`dataCategory: Time`) |
+| `Año` | Entero | 2020 | `YEAR` |
+| `Trimestre` | Texto | `1 Trim` | `QUARTER & " Trim"` |
+| `Mes_Num` | Entero | 1 | `MONTH` |
+| `Mes_Corto` | Texto | `ENE` | `UPPER(FORMAT(..., "MMM", "es-ES"))`, ordenada por `Mes_Num` |
+| `Mes_Largo` | Texto | `ENERO` | `UPPER(FORMAT(..., "MMMM", "es-ES"))`, ordenada por `Mes_Num` |
+
+Todavía no tiene relaciones con otras tablas (se crean en el siguiente paso de OE3).

@@ -56,12 +56,12 @@ Para cada una de las cuatro consultas:
 - [ ] Cerrar y aplicar todos los cambios
 
 ## OE3 – Tabla Calendario + Modelado de datos
-- [ ] Crear la tabla `Calendario` con "Nueva tabla" (DAX), del 2020/1/1 al 2023/12/31
-- [ ] Columna `Año`
-- [ ] Columna `Trimestre`
-- [ ] Columna `Mes_Num`
-- [ ] Columna `Mes_Corto` (con `FORMAT`)
-- [ ] Columna `Mes_Largo` (con `FORMAT`)
+- [ ] Crear la tabla `Calendario` con "Nueva tabla" (DAX), del 2020/1/1 al 2023/12/31 — *aplicado en TMDL (changelog 11), falta validar en Desktop*
+- [ ] Columna `Año` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
+- [ ] Columna `Trimestre` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
+- [ ] Columna `Mes_Num` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
+- [ ] Columna `Mes_Corto` (con `FORMAT`) — *aplicado en TMDL (changelog 11), falta validar en Desktop*
+- [ ] Columna `Mes_Largo` (con `FORMAT`) — *aplicado en TMDL (changelog 11), falta validar en Desktop*
 - [ ] Verificar relaciones y modelado correctos entre todas las consultas, incluyendo `Calendario`
 
 ## OE4 – DAX

@@ -21,4 +21,5 @@ ref table DateTableTemplate_24103f8a-b426-4299-9a01-e2e12dda31c2
 ref table LocalDateTable_e191e5ee-7a04-450f-b11d-5745b807b04f
 ref table Dim_Vendedores
 ref table Dim_Metas
+ref table Calendario
 

@@ -12,3 +12,4 @@
 - 2026-11-01 · [08 – Corrección del error de relación al abrir el proyecto](changelog/08-corregir-relacion-fecha.md) · OE2
 - 2026-11-01 · [09 – Dim_Vendedores, Dim_Metas y Dim_Territorios](changelog/09-vendedores-metas-territorios.md) · OE2
 - 2026-11-01 · [10 – Revisión de Dim_Territorios con la tabla real de Wikipedia](changelog/10-revisar-dim-territorios.md) · OE2
+- 2026-11-01 · [11 – Tabla calculada Calendario](changelog/11-calendario.md) · OE3
