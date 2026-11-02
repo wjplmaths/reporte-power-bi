@@ -40,3 +40,4 @@ table Dim_Metas
 				    TiposCorrectos
 
 	annotation PBI_ResultType = Table
+

@@ -1,0 +1,1 @@
+Imagen 1: tabla de Wikipedia (Departamento, ISO:NI, Cabecera, Población (2023), Superficie (km²), Densidad; 17 filas). Imagen 2: requisito de la guía para la Consulta Tabla 6 (renombrar a Dim_Territorios, quitar filas superiores e inferiores, quitar columnas, revisar tipos). Mensaje del usuario: 'Revisalo y asegura de que este bien'.

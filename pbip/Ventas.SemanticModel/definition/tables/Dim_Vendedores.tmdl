@@ -36,3 +36,4 @@ table Dim_Vendedores
 				    TiposCorrectos
 
 	annotation PBI_ResultType = Table
+

@@ -18,6 +18,7 @@ expression fnMetasMensuales =
 		in
 		    TiposCorrectos
 	lineageTag: 4ed913b6-101d-4b79-9dad-17f560d6c99d
+
 	annotation PBI_ResultType = Function
 
 expression Metas_2020 =
@@ -29,6 +30,7 @@ expression Metas_2020 =
 		in
 		    Metas
 	lineageTag: 9ba78bc4-8b32-4585-bedf-ec14b565ddc6
+
 	annotation PBI_ResultType = Table
 
 expression Metas_2021 =
@@ -40,6 +42,7 @@ expression Metas_2021 =
 		in
 		    Metas
 	lineageTag: 96bbad74-ee06-4a15-8307-7872e50b689b
+
 	annotation PBI_ResultType = Table
 
 expression Metas_2022 =
@@ -51,6 +54,7 @@ expression Metas_2022 =
 		in
 		    Metas
 	lineageTag: bcbd53e3-10cd-4026-be64-4e9fa04b9c00
+
 	annotation PBI_ResultType = Table
 
 expression Metas_2023 =
@@ -62,4 +66,6 @@ expression Metas_2023 =
 		in
 		    Metas
 	lineageTag: 8ede7031-2db9-492b-ac9d-a151eedce041
+
 	annotation PBI_ResultType = Table
+
