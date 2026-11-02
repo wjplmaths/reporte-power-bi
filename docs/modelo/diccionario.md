@@ -133,3 +133,16 @@ Aún sin validar en Desktop. Tabla de fechas con 1 461 filas (2020-01-01 a 2023-
 | `Mes_Largo` | Texto | `ENERO` | `UPPER(FORMAT(..., "MMMM", "es-ES"))`, ordenada por `Mes_Num` |
 
 Todavía no tiene relaciones con otras tablas (se crean en el siguiente paso de OE3).
+## Medidas (OE4, tabla `Medidas`)
+Aún sin validar en Desktop. `Medidas` es una tabla calculada (`ROW("Columna", 1)`) con una columna oculta; solo sirve de contenedor.
+
+| Medida | DAX | Formato | Carpeta |
+|---|---|---|---|
+| `Total Facturado` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])` | `C$#,0.00` | Ventas |
+| `Costo Total` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * RELATED(Dim_Productos[Costo Unitario]))` | `C$#,0.00` | Ventas |
+| `Utilidad Total` | `[Total Facturado] - [Costo Total]` | `C$#,0.00` | Ventas |
+| `SumMetas` (oculta) | `SUM(Dim_Metas[Meta])` | `C$#,0.00` | Metas |
+| `Meta` | `[SumMetas]` | `C$#,0.00` | Metas |
+| `% Cumplimiento metas` | `DIVIDE([Total Facturado], [SumMetas])` | `0.0%` | Metas |
+| `Ventas del Año Anterior` | `CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))` | `C$#,0.00` | Tiempo |
+| `Etiqueta % Avance` | `FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")` | texto | Etiquetas |

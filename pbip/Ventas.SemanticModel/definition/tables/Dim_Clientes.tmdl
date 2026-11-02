@@ -37,8 +37,8 @@ table Dim_Clientes
 
 	column Departamento
 		dataType: string
-		dataCategory: StateOrProvince
 		lineageTag: 3650ca9b-4f3b-4126-94c3-5fd31aa5f250
+		dataCategory: StateOrProvince
 		summarizeBy: none
 		sourceColumn: Departamento
 

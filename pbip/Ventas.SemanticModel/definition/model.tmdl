@@ -22,4 +22,5 @@ ref table LocalDateTable_e191e5ee-7a04-450f-b11d-5745b807b04f
 ref table Dim_Vendedores
 ref table Dim_Metas
 ref table Calendario
+ref table Medidas
 

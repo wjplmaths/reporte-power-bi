@@ -30,3 +30,4 @@ relationship 0cbdba07-d8b0-442e-bd02-b438512c77df
 relationship 177e7263-bf9e-4ce2-abc1-7adad2c83feb
 	fromColumn: Dim_Clientes.Departamento
 	toColumn: Dim_Territorios.Departamento
+

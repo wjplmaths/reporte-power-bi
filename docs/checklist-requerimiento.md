@@ -65,13 +65,13 @@ Para cada una de las cuatro consultas:
 - [ ] Verificar relaciones y modelado correctos entre todas las consultas, incluyendo `Calendario` — *7 relaciones definidas en TMDL (changelog 13), falta validar en Desktop*
 
 ## OE4 – DAX
-- [ ] Crear la consulta/tabla contenedora `Medidas`
-- [ ] `Total Facturado` = Cantidad * Precio Unitario (`SUMX`)
-- [ ] `Costo Total` = Cantidad * Costo Unitario (`SUMX`, `RELATED`)
-- [ ] `Utilidad Total` = Total Facturado − Costo Total
-- [ ] `% Cumplimiento metas` = Total Facturado / Meta (`DIVIDE`)
-- [ ] `Meta` = `SumMetas`
-- [ ] `Ventas del Año Anterior` (`SAMEPERIODLASTYEAR`)
+- [ ] Crear la consulta/tabla contenedora `Medidas` — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [ ] `Total Facturado` = Cantidad * Precio Unitario (`SUMX`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [ ] `Costo Total` = Cantidad * Costo Unitario (`SUMX`, `RELATED`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [ ] `Utilidad Total` = Total Facturado − Costo Total — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [ ] `% Cumplimiento metas` = Total Facturado / Meta (`DIVIDE`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [ ] `Meta` = `SumMetas` — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [ ] `Ventas del Año Anterior` (`SAMEPERIODLASTYEAR`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
 
 ## OE5 – Visualizaciones + Compartir informe
 ### Página de inicio
