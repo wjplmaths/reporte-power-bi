@@ -111,40 +111,8 @@
                                                                                                                                    "Value":  "2L"
                                                                                                                                }
                                                                                                                }
-                                                                                                  },
-                                                                               "showDynamicLabels":  {
-                                                                                                         "expr":  {
-                                                                                                                      "Literal":  {
-                                                                                                                                      "Value":  "true"
-                                                                                                                                  }
-                                                                                                                  }
-                                                                                                     }
+                                                                                                  }
                                                                            }
-                                                        },
-                                                        {
-                                                            "properties":  {
-                                                                               "dynamicLabelValue":  {
-                                                                                                         "expr":  {
-                                                                                                                      "Measure":  {
-                                                                                                                                      "Expression":  {
-                                                                                                                                                         "SourceRef":  {
-                                                                                                                                                                           "Entity":  "Medidas"
-                                                                                                                                                                       }
-                                                                                                                                                     },
-                                                                                                                                      "Property":  "Etiqueta % Avance"
-                                                                                                                                  }
-                                                                                                                  }
-                                                                                                     }
-                                                                           },
-                                                            "selector":  {
-                                                                             "data":  [
-                                                                                          {
-                                                                                              "dataViewWildcard":  {
-                                                                                                                       "matchingOption":  1
-                                                                                                                   }
-                                                                                          }
-                                                                                      ]
-                                                                         }
                                                         }
                                                     ],
                                    "target":  [
