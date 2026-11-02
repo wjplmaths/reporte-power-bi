@@ -79,11 +79,10 @@ Los nombres de columna son los **reales de origen**, con tildes y espacios; el m
 - La `Fecha de Envío` llega hasta enero de 2024, fuera del calendario 2020-2023. No debe usarse como relación activa con `Calendario`.
 
 ## Consultas de conexión (OE1, sin transformar)
-Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas declaradas en el modelo. El enlace de G.Drive es público: contiene el libro `Vendedores + Metas_Mensuales.xlsx` con 5 hojas (Vendedores, Metas 2020, Metas 2021, Metas 2022, Metas 2023). La hoja Vendedores trae `ID Vendedor`, `Nombre Completo` y `Primer Nombre`.
+Definidas en `pbip/Ventas.SemanticModel/definition/` (las columnas finales de cada tabla se describen más abajo). El enlace de G.Drive es público: contiene el libro `Vendedores + Metas_Mensuales.xlsx` con 5 hojas (Vendedores, Metas 2020, Metas 2021, Metas 2022, Metas 2023). La hoja Vendedores trae `ID Vendedor`, `Nombre Completo` y `Primer Nombre`.
 
 | Consulta | Origen | Función M | Carga |
 |---|---|---|---|
-| `fnMetasMensuales` | Función que convierte una hoja de metas (vendedor × 12 meses) en filas ID_Vendedor, Fecha, Meta | — | No |
 | `Fact_Ventas` | `data/raw/Fact_Ventas.xlsx` (ruta absoluta dentro de la consulta), hoja `Fact_Ventas` | `Excel.Workbook` | Sí |
 | `Dim_Clientes` | `Dim_Clientes.csv` (UTF-8, coma, 5 columnas) | `Csv.Document` | Sí |
 | `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
@@ -113,7 +112,7 @@ Aún sin validar en Desktop. Ahora las hojas de G.Drive se leen como CSV exporta
 **Dim_Vendedores** (antes `Tabla 1`, 2 columnas, 19 filas): `ID Vendedor` (entero), `Nombre Completo` (texto).
 
 **Dim_Metas** (anexo de `Metas_2020` a `Metas_2023`, 4 × 19 × 12 = 912 filas esperadas): `ID_Vendedor` (entero), `Fecha` (fecha, primer día de cada mes), `Meta` (decimal).
-- `Metas_2020` a `Metas_2023` no se cargan al modelo (son consultas intermedias). Todas pasan por la función `fnMetasMensuales`.
+- `Metas_2020` a `Metas_2023` no se cargan al modelo (son consultas intermedias). Cada una muestra sus 8 pasos nombrados: origen, filas superiores, encabezados, “Columna 1”, renombrar `ID_vendedor`, anular dinamización, renombrar a `Fecha` y `Meta`, y tipos (changelog 35; antes compartían la función `fnMetasMensuales`, ya eliminada).
 - Los encabezados de mes llegan como texto `d/m/aaaa` (`1/1/2020` a `1/12/2020`) y se convierten con `Date.FromText` usando formato `d/M/yyyy` y cultura `en-US`.
 - Las metas llegan como texto con formato de moneda: `251,625.83` en 2020 y `C$277,701.30` de 2021 a 2023. Se dejan solo dígitos y punto decimal.
 - El CSV trae las metas redondeadas a 2 decimales; el libro xlsx original trae más decimales.
@@ -132,7 +131,7 @@ Aún sin validar en Desktop. Tabla de fechas con 1 461 filas (2020-01-01 a 2023-
 | `Mes_Corto` | Texto | `ENE` | `UPPER(FORMAT(..., "MMM", "es-ES"))`, ordenada por `Mes_Num` |
 | `Mes_Largo` | Texto | `ENERO` | `UPPER(FORMAT(..., "MMMM", "es-ES"))`, ordenada por `Mes_Num` |
 
-Todavía no tiene relaciones con otras tablas (se crean en el siguiente paso de OE3).
+Se relaciona con `Fact_Ventas[Fecha de Venta]` y con `Dim_Metas[Fecha]` (ver `diagrama-relaciones.md`).
 ## Medidas (OE4, consulta `Medidas`)
 Aún sin validar en Desktop. `Medidas` es una consulta M en blanco (`#table(type table [Columna = Int64.Type], {})`) con una columna oculta; solo sirve de contenedor, como pide la guía. Las medidas están sin carpetas de visualización.
 
@@ -141,7 +140,8 @@ Aún sin validar en Desktop. `Medidas` es una consulta M en blanco (`#table(type
 | `Total Facturado` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])` | `C$#,0.00` |
 | `Costo Total` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * RELATED(Dim_Productos[Costo Unitario]))` | `C$#,0.00` |
 | `Utilidad Total` | `[Total Facturado] - [Costo Total]` | `C$#,0.00` |
-| `Meta` | `SUM(Dim_Metas[Meta])` | `C$#,0.00` |
-| `% Cumplimiento metas` | `DIVIDE([Total Facturado], [Meta])` | `0.0%` |
+| `SumMetas` (oculta) | `SUM(Dim_Metas[Meta])` | `C$#,0.00` |
+| `Meta` | `[SumMetas]` | `C$#,0.00` |
+| `% Cumplimiento metas` | `DIVIDE([Total Facturado], [SumMetas])` | `0.0%` |
 | `Ventas del Año Anterior` | `CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))` | `C$#,0.00` |
 | `Etiqueta % Avance` | `"Avance: " & FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")` | texto |

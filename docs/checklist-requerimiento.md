@@ -1,8 +1,8 @@
 # Checklist del requerimiento
 
-Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la auditoría final del 2026-11-01 (detalle, evidencias y citas en `docs/CHECKLIST_FINAL.md`).
+Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la reauditoría del 2026-11-01 tras las correcciones del changelog 35 (detalle, evidencias y citas en `docs/CHECKLIST_FINAL.md`).
 
-**Leyenda:** `[x]` ✅ cumplido con evidencia en archivo · `[ ]` 🟡 parcial · ❌ pendiente · 🔍 por validar en Desktop.
+**Leyenda:** `[x]` ✅ cumplido con evidencia en archivo · `[ ]` 🟡 parcial · ❌ pendiente · 🔍 por validar en Desktop · ➖ excluido por indicación del usuario.
 
 **Contexto:** informe de ventas nacionales 2020-2023 con control de cumplimiento de metas por vendedor, comportamiento por Año/Trimestre/Mes y comparativos con períodos anteriores.
 
@@ -24,30 +24,30 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la a
 - [x] ✅ OE2 · Consulta Dim_Productos · «Elimine ID de clientes “null”» (la guía dice “clientes”; se entiende ID Producto)
 - [x] ✅ OE2 · Dim_Productos · «Revise que el tipo de datos sea el correcto en cada columna»
 - [x] ✅ OE2 · Consulta Tabla 1 · «Cambie el nombre de la consulta por “Dim_Vendedores”»
-- [ ] 🟡 OE2 · Tabla 1 · «Elimine filas superiores y coloque los encabezados correctos»
+- [x] ✅ OE2 · Tabla 1 · «Elimine filas superiores y coloque los encabezados correctos»
 - [x] ✅ OE2 · Tabla 1 · «Elimine columnas que no usará en su modelo de datos»
 - [x] ✅ OE2 · Tabla 1 · «Revise que el tipo de datos sea el correcto en cada columna»
 - [x] ✅ OE2 · Consulta Tabla 2 · «Cambie el nombre de la consulta por “Metas_2020”»
-- [ ] 🟡 OE2 · Consulta Tabla 2 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2020)
-- [ ] 🟡 OE2 · Consulta Tabla 2 · «Elimine columnas que no usará (Columna 1)» (Metas_2020)
+- [x] ✅ OE2 · Consulta Tabla 2 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2020)
+- [x] ✅ OE2 · Consulta Tabla 2 · «Elimine columnas que no usará (Columna 1)» (Metas_2020)
 - [x] ✅ OE2 · Consulta Tabla 2 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2020)
 - [x] ✅ OE2 · Consulta Tabla 2 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2020)
 - [x] ✅ OE2 · Consulta Tabla 2 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2020)
 - [x] ✅ OE2 · Consulta Tabla 3 · «Cambie el nombre de la consulta por “Metas_2021”»
-- [ ] 🟡 OE2 · Consulta Tabla 3 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2021)
-- [ ] 🟡 OE2 · Consulta Tabla 3 · «Elimine columnas que no usará (Columna 1)» (Metas_2021)
+- [x] ✅ OE2 · Consulta Tabla 3 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2021)
+- [x] ✅ OE2 · Consulta Tabla 3 · «Elimine columnas que no usará (Columna 1)» (Metas_2021)
 - [x] ✅ OE2 · Consulta Tabla 3 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2021)
 - [x] ✅ OE2 · Consulta Tabla 3 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2021)
 - [x] ✅ OE2 · Consulta Tabla 3 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2021)
 - [x] ✅ OE2 · Consulta Tabla 4 · «Cambie el nombre de la consulta por “Metas_2022”»
-- [ ] 🟡 OE2 · Consulta Tabla 4 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2022)
-- [ ] 🟡 OE2 · Consulta Tabla 4 · «Elimine columnas que no usará (Columna 1)» (Metas_2022)
+- [x] ✅ OE2 · Consulta Tabla 4 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2022)
+- [x] ✅ OE2 · Consulta Tabla 4 · «Elimine columnas que no usará (Columna 1)» (Metas_2022)
 - [x] ✅ OE2 · Consulta Tabla 4 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2022)
 - [x] ✅ OE2 · Consulta Tabla 4 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2022)
 - [x] ✅ OE2 · Consulta Tabla 4 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2022)
 - [x] ✅ OE2 · Consulta Tabla 5 · «Cambie el nombre de la consulta por “Metas_2023”»
-- [ ] 🟡 OE2 · Consulta Tabla 5 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2023)
-- [ ] 🟡 OE2 · Consulta Tabla 5 · «Elimine columnas que no usará (Columna 1)» (Metas_2023)
+- [x] ✅ OE2 · Consulta Tabla 5 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2023)
+- [x] ✅ OE2 · Consulta Tabla 5 · «Elimine columnas que no usará (Columna 1)» (Metas_2023)
 - [x] ✅ OE2 · Consulta Tabla 5 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2023)
 - [x] ✅ OE2 · Consulta Tabla 5 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2023)
 - [x] ✅ OE2 · Consulta Tabla 5 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2023)
@@ -86,8 +86,8 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la a
 - [x] ✅ OE4 · «a. Total Facturado = Cantidad * Precio Unitario (SumX)»
 - [x] ✅ OE4 · «b. Costo Total = Cantidad * Costo Unitario (SumX, Related)»
 - [x] ✅ OE4 · «b. Utilidad Total = Total Facturado – Costo total»
-- [ ] 🟡 OE4 · «c. % Cumplimiento metas = Total Facturado / SumMetas (Divide)»
-- [ ] 🟡 OE4 · «d. Meta = SumMetas»
+- [x] ✅ OE4 · «c. % Cumplimiento metas = Total Facturado / SumMetas (Divide)»
+- [x] ✅ OE4 · «d. Meta = SumMetas»
 - [x] ✅ OE4 · «Utilice las funciones de inteligencia de tiempo SAMEPERIODLASTYEAR · a. Ventas del Año Anterior»
 
 ## OE5 – Visualizaciones + Compartir informe
@@ -105,7 +105,7 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la a
 - [x] ✅ OE5 · Tabla · «Entre 60% al 79% Amarillo»
 - [x] ✅ OE5 · Tabla · «Mayor al 80% Verde»
 - [x] ✅ OE5 · Uso de Medidor · «Utilice la visualización “Medidor” para representar el avance total, relacionando el Total Facturado vs Meta»
-- [ ] 🟡 OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance»
+- [ ] 🔍 OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance»
 - [x] ✅ OE5 · Uso de Barras Agrupadas · «Utilice la visualización “Gráfico de barras agrupadas” para representar el Top 5 de clientes por facturación»
 - [x] ✅ OE5 · Uso de Segmentaciones · «Utilice… “Chiclet Slicer” de AppSource… por Año»
 - [x] ✅ OE5 · Segmentaciones · «…y Mes Corto»
@@ -117,19 +117,19 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la a
 - [x] ✅ OE5 · Columnas + Líneas · «** En el caso de la línea, represente el % de cumplimiento»
 - [x] ✅ OE5 · Columnas + Líneas · «** El gráfico debe contener una jerarquía de Año-Trimestre-Mes en su eje X»
 - [x] ✅ OE5 · Uso de Segmentaciones (Tendencia) · «Reutilice las segmentaciones de la página anterior»
-- [ ] ❌ OE5 · «Publique y comparta el enlace de su proyecto en el grupo de trabajo»
+- [ ] ➖ OE5 · «Publique y comparta el enlace de su proyecto en el grupo de trabajo»
 - [ ] ❌ OE5 · «El archivo Pbix deberá subirse a la plataforma Classroom»
 
 ## Resumen
 
-| Objetivo | ✅ | 🟡 | 🔍 | ❌ | % cumplido |
-|---|---:|---:|---:|---:|---:|
-| OE1 | 5 | 0 | 0 | 0 | 100 % |
-| OE2 | 35 | 9 | 5 | 0 | 71 % |
-| OE3 | 14 | 0 | 0 | 0 | 100 % |
-| OE4 | 6 | 2 | 0 | 0 | 75 % |
-| OE5 | 22 | 1 | 2 | 3 | 79 % |
-| **Total** | 82 | 12 | 7 | 3 | **79 %** |
+| Objetivo | Evaluados | ✅ | 🟡 | 🔍 | ❌ | % cumplido |
+|---|---:|---:|---:|---:|---:|---:|
+| OE1 | 5 | 5 | 0 | 0 | 0 | 100 % |
+| OE2 | 49 | 44 | 0 | 5 | 0 | 90 % |
+| OE3 | 14 | 14 | 0 | 0 | 0 | 100 % |
+| OE4 | 8 | 8 | 0 | 0 | 0 | 100 % |
+| OE5 | 27 | 22 | 0 | 3 | 2 | 81 % |
+| **Total** | 103 | 93 | 0 | 8 | 2 | **90 %** |
 
 ## Notas
 - El PDF define “mayor al 80%” en verde y “60% a 79%” en amarillo; la imagen del cuadro de íconos fija los límites en 0.6 y 0.8 (>=0.8 verde). El modelo usa esos límites.

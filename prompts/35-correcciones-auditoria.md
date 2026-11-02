@@ -1,0 +1,3 @@
+Ajusta todo lo que no necesita revisión manual sin cambiar el diseño y la estructura del reporte. No incluyas lo de la publicacion y compartir el enlace y genera una nueva calificación. Genera nuevamente la tabla de resultados tras resolucion de los pendientes.
+
+(Contexto: captura de la tabla de resultados de la auditoría del changelog 34: OE1 100 %, OE2 71 %, OE3 100 %, OE4 75 %, OE5 79 %, total 79 %.)
