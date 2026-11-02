@@ -31,3 +31,4 @@
 - 2026-11-01 · [27 – Mapa: León de Nicaragua en lugar de León (España)](changelog/27-mapa-leon-nicaragua.md) · OE5
 - 2026-11-01 · [28 – Navegación entre páginas](changelog/28-navegacion.md) · OE5
 - 2026-11-01 · [29 – Tema personalizado del informe](changelog/29-tema.md) · OE5
+- 2026-11-01 · [30 – Variantes del tema (claro, oscuro, corporativo)](changelog/30-variantes-tema.md) · OE5
