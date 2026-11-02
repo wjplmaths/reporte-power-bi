@@ -16,13 +16,19 @@ table Medidas
 		formatString: "C$"#,0.00
 		lineageTag: a5d45405-452a-4d89-aa89-0f81beb441ea
 
-	/// Meta de ventas: suma de Dim_Metas[Meta] en el contexto de filtro actual (vendedor, mes, anio).
-	measure Meta = SUM(Dim_Metas[Meta])
+	/// Suma de Dim_Metas[Meta] en el contexto de filtro actual (vendedor, mes, anio). Medida auxiliar oculta que usan Meta y % Cumplimiento metas.
+	measure SumMetas = SUM(Dim_Metas[Meta])
+		isHidden
+		formatString: "C$"#,0.00
+		lineageTag: 2c6f1a4e-9b3d-4f0a-8e57-6d1b7a90c4e2
+
+	/// Meta de ventas (= SumMetas) en el contexto de filtro actual (vendedor, mes, anio).
+	measure Meta = [SumMetas]
 		formatString: "C$"#,0.00
 		lineageTag: 83ecb3d5-1658-4677-bb2c-d6df6d5c6c88
 
-	/// Total Facturado dividido entre la Meta (DIVIDE). Devuelve en blanco si no hay meta.
-	measure '% Cumplimiento metas' = DIVIDE([Total Facturado], [Meta])
+	/// Total Facturado dividido entre SumMetas (DIVIDE). Devuelve en blanco si no hay meta.
+	measure '% Cumplimiento metas' = DIVIDE([Total Facturado], [SumMetas])
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 585c0612-bbda-42a4-9f7b-96d48b27377a
 

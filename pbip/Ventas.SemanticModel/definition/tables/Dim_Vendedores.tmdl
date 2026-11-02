@@ -25,13 +25,16 @@ table Dim_Vendedores
 				let
 				    // 1. Origen: hoja "Vendedores" del libro de G.Drive (publico), exportada como CSV por Web
 				    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=1022144234"), [Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-				    // 2. Filas superiores: el CSV no trae filas basura, la primera fila ya es el encabezado
-				    EncabezadosPromovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    // 3. Quitar "Primer Nombre": repite "Nombre Completo" y trae apodos inconsistentes (Glenn/Glen, Leonor/Leo)
+				    // 2. Eliminar filas superiores: todo lo que hay antes de la fila de encabezados ("ID Vendedor"); en el CSV actual son 0 filas
+				    PosEncabezado = List.PositionOf(List.Transform(Table.ToRows(Origen), each Text.Trim(Text.From(_{0}))), "ID Vendedor"),
+				    FilasSuperioresEliminadas = Table.Skip(Origen, List.Max({PosEncabezado, 0})),
+				    // 3. Promover la fila de encabezados
+				    EncabezadosPromovidos = Table.PromoteHeaders(FilasSuperioresEliminadas, [PromoteAllScalars=true]),
+				    // 4. Quitar "Primer Nombre": repite "Nombre Completo" y trae apodos inconsistentes (Glenn/Glen, Leonor/Leo)
 				    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, {"ID Vendedor", "Nombre Completo"}),
-				    // 4. Quitar vendedores sin ID
+				    // 5. Quitar vendedores sin ID
 				    SinIdNulo = Table.SelectRows(ColumnasUtiles, each [ID Vendedor] <> null and [ID Vendedor] <> ""),
-				    // 5. Tipos
+				    // 6. Tipos
 				    TiposCorrectos = Table.TransformColumnTypes(SinIdNulo, {{"ID Vendedor", Int64.Type}, {"Nombre Completo", type text}})
 				in
 				    TiposCorrectos

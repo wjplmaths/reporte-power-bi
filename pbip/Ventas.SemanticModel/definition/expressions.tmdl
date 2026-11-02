@@ -1,71 +1,115 @@
-/// Convierte la tabla CSV de metas de un anio (vendedor x 12 meses) en filas ID_Vendedor, Fecha, Meta.
-expression fnMetasMensuales =
-		(Origen as table) as table =>
+expression Metas_2020 =
 		let
-		    // 1. Promover encabezados: la primera fila del CSV trae "ID_vendedor" y los meses como texto d/m/aaaa (1/1/2020, 1/2/2020...)
-		    EncabezadosPromovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-		    // 2. Nombre estandar de la columna de vendedor
-		    IdRenombrado = Table.RenameColumns(EncabezadosPromovidos, {{"ID_vendedor", "ID_Vendedor"}}),
-		    // 3. Anular dinamizacion de todas las columnas excepto ID_Vendedor: una fila por vendedor y mes
-		    MesesEnFilas = Table.UnpivotOtherColumns(IdRenombrado, {"ID_Vendedor"}, "Fecha", "Meta"),
-		    // 4. Fecha: el encabezado es texto d/M/aaaa; se convierte con formato y cultura fijos (no depende de la region del equipo)
-		    // 5. Meta: llega como texto con formato de moneda ("C$277,701.30" o "251,625.83"); se dejan solo digitos y punto decimal
-		    TiposCorrectos = Table.TransformColumns(MesesEnFilas, {
+		    // 1. Origen: hoja "Metas 2020" del libro de G.Drive (publico), exportada como CSV por Web
+		    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=853825651"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+		    // 2. Eliminar filas superiores: todo lo que hay antes de la fila de encabezados ("ID_vendedor"); en el CSV actual son 0 filas
+		    PosEncabezado = List.PositionOf(List.Transform(Table.ToRows(Origen), each Text.Trim(Text.From(_{0}))), "ID_vendedor"),
+		    FilasSuperioresEliminadas = Table.Skip(Origen, List.Max({PosEncabezado, 0})),
+		    // 3. Promover la fila de encabezados (ID_vendedor y los meses como texto d/m/aaaa: 1/1/2020, 1/2/2020...)
+		    EncabezadosPromovidos = Table.PromoteHeaders(FilasSuperioresEliminadas, [PromoteAllScalars=true]),
+		    // 4. Eliminar "Columna 1": cualquier columna sobrante sin encabezado (en el CSV actual no hay ninguna)
+		    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, List.Select(Table.ColumnNames(EncabezadosPromovidos), each not Text.StartsWith(_, "Column"))),
+		    // 5. Nombre estandar de la columna de vendedor
+		    IdRenombrado = Table.RenameColumns(ColumnasUtiles, {{"ID_vendedor", "ID_Vendedor"}}),
+		    // 6. Anular dinamizacion de todas las columnas a partir de ID_Vendedor: una fila por vendedor y mes
+		    MesesEnFilas = Table.UnpivotOtherColumns(IdRenombrado, {"ID_Vendedor"}, "Atributo", "Valor"),
+		    // 7. Renombrar las columnas por "Fecha" y "Meta"
+		    ColumnasRenombradas = Table.RenameColumns(MesesEnFilas, {{"Atributo", "Fecha"}, {"Valor", "Meta"}}),
+		    // 8. Tipos: Fecha es texto d/M/aaaa y se convierte con formato y cultura fijos; Meta llega con formato de moneda ("C$277,701.30" o "251,625.83") y se dejan solo digitos y punto decimal
+		    TiposCorrectos = Table.TransformColumns(ColumnasRenombradas, {
 		        {"ID_Vendedor", each Number.FromText(Text.Trim(_), "en-US"), Int64.Type},
 		        {"Fecha", each Date.FromText(Text.Trim(_), [Format="d/M/yyyy", Culture="en-US"]), type date},
 		        {"Meta", each Number.FromText(Text.Select(Text.From(_), {"0".."9", "."}), "en-US"), type number}
 		    })
 		in
 		    TiposCorrectos
-	lineageTag: 4ed913b6-101d-4b79-9dad-17f560d6c99d
-
-	annotation PBI_ResultType = Function
-
-expression Metas_2020 =
-		let
-		    // Origen: hoja "Metas 2020" del libro de G.Drive (publico), exportada como CSV por Web
-		    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=853825651"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-		    // Los pasos de transformacion estan en fnMetasMensuales (son los mismos para los 4 anios)
-		    Metas = fnMetasMensuales(Origen)
-		in
-		    Metas
 	lineageTag: 9ba78bc4-8b32-4585-bedf-ec14b565ddc6
 
 	annotation PBI_ResultType = Table
 
 expression Metas_2021 =
 		let
-		    // Origen: hoja "Metas 2021" del libro de G.Drive (publico), exportada como CSV por Web
+		    // 1. Origen: hoja "Metas 2021" del libro de G.Drive (publico), exportada como CSV por Web
 		    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=660711774"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-		    // Los pasos de transformacion estan en fnMetasMensuales (son los mismos para los 4 anios)
-		    Metas = fnMetasMensuales(Origen)
+		    // 2. Eliminar filas superiores: todo lo que hay antes de la fila de encabezados ("ID_vendedor"); en el CSV actual son 0 filas
+		    PosEncabezado = List.PositionOf(List.Transform(Table.ToRows(Origen), each Text.Trim(Text.From(_{0}))), "ID_vendedor"),
+		    FilasSuperioresEliminadas = Table.Skip(Origen, List.Max({PosEncabezado, 0})),
+		    // 3. Promover la fila de encabezados (ID_vendedor y los meses como texto d/m/aaaa: 1/1/2021, 1/2/2021...)
+		    EncabezadosPromovidos = Table.PromoteHeaders(FilasSuperioresEliminadas, [PromoteAllScalars=true]),
+		    // 4. Eliminar "Columna 1": cualquier columna sobrante sin encabezado (en el CSV actual no hay ninguna)
+		    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, List.Select(Table.ColumnNames(EncabezadosPromovidos), each not Text.StartsWith(_, "Column"))),
+		    // 5. Nombre estandar de la columna de vendedor
+		    IdRenombrado = Table.RenameColumns(ColumnasUtiles, {{"ID_vendedor", "ID_Vendedor"}}),
+		    // 6. Anular dinamizacion de todas las columnas a partir de ID_Vendedor: una fila por vendedor y mes
+		    MesesEnFilas = Table.UnpivotOtherColumns(IdRenombrado, {"ID_Vendedor"}, "Atributo", "Valor"),
+		    // 7. Renombrar las columnas por "Fecha" y "Meta"
+		    ColumnasRenombradas = Table.RenameColumns(MesesEnFilas, {{"Atributo", "Fecha"}, {"Valor", "Meta"}}),
+		    // 8. Tipos: Fecha es texto d/M/aaaa y se convierte con formato y cultura fijos; Meta llega con formato de moneda ("C$277,701.30" o "251,625.83") y se dejan solo digitos y punto decimal
+		    TiposCorrectos = Table.TransformColumns(ColumnasRenombradas, {
+		        {"ID_Vendedor", each Number.FromText(Text.Trim(_), "en-US"), Int64.Type},
+		        {"Fecha", each Date.FromText(Text.Trim(_), [Format="d/M/yyyy", Culture="en-US"]), type date},
+		        {"Meta", each Number.FromText(Text.Select(Text.From(_), {"0".."9", "."}), "en-US"), type number}
+		    })
 		in
-		    Metas
+		    TiposCorrectos
 	lineageTag: 96bbad74-ee06-4a15-8307-7872e50b689b
 
 	annotation PBI_ResultType = Table
 
 expression Metas_2022 =
 		let
-		    // Origen: hoja "Metas 2022" del libro de G.Drive (publico), exportada como CSV por Web
+		    // 1. Origen: hoja "Metas 2022" del libro de G.Drive (publico), exportada como CSV por Web
 		    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=852310414"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-		    // Los pasos de transformacion estan en fnMetasMensuales (son los mismos para los 4 anios)
-		    Metas = fnMetasMensuales(Origen)
+		    // 2. Eliminar filas superiores: todo lo que hay antes de la fila de encabezados ("ID_vendedor"); en el CSV actual son 0 filas
+		    PosEncabezado = List.PositionOf(List.Transform(Table.ToRows(Origen), each Text.Trim(Text.From(_{0}))), "ID_vendedor"),
+		    FilasSuperioresEliminadas = Table.Skip(Origen, List.Max({PosEncabezado, 0})),
+		    // 3. Promover la fila de encabezados (ID_vendedor y los meses como texto d/m/aaaa: 1/1/2022, 1/2/2022...)
+		    EncabezadosPromovidos = Table.PromoteHeaders(FilasSuperioresEliminadas, [PromoteAllScalars=true]),
+		    // 4. Eliminar "Columna 1": cualquier columna sobrante sin encabezado (en el CSV actual no hay ninguna)
+		    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, List.Select(Table.ColumnNames(EncabezadosPromovidos), each not Text.StartsWith(_, "Column"))),
+		    // 5. Nombre estandar de la columna de vendedor
+		    IdRenombrado = Table.RenameColumns(ColumnasUtiles, {{"ID_vendedor", "ID_Vendedor"}}),
+		    // 6. Anular dinamizacion de todas las columnas a partir de ID_Vendedor: una fila por vendedor y mes
+		    MesesEnFilas = Table.UnpivotOtherColumns(IdRenombrado, {"ID_Vendedor"}, "Atributo", "Valor"),
+		    // 7. Renombrar las columnas por "Fecha" y "Meta"
+		    ColumnasRenombradas = Table.RenameColumns(MesesEnFilas, {{"Atributo", "Fecha"}, {"Valor", "Meta"}}),
+		    // 8. Tipos: Fecha es texto d/M/aaaa y se convierte con formato y cultura fijos; Meta llega con formato de moneda ("C$277,701.30" o "251,625.83") y se dejan solo digitos y punto decimal
+		    TiposCorrectos = Table.TransformColumns(ColumnasRenombradas, {
+		        {"ID_Vendedor", each Number.FromText(Text.Trim(_), "en-US"), Int64.Type},
+		        {"Fecha", each Date.FromText(Text.Trim(_), [Format="d/M/yyyy", Culture="en-US"]), type date},
+		        {"Meta", each Number.FromText(Text.Select(Text.From(_), {"0".."9", "."}), "en-US"), type number}
+		    })
 		in
-		    Metas
+		    TiposCorrectos
 	lineageTag: bcbd53e3-10cd-4026-be64-4e9fa04b9c00
 
 	annotation PBI_ResultType = Table
 
 expression Metas_2023 =
 		let
-		    // Origen: hoja "Metas 2023" del libro de G.Drive (publico), exportada como CSV por Web
+		    // 1. Origen: hoja "Metas 2023" del libro de G.Drive (publico), exportada como CSV por Web
 		    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=1769925918"), [Delimiter=",", Columns=13, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
-		    // Los pasos de transformacion estan en fnMetasMensuales (son los mismos para los 4 anios)
-		    Metas = fnMetasMensuales(Origen)
+		    // 2. Eliminar filas superiores: todo lo que hay antes de la fila de encabezados ("ID_vendedor"); en el CSV actual son 0 filas
+		    PosEncabezado = List.PositionOf(List.Transform(Table.ToRows(Origen), each Text.Trim(Text.From(_{0}))), "ID_vendedor"),
+		    FilasSuperioresEliminadas = Table.Skip(Origen, List.Max({PosEncabezado, 0})),
+		    // 3. Promover la fila de encabezados (ID_vendedor y los meses como texto d/m/aaaa: 1/1/2023, 1/2/2023...)
+		    EncabezadosPromovidos = Table.PromoteHeaders(FilasSuperioresEliminadas, [PromoteAllScalars=true]),
+		    // 4. Eliminar "Columna 1": cualquier columna sobrante sin encabezado (en el CSV actual no hay ninguna)
+		    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, List.Select(Table.ColumnNames(EncabezadosPromovidos), each not Text.StartsWith(_, "Column"))),
+		    // 5. Nombre estandar de la columna de vendedor
+		    IdRenombrado = Table.RenameColumns(ColumnasUtiles, {{"ID_vendedor", "ID_Vendedor"}}),
+		    // 6. Anular dinamizacion de todas las columnas a partir de ID_Vendedor: una fila por vendedor y mes
+		    MesesEnFilas = Table.UnpivotOtherColumns(IdRenombrado, {"ID_Vendedor"}, "Atributo", "Valor"),
+		    // 7. Renombrar las columnas por "Fecha" y "Meta"
+		    ColumnasRenombradas = Table.RenameColumns(MesesEnFilas, {{"Atributo", "Fecha"}, {"Valor", "Meta"}}),
+		    // 8. Tipos: Fecha es texto d/M/aaaa y se convierte con formato y cultura fijos; Meta llega con formato de moneda ("C$277,701.30" o "251,625.83") y se dejan solo digitos y punto decimal
+		    TiposCorrectos = Table.TransformColumns(ColumnasRenombradas, {
+		        {"ID_Vendedor", each Number.FromText(Text.Trim(_), "en-US"), Int64.Type},
+		        {"Fecha", each Date.FromText(Text.Trim(_), [Format="d/M/yyyy", Culture="en-US"]), type date},
+		        {"Meta", each Number.FromText(Text.Select(Text.From(_), {"0".."9", "."}), "en-US"), type number}
+		    })
 		in
-		    Metas
+		    TiposCorrectos
 	lineageTag: 8ede7031-2db9-492b-ac9d-a151eedce041
 
 	annotation PBI_ResultType = Table
-

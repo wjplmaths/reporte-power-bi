@@ -14,17 +14,7 @@
     "objects": {
       "general": [
         {
-          "properties": {
-            "imageUrl": {
-              "expr": {
-                "ResourcePackageItem": {
-                  "PackageName": "RegisteredResources",
-                  "PackageType": "RegisteredResources",
-                  "ItemName": "logo.jpeg"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "image": [
