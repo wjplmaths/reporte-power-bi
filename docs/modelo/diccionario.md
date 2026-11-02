@@ -133,8 +133,8 @@ Aún sin validar en Desktop. Tabla de fechas con 1 461 filas (2020-01-01 a 2023-
 | `Mes_Largo` | Texto | `ENERO` | `UPPER(FORMAT(..., "MMMM", "es-ES"))`, ordenada por `Mes_Num` |
 
 Todavía no tiene relaciones con otras tablas (se crean en el siguiente paso de OE3).
-## Medidas (OE4, tabla `Medidas`)
-Aún sin validar en Desktop. `Medidas` es una tabla calculada (`ROW("Columna", 1)`) con una columna oculta; solo sirve de contenedor.
+## Medidas (OE4, consulta `Medidas`)
+Aún sin validar en Desktop. `Medidas` es una consulta M en blanco (`#table(type table [Columna = Int64.Type], {})`) con una columna oculta; solo sirve de contenedor, como pide la guía.
 
 | Medida | DAX | Formato | Carpeta |
 |---|---|---|---|

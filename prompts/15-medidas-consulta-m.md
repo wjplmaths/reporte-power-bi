@@ -1,0 +1,1 @@
+Captura del panel de campos con la tabla Medidas y sus carpetas (Etiquetas, Metas, Tiempo, Ventas). Pregunta del usuario: 'como hiciste esto: Crear una consulta como contenedor de medidas o Cree una nueva consulta llamada Medidas para agrupar las medidas a crear.' Respuesta del usuario a la propuesta: cambiar a consulta M.

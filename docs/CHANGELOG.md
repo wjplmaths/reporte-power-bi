@@ -16,3 +16,4 @@
 - 2026-11-01 · [12 – Formato de fecha de Calendario según la imagen de la guía](changelog/12-calendario-formato-fecha.md) · OE3
 - 2026-11-01 · [13 – Relaciones del modelo](changelog/13-relaciones.md) · OE3
 - 2026-11-01 · [14 – Tabla Medidas y medidas DAX](changelog/14-medidas.md) · OE4
+- 2026-11-01 · [15 – Medidas como consulta de Power Query](changelog/15-medidas-consulta-m.md) · OE4

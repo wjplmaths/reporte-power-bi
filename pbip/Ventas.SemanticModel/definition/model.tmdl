@@ -9,7 +9,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Fact_Ventas","Dim_Clientes","Dim_Productos","Dim_Territorios","Dim_Vendedores","fnMetasMensuales","Metas_2020","Metas_2021","Metas_2022","Metas_2023","Dim_Metas"]
+annotation PBI_QueryOrder = ["Fact_Ventas","Dim_Clientes","Dim_Productos","Dim_Territorios","Dim_Vendedores","fnMetasMensuales","Metas_2020","Metas_2021","Metas_2022","Metas_2023","Dim_Metas","Medidas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
