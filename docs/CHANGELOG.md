@@ -26,3 +26,4 @@
 - 2026-11-01 · [22 – Íconos nativos de formato condicional en la tabla](changelog/22-iconos-cumplimiento.md) · OE5
 - 2026-11-01 · [23 – Página Análisis de Tendencia](changelog/23-analisis-tendencia.md) · OE5
 - 2026-11-01 · [24 – Corrección de syncGroup (error al abrir el informe)](changelog/24-corregir-syncgroup.md) · OE5
+- 2026-11-01 · [25 – Corrección del KPI y del eje del gráfico combinado](changelog/25-corregir-kpi-y-eje.md) · OE5

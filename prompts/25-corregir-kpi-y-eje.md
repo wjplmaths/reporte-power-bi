@@ -1,0 +1,1 @@
+Capturas: pagina Analisis de Tendencia en Desktop (KPI vacio, grafico combinado solo por Año) y apartado de la guia 'Pagina de Analisis de Tendencia'. Mensaje del usuario: 'No se visualiza nada en Total facturado vs año anterior, ni aplicando los segmentadores de años. A su vez, verifica que todo lo que aparece en la otra imagen se cumpla completamente'.

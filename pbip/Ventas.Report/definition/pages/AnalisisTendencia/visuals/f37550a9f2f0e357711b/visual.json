@@ -1,67 +1,99 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "f37550a9f2f0e357711b",
-    "position":  {
-                     "x":  330,
-                     "y":  96,
-                     "z":  3,
-                     "height":  150,
-                     "width":  300,
-                     "tabOrder":  3
-                 },
-    "visual":  {
-                   "visualType":  "cardVisual",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Data":  {
-                                                                 "projections":  [
-                                                                                     {
-                                                                                         "field":  {
-                                                                                                       "Measure":  {
-                                                                                                                       "Expression":  {
-                                                                                                                                          "SourceRef":  {
-                                                                                                                                                            "Entity":  "Medidas"
-                                                                                                                                                        }
-                                                                                                                                      },
-                                                                                                                       "Property":  "Ventas del Año Anterior"
-                                                                                                                   }
-                                                                                                   },
-                                                                                         "queryRef":  "Medidas.Ventas del Año Anterior",
-                                                                                         "nativeQueryRef":  "Ventas del Año Anterior"
-                                                                                     }
-                                                                                 ]
-                                                             }
-                                                }
-                             },
-                   "objects":  {
-                                   "value":  [
-                                                 {
-                                                     "properties":  {
-                                                                        "fontSize":  {
-                                                                                         "expr":  {
-                                                                                                      "Literal":  {
-                                                                                                                      "Value":  "26D"
-                                                                                                                  }
-                                                                                                  }
-                                                                                     },
-                                                                        "labelDisplayUnits":  {
-                                                                                                  "expr":  {
-                                                                                                               "Literal":  {
-                                                                                                                               "Value":  "1000000D"
-                                                                                                                           }
-                                                                                                           }
-                                                                                              },
-                                                                        "labelPrecision":  {
-                                                                                               "expr":  {
-                                                                                                            "Literal":  {
-                                                                                                                            "Value":  "2L"
-                                                                                                                        }
-                                                                                                        }
-                                                                                           }
-                                                                    }
-                                                 }
-                                             ]
-                               },
-                   "drillFilterOtherVisuals":  true
-               }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f37550a9f2f0e357711b",
+  "position": {
+    "x": 330,
+    "y": 96,
+    "z": 3,
+    "height": 150,
+    "width": 300,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Ventas del Año Anterior"
+                }
+              },
+              "queryRef": "Medidas.Ventas del Año Anterior",
+              "nativeQueryRef": "Ventas del Año Anterior"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "8a9a0e8f4cc641007786",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Ventas del Año Anterior"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

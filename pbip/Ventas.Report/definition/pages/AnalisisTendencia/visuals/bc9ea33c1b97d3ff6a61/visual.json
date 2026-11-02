@@ -42,7 +42,8 @@
                                                                                                                       }
                                                                                                        },
                                                                                              "queryRef":  "Calendario.Trimestre",
-                                                                                             "nativeQueryRef":  "Trimestre"
+                                                                                             "nativeQueryRef":  "Trimestre",
+                                                                                             "active":  true
                                                                                          },
                                                                                          {
                                                                                              "field":  {
@@ -56,7 +57,8 @@
                                                                                                                       }
                                                                                                        },
                                                                                              "queryRef":  "Calendario.Mes_Corto",
-                                                                                             "nativeQueryRef":  "Mes_Corto"
+                                                                                             "nativeQueryRef":  "Mes_Corto",
+                                                                                             "active":  true
                                                                                          }
                                                                                      ]
                                                                  },
@@ -135,5 +137,93 @@
                                                             ]
                                               },
                    "drillFilterOtherVisuals":  true
-               }
+               },
+    "filterConfig":  {
+                         "filters":  [
+                                         {
+                                             "name":  "77e668950a2baee0664a",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "Calendario"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "Año"
+                                                                      }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "7944e9079e49d9341910",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "Calendario"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "Trimestre"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "27c385a00d19a20238d6",
+                                             "field":  {
+                                                           "Column":  {
+                                                                          "Expression":  {
+                                                                                             "SourceRef":  {
+                                                                                                               "Entity":  "Calendario"
+                                                                                                           }
+                                                                                         },
+                                                                          "Property":  "Mes_Corto"
+                                                                      }
+                                                       },
+                                             "type":  "Categorical"
+                                         },
+                                         {
+                                             "name":  "70669d1eccb29d62b531",
+                                             "field":  {
+                                                           "Measure":  {
+                                                                           "Expression":  {
+                                                                                              "SourceRef":  {
+                                                                                                                "Entity":  "Medidas"
+                                                                                                            }
+                                                                                          },
+                                                                           "Property":  "Meta"
+                                                                       }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "957114f3a244aa07a62a",
+                                             "field":  {
+                                                           "Measure":  {
+                                                                           "Expression":  {
+                                                                                              "SourceRef":  {
+                                                                                                                "Entity":  "Medidas"
+                                                                                                            }
+                                                                                          },
+                                                                           "Property":  "Total Facturado"
+                                                                       }
+                                                       },
+                                             "type":  "Advanced"
+                                         },
+                                         {
+                                             "name":  "f11f00082e60812aea61",
+                                             "field":  {
+                                                           "Measure":  {
+                                                                           "Expression":  {
+                                                                                              "SourceRef":  {
+                                                                                                                "Entity":  "Medidas"
+                                                                                                            }
+                                                                                          },
+                                                                           "Property":  "% Cumplimiento metas"
+                                                                       }
+                                                       },
+                                             "type":  "Advanced"
+                                         }
+                                     ]
+                     }
 }
