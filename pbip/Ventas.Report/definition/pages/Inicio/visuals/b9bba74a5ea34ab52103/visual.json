@@ -25,7 +25,7 @@
                 "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'icono-facturacion.jpeg'"
+                      "Value": "'logo-ventas.svg'"
                     }
                   }
                 },
@@ -34,7 +34,7 @@
                     "ResourcePackageItem": {
                       "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "ItemName": "icono-facturacion9358770855875156.jpeg"
+                      "ItemName": "logo-ventas46965704864128055.svg"
                     }
                   }
                 },

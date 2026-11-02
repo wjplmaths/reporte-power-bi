@@ -16,12 +16,6 @@ table Medidas
 		formatString: "C$"#,0.00
 		lineageTag: a5d45405-452a-4d89-aa89-0f81beb441ea
 
-	/// Suma de Dim_Metas[Meta] en el contexto de filtro actual (vendedor, mes, anio). Medida auxiliar oculta que usan Meta y % Cumplimiento metas.
-	measure SumMetas = SUM(Dim_Metas[Meta])
-		isHidden
-		formatString: "C$"#,0.00
-		lineageTag: 2c6f1a4e-9b3d-4f0a-8e57-6d1b7a90c4e2
-
 	/// Meta de ventas (= SumMetas) en el contexto de filtro actual (vendedor, mes, anio).
 	measure Meta = [SumMetas]
 		formatString: "C$"#,0.00
@@ -40,6 +34,12 @@ table Medidas
 	/// Texto con el porcentaje de avance (Total Facturado frente a Meta) para la etiqueta del medidor. Muestra 0.0% si no hay meta.
 	measure 'Etiqueta % Avance' = "Avance: " & FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")
 		lineageTag: 48b936c3-b0d5-4935-b565-5ad33426b99e
+
+	/// Suma de Dim_Metas[Meta] en el contexto de filtro actual (vendedor, mes, anio). Medida auxiliar oculta que usan Meta y % Cumplimiento metas.
+	measure SumMetas = SUM(Dim_Metas[Meta])
+		formatString: "C$"#,0.00
+		isHidden
+		lineageTag: 2c6f1a4e-9b3d-4f0a-8e57-6d1b7a90c4e2
 
 	column Columna
 		dataType: int64

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Costo total">
+  <path d="M8 32 32 8h22a2 2 0 0 1 2 2v22L32 56a4 4 0 0 1-5.700 0L8 37.700a4 4 0 0 1 0-5.700z" fill="#E69F00" stroke="#1F3864" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="44" cy="20" r="4.500" fill="#FFFFFF" stroke="#1F3864" stroke-width="3"/>
+  <g fill="none" stroke="#1F3864" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 36l8-8"/>
+    <path d="M26 42l8-8"/>
+  </g>
+  <g fill="none" stroke="#D55E00" stroke-width="4.500" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M50 44v12"/>
+    <path d="M44 52l6 6 6-6"/>
+  </g>
+</svg>

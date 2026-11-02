@@ -3,9 +3,7 @@
   "pageOrder": [
     "Inicio",
     "AnalisisGeneral",
-    "AnalisisTendencia",
-    "TooltipMapa",
-    "TooltipBarras"
+    "AnalisisTendencia"
   ],
   "activePageName": "AnalisisGeneral"
 }

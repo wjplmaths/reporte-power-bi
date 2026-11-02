@@ -44,8 +44,33 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "icono-facturacion9358770855875156.jpeg",
-          "path": "icono-facturacion9358770855875156.jpeg",
+          "name": "icono-costo923208635883665.svg",
+          "path": "icono-costo923208635883665.svg",
+          "type": "Image"
+        },
+        {
+          "name": "icono-facturado24636097936890322.svg",
+          "path": "icono-facturado24636097936890322.svg",
+          "type": "Image"
+        },
+        {
+          "name": "icono-facturado49561449720835127.svg",
+          "path": "icono-facturado49561449720835127.svg",
+          "type": "Image"
+        },
+        {
+          "name": "icono-utilidad5454431066921042.svg",
+          "path": "icono-utilidad5454431066921042.svg",
+          "type": "Image"
+        },
+        {
+          "name": "icono-utilidad9126430885677451.svg",
+          "path": "icono-utilidad9126430885677451.svg",
+          "type": "Image"
+        },
+        {
+          "name": "logo-ventas46965704864128055.svg",
+          "path": "logo-ventas46965704864128055.svg",
           "type": "Image"
         }
       ]
