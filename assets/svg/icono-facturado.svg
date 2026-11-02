@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Total facturado">
+  <path d="M14 6h28l10 10v40a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V10a4 4 0 0 1 4-4z" fill="#FFFFFF" stroke="#1F3864" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M42 6v10h10" fill="none" stroke="#1F3864" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#1F3864" stroke-width="3" stroke-linecap="round">
+    <line x1="17" y1="22" x2="34" y2="22"/>
+    <line x1="17" y1="30" x2="40" y2="30"/>
+    <line x1="17" y1="38" x2="30" y2="38"/>
+  </g>
+  <circle cx="44" cy="46" r="13" fill="#56B4E9" stroke="#1F3864" stroke-width="3"/>
+  <path d="M48 41c-1-2-3-3-5-3-3 0-5 1.600-5 4 0 5 10 2.500 10 8 0 2.400-2 4-5 4-2.500 0-4.500-1.200-5.500-3.200M43 35v3m0 17v3" fill="none" stroke="#1F3864" stroke-width="2.600" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

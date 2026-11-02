@@ -1,0 +1,1 @@
+Genera en assets/ archivos SVG para: fondo de portada, fondo de página de análisis (con zonas diseñadas para tarjetas y gráficos), íconos para las tarjetas (facturado, costo, utilidad) y un logo simple. Usa la paleta del tema. Dimensiones 1280x720 para los fondos.
