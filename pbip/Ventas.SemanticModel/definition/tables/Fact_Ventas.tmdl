@@ -5,7 +5,7 @@ table Fact_Ventas
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents(RutaBase & "\Fact_Ventas.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Fact_Ventas.xlsx"), null, true),
 				    Hoja = Origen{[Item="Fact_Ventas",Kind="Sheet"]}[Data]
 				in
 				    Hoja

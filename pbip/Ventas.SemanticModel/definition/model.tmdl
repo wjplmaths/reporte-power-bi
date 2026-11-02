@@ -13,6 +13,5 @@ ref table 'Tabla 4'
 ref table 'Tabla 5'
 ref table 'Tabla 6'
 
-ref expression RutaBase
 ref expression GDrive_Fuente
 ref expression fnBuscarTabla

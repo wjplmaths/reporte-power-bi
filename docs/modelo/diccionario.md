@@ -83,10 +83,9 @@ Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas decla
 
 | Consulta | Origen | Función M | Carga |
 |---|---|---|---|
-| `RutaBase` | Parámetro de texto con la ruta de `data/raw` | — | No |
 | `fnBuscarTabla` | Función auxiliar: devuelve la tabla de `Web.Page` que contiene todos los textos pedidos | — | No |
 | `GDrive_Fuente` | Google Drive (enlace en `docs/requerimiento/Enlace G_Drive.txt`) | `Web.Page` | No |
-| `Fact_Ventas` | `Fact_Ventas.xlsx`, hoja `Fact_Ventas` | `Excel.Workbook` | Sí |
+| `Fact_Ventas` | `data/raw/Fact_Ventas.xlsx` (ruta absoluta dentro de la consulta), hoja `Fact_Ventas` | `Excel.Workbook` | Sí |
 | `Dim_Clientes` | `Dim_Clientes.csv` (UTF-8, coma, 5 columnas) | `Csv.Document` | Sí |
 | `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
 | `Tabla 1` | `GDrive_Fuente`, tabla que contiene `ID Vendedor` (vendedores) | `Web.Page` | Sí |

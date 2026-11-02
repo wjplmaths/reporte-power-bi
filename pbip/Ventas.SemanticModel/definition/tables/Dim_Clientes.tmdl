@@ -5,6 +5,6 @@ table Dim_Clientes
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents(RutaBase & "\Dim_Clientes.csv"), [Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None])
+				    Origen = Csv.Document(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Dim_Clientes.csv"), [Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None])
 				in
 				    Origen
