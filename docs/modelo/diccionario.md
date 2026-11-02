@@ -144,3 +144,4 @@ Aún sin validar en Desktop. `Medidas` es una consulta M en blanco (`#table(type
 | `Meta` | `SUM(Dim_Metas[Meta])` | `C$#,0.00` |
 | `% Cumplimiento metas` | `DIVIDE([Total Facturado], [Meta])` | `0.0%` |
 | `Ventas del Año Anterior` | `CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))` | `C$#,0.00` |
+| `Etiqueta % Avance` | `"Avance: " & FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")` | texto |

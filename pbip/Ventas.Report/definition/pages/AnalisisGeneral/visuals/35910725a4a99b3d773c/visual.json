@@ -1,0 +1,38 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "35910725a4a99b3d773c",
+    "position":  {
+                     "x":  960,
+                     "y":  344,
+                     "z":  11,
+                     "height":  52,
+                     "width":  300,
+                     "tabOrder":  11
+                 },
+    "visual":  {
+                   "visualType":  "cardVisual",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Data":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "Medidas"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Etiqueta % Avance"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "Medidas.Etiqueta % Avance",
+                                                                                         "nativeQueryRef":  "Etiqueta % Avance"
+                                                                                     }
+                                                                                 ]
+                                                             }
+                                                }
+                             },
+                   "drillFilterOtherVisuals":  true
+               }
+}

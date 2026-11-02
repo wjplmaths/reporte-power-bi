@@ -26,14 +26,13 @@
                   "Property": "Total Facturado"
                 }
               },
-              "nativeQueryRef": "Total Facturado",
-              "queryRef": "Medidas.Total Facturado"
+              "queryRef": "Medidas.Total Facturado",
+              "nativeQueryRef": "Total Facturado"
             }
           ]
         }
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "value": [
         {
@@ -61,7 +60,39 @@
             }
           }
         }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "calloutSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "50D"
+                }
+              }
+            }
+          }
+        }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "601c8fc882da74998400",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Facturado"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

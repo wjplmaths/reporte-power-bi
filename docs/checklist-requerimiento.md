@@ -85,7 +85,7 @@ Para cada una de las cuatro consultas:
 - [ ] Mapa con Total Facturado por Departamento — *creado en PBIR (changelog 18), falta validar en Desktop*
 - [ ] Tabla con el cumplimiento de ventas de cada vendedor — *creado en PBIR (changelog 18), falta validar en Desktop*
 - [ ] Formato condicional en `% Cumplimiento`: menor a 60% rojo, 60% a 79% amarillo, mayor a 80% verde — *reglas por color en PBIR; los íconos son un paso manual (changelog 18)*
-- [ ] Medidor: Total Facturado vs Meta, con etiqueta personalizada en el valor que muestre el % de avance — *medidor creado; la etiqueta personalizada es un paso manual (changelog 18)*
+- [ ] Medidor: Total Facturado vs Meta, con etiqueta personalizada en el valor que muestre el % de avance — *medidor con medida `Etiqueta % Avance` en tarjeta bajo el medidor y en su tooltip (changelog 21); la etiqueta dentro del globo es un paso manual*
 - [ ] Gráfico de barras agrupadas: Top 5 clientes por facturación — *creado en PBIR (changelog 18), falta validar en Desktop*
 - [ ] Chiclet Slicer (AppSource) por Año — *creado en PBIR con el identificador real del visual (changelog 20), falta validar en Desktop*
 - [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num` — *creado en PBIR con el identificador real del visual (changelog 20), falta validar en Desktop*
