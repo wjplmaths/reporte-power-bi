@@ -31,6 +31,10 @@ table Medidas
 		formatString: "C$"#,0.00
 		lineageTag: 33326196-a7bd-4157-a805-86045acc46a5
 
+	/// Texto con el porcentaje de avance (Total Facturado frente a Meta) para la etiqueta del medidor. Muestra 0.0% si no hay meta.
+	measure 'Etiqueta % Avance' = "Avance: " & FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")
+		lineageTag: 48b936c3-b0d5-4935-b565-5ad33426b99e
+
 	column Columna
 		dataType: int64
 		isHidden
@@ -40,10 +44,6 @@ table Medidas
 		sourceColumn: Columna
 
 		annotation SummarizationSetBy = Automatic
-
-	/// Texto con el porcentaje de avance (Total Facturado frente a Meta) para la etiqueta del medidor. Muestra 0.0% si no hay meta.
-	measure 'Etiqueta % Avance' = "Avance: " & FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")
-		lineageTag: 48b936c3-b0d5-4935-b565-5ad33426b99e
 
 	partition Medidas = m
 		mode: import

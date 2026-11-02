@@ -4,10 +4,10 @@
   "position": {
     "x": 400,
     "y": 96,
-    "z": 4,
+    "z": 4000,
     "height": 110,
     "width": 230,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -26,14 +26,13 @@
                   "Property": "Costo Total"
                 }
               },
-              "nativeQueryRef": "Costo Total",
-              "queryRef": "Medidas.Costo Total"
+              "queryRef": "Medidas.Costo Total",
+              "nativeQueryRef": "Costo Total"
             }
           ]
         }
       }
     },
-    "drillFilterOtherVisuals": true,
     "objects": {
       "value": [
         {
@@ -60,8 +59,41 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ]
-    }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "244e68fdd800a905365c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Costo Total"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

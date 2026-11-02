@@ -4,10 +4,10 @@
   "position": {
     "x": 529.6758739677382,
     "y": 16.466607480862326,
-    "z": 1,
+    "z": 1000,
     "height": 79.5886028241679,
     "width": 730.01959831822978,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "ChicletSlicer1448559807354",
@@ -79,23 +79,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "af94c30fc69b9d864dc0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendario"
-              }
-            },
-            "Property": "Mes_Corto"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

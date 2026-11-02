@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "8fee8e02321b6161dbd7",
   "position": {
-    "x": 90,
-    "y": 96,
-    "z": 3,
-    "height": 110,
-    "width": 230,
-    "tabOrder": 3
+    "x": 89.8195536228652,
+    "y": 95.909014885432342,
+    "z": 3000,
+    "height": 109.61030272620839,
+    "width": 243.57845050268531,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -59,6 +59,20 @@
               }
             }
           }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "layout": [
@@ -73,26 +87,31 @@
             }
           }
         }
+      ],
+      "label": [
+        {
+          "properties": {
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Heading2'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "601c8fc882da74998400",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

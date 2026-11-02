@@ -4,10 +4,10 @@
   "position": {
     "x": 640,
     "y": 106,
-    "z": 5,
+    "z": 5000,
     "height": 64,
     "width": 64,
-    "tabOrder": 5
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "image",
@@ -17,26 +17,26 @@
           "properties": {
             "sourceFile": {
               "image": {
-                "scaling": {
+                "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Fit'"
+                      "Value": "'icono-ventas.jpeg'"
                     }
                   }
                 },
                 "url": {
                   "expr": {
                     "ResourcePackageItem": {
-                      "ItemName": "icono-ventas.jpeg",
+                      "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "PackageName": "RegisteredResources"
+                      "ItemName": "icono-ventas.jpeg"
                     }
                   }
                 },
-                "name": {
+                "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'icono-ventas.jpeg'"
+                      "Value": "'Fit'"
                     }
                   }
                 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 20,
     "y": 218,
-    "z": 7,
+    "z": 7000,
     "height": 482,
     "width": 380,
-    "tabOrder": 7
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "azureMap",
@@ -81,6 +81,27 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "zoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "2.88D"
+                }
+              }
+            },
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "8.395309469024895D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "-86.50091148863999D"
                 }
               }
             }
@@ -170,21 +191,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "9cc387120130e4351051",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Clientes"
-              }
-            },
-            "Property": "Departamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "45eb7463c4d3131805cd",
+        "name": "e5f8f3806c1168da6a58",
         "field": {
           "Measure": {
             "Expression": {
@@ -196,6 +203,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "0d73a50400a4d1adccd3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Clientes"
+              }
+            },
+            "Property": "Departamento"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

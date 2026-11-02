@@ -1,38 +1,112 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "35910725a4a99b3d773c",
-    "position":  {
-                     "x":  960,
-                     "y":  344,
-                     "z":  11,
-                     "height":  52,
-                     "width":  300,
-                     "tabOrder":  11
-                 },
-    "visual":  {
-                   "visualType":  "cardVisual",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Data":  {
-                                                                 "projections":  [
-                                                                                     {
-                                                                                         "field":  {
-                                                                                                       "Measure":  {
-                                                                                                                       "Expression":  {
-                                                                                                                                          "SourceRef":  {
-                                                                                                                                                            "Entity":  "Medidas"
-                                                                                                                                                        }
-                                                                                                                                      },
-                                                                                                                       "Property":  "Etiqueta % Avance"
-                                                                                                                   }
-                                                                                                   },
-                                                                                         "queryRef":  "Medidas.Etiqueta % Avance",
-                                                                                         "nativeQueryRef":  "Etiqueta % Avance"
-                                                                                     }
-                                                                                 ]
-                                                             }
-                                                }
-                             },
-                   "drillFilterOtherVisuals":  true
-               }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "35910725a4a99b3d773c",
+  "position": {
+    "x": 960.61251416996515,
+    "y": 310.56252439092378,
+    "z": 11000,
+    "height": 85.252457675939851,
+    "width": 299.90596718143127,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Etiqueta % Avance"
+                }
+              },
+              "queryRef": "Medidas.Etiqueta % Avance",
+              "nativeQueryRef": "Etiqueta % Avance"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "label": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ef0a012c094811521714",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Etiqueta % Avance"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

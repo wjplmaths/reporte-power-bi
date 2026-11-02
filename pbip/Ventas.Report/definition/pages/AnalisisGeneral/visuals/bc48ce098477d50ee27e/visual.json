@@ -4,10 +4,10 @@
   "position": {
     "x": 20,
     "y": 106,
-    "z": 2,
+    "z": 2000,
     "height": 64,
     "width": 64,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "image",
@@ -17,26 +17,26 @@
           "properties": {
             "sourceFile": {
               "image": {
-                "scaling": {
+                "name": {
                   "expr": {
                     "Literal": {
-                      "Value": "'Fit'"
+                      "Value": "'icono-facturacion9358770855875156.jpeg'"
                     }
                   }
                 },
                 "url": {
                   "expr": {
                     "ResourcePackageItem": {
-                      "ItemName": "icono-facturacion9358770855875156.jpeg",
+                      "PackageName": "RegisteredResources",
                       "PackageType": 1,
-                      "PackageName": "RegisteredResources"
+                      "ItemName": "icono-facturacion9358770855875156.jpeg"
                     }
                   }
                 },
-                "name": {
+                "scaling": {
                   "expr": {
                     "Literal": {
-                      "Value": "'icono-facturacion9358770855875156.jpeg'"
+                      "Value": "'Fit'"
                     }
                   }
                 }

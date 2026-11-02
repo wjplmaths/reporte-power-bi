@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "826d3d0b43c276cb6538",
   "position": {
-    "x": 960,
-    "y": 408,
-    "z": 10,
-    "height": 292,
-    "width": 300,
-    "tabOrder": 10
+    "x": 960.61251416996515,
+    "y": 407.99390459199788,
+    "z": 10000,
+    "height": 292.29414060322239,
+    "width": 299.90596718143127,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -69,6 +69,21 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "visualContainerObjects": {
       "title": [
@@ -196,6 +211,20 @@
             }
           ]
         }
+      },
+      {
+        "name": "35e65dc6377b31807083",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Facturado"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
