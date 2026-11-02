@@ -1,67 +1,67 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "ab61f6a4669797f6427b",
-    "position":  {
-                     "x":  400,
-                     "y":  96,
-                     "z":  4,
-                     "height":  110,
-                     "width":  230,
-                     "tabOrder":  4
-                 },
-    "visual":  {
-                   "visualType":  "cardVisual",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Data":  {
-                                                                 "projections":  [
-                                                                                     {
-                                                                                         "field":  {
-                                                                                                       "Measure":  {
-                                                                                                                       "Expression":  {
-                                                                                                                                          "SourceRef":  {
-                                                                                                                                                            "Entity":  "Medidas"
-                                                                                                                                                        }
-                                                                                                                                      },
-                                                                                                                       "Property":  "Costo Total"
-                                                                                                                   }
-                                                                                                   },
-                                                                                         "nativeQueryRef":  "Costo Total",
-                                                                                         "queryRef":  "Medidas.Costo Total"
-                                                                                     }
-                                                                                 ]
-                                                             }
-                                                }
-                             },
-                   "drillFilterOtherVisuals":  true,
-                   "objects":  {
-                                   "value":  [
-                                                 {
-                                                     "properties":  {
-                                                                        "fontSize":  {
-                                                                                         "expr":  {
-                                                                                                      "Literal":  {
-                                                                                                                      "Value":  "26D"
-                                                                                                                  }
-                                                                                                  }
-                                                                                     },
-                                                                        "labelDisplayUnits":  {
-                                                                                                  "expr":  {
-                                                                                                               "Literal":  {
-                                                                                                                               "Value":  "1000000D"
-                                                                                                                           }
-                                                                                                           }
-                                                                                              },
-                                                                        "labelPrecision":  {
-                                                                                               "expr":  {
-                                                                                                            "Literal":  {
-                                                                                                                            "Value":  "2L"
-                                                                                                                        }
-                                                                                                        }
-                                                                                           }
-                                                                    }
-                                                 }
-                                             ]
-                               }
-               }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "ab61f6a4669797f6427b",
+  "position": {
+    "x": 400,
+    "y": 96,
+    "z": 4,
+    "height": 110,
+    "width": 230,
+    "tabOrder": 4
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Costo Total"
+                }
+              },
+              "nativeQueryRef": "Costo Total",
+              "queryRef": "Medidas.Costo Total"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "value": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "26D"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
 }

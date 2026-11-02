@@ -11,19 +11,22 @@
       "type": "SharedResources"
     }
   },
+  "publicCustomVisuals": [
+    "ChicletSlicer1448559807354"
+  ],
   "resourcePackages": [
     {
       "name": "RegisteredResources",
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "icono-ventas.jpeg",
-          "path": "icono-ventas.jpeg",
+          "name": "icono-facturacion9358770855875156.jpeg",
+          "path": "icono-facturacion9358770855875156.jpeg",
           "type": "Image"
         },
         {
-          "name": "icono-facturacion9358770855875156.jpeg",
-          "path": "icono-facturacion9358770855875156.jpeg",
+          "name": "icono-ventas.jpeg",
+          "path": "icono-ventas.jpeg",
           "type": "Image"
         }
       ]

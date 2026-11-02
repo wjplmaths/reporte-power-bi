@@ -1,111 +1,111 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "b5982da9636de7dfe6ac",
-    "position":  {
-                     "x":  20,
-                     "y":  218,
-                     "z":  7,
-                     "height":  482,
-                     "width":  380,
-                     "tabOrder":  7
-                 },
-    "visual":  {
-                   "visualType":  "map",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Category":  {
-                                                                     "projections":  [
-                                                                                         {
-                                                                                             "field":  {
-                                                                                                           "Column":  {
-                                                                                                                          "Expression":  {
-                                                                                                                                             "SourceRef":  {
-                                                                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                                                                           }
-                                                                                                                                         },
-                                                                                                                          "Property":  "Departamento"
-                                                                                                                      }
-                                                                                                       },
-                                                                                             "queryRef":  "Dim_Clientes.Departamento",
-                                                                                             "nativeQueryRef":  "Departamento",
-                                                                                             "active":  true
-                                                                                         }
-                                                                                     ]
-                                                                 },
-                                                    "Size":  {
-                                                                 "projections":  [
-                                                                                     {
-                                                                                         "field":  {
-                                                                                                       "Measure":  {
-                                                                                                                       "Expression":  {
-                                                                                                                                          "SourceRef":  {
-                                                                                                                                                            "Entity":  "Medidas"
-                                                                                                                                                        }
-                                                                                                                                      },
-                                                                                                                       "Property":  "Total Facturado"
-                                                                                                                   }
-                                                                                                   },
-                                                                                         "queryRef":  "Medidas.Total Facturado",
-                                                                                         "nativeQueryRef":  "Total Facturado"
-                                                                                     }
-                                                                                 ]
-                                                             }
-                                                }
-                             },
-                   "visualContainerObjects":  {
-                                                  "title":  [
-                                                                {
-                                                                    "properties":  {
-                                                                                       "text":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "\u0027Ventas por departamento\u0027"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                },
-                                                                                       "show":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "true"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                }
-                                                                                   }
-                                                                }
-                                                            ]
-                                              },
-                   "drillFilterOtherVisuals":  true
-               },
-    "filterConfig":  {
-                         "filters":  [
-                                         {
-                                             "name":  "87ddd515e8c0d4a3bccd",
-                                             "field":  {
-                                                           "Column":  {
-                                                                          "Expression":  {
-                                                                                             "SourceRef":  {
-                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                           }
-                                                                                         },
-                                                                          "Property":  "Departamento"
-                                                                      }
-                                                       },
-                                             "type":  "Categorical"
-                                         },
-                                         {
-                                             "name":  "fef45250b803b69091b9",
-                                             "field":  {
-                                                           "Measure":  {
-                                                                           "Expression":  {
-                                                                                              "SourceRef":  {
-                                                                                                                "Entity":  "Medidas"
-                                                                                                            }
-                                                                                          },
-                                                                           "Property":  "Total Facturado"
-                                                                       }
-                                                       },
-                                             "type":  "Advanced"
-                                         }
-                                     ]
-                     }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "b5982da9636de7dfe6ac",
+  "position": {
+    "x": 20,
+    "y": 218,
+    "z": 7,
+    "height": 482,
+    "width": 380,
+    "tabOrder": 7
+  },
+  "visual": {
+    "visualType": "map",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Clientes"
+                    }
+                  },
+                  "Property": "Departamento"
+                }
+              },
+              "queryRef": "Dim_Clientes.Departamento",
+              "nativeQueryRef": "Departamento",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Facturado"
+                }
+              },
+              "queryRef": "Medidas.Total Facturado",
+              "nativeQueryRef": "Total Facturado"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ventas por departamento'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "87ddd515e8c0d4a3bccd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Clientes"
+              }
+            },
+            "Property": "Departamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "fef45250b803b69091b9",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Facturado"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
 }

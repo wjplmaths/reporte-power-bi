@@ -21,3 +21,4 @@
 - 2026-11-01 · [17 – Página Inicio (portada)](changelog/17-pagina-inicio.md) · OE5
 - 2026-11-01 · [18 – Página Análisis General](changelog/18-analisis-general.md) · OE5
 - 2026-11-01 · [19 – Corrección de Análisis General (segmentaciones, íconos y tamaños)](changelog/19-analisis-general-correcciones.md) · OE5
+- 2026-11-01 · [20 – Chiclet Slicer con el identificador correcto](changelog/20-chiclet-slicer.md) · OE5

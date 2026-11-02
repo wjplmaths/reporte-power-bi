@@ -1,237 +1,237 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "00ede76c2e04fc432cd8",
-    "position":  {
-                     "x":  410,
-                     "y":  218,
-                     "z":  8,
-                     "height":  482,
-                     "width":  530,
-                     "tabOrder":  8
-                 },
-    "visual":  {
-                   "visualType":  "tableEx",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Values":  {
-                                                                   "projections":  [
-                                                                                       {
-                                                                                           "field":  {
-                                                                                                         "Column":  {
-                                                                                                                        "Expression":  {
-                                                                                                                                           "SourceRef":  {
-                                                                                                                                                             "Entity":  "Dim_Vendedores"
-                                                                                                                                                         }
-                                                                                                                                       },
-                                                                                                                        "Property":  "Nombre Completo"
-                                                                                                                    }
-                                                                                                     },
-                                                                                           "nativeQueryRef":  "Nombre Completo",
-                                                                                           "queryRef":  "Dim_Vendedores.Nombre Completo"
-                                                                                       },
-                                                                                       {
-                                                                                           "field":  {
-                                                                                                         "Measure":  {
-                                                                                                                         "Expression":  {
-                                                                                                                                            "SourceRef":  {
-                                                                                                                                                              "Entity":  "Medidas"
-                                                                                                                                                          }
-                                                                                                                                        },
-                                                                                                                         "Property":  "Total Facturado"
-                                                                                                                     }
-                                                                                                     },
-                                                                                           "nativeQueryRef":  "Total Facturado",
-                                                                                           "queryRef":  "Medidas.Total Facturado"
-                                                                                       },
-                                                                                       {
-                                                                                           "field":  {
-                                                                                                         "Measure":  {
-                                                                                                                         "Expression":  {
-                                                                                                                                            "SourceRef":  {
-                                                                                                                                                              "Entity":  "Medidas"
-                                                                                                                                                          }
-                                                                                                                                        },
-                                                                                                                         "Property":  "Meta"
-                                                                                                                     }
-                                                                                                     },
-                                                                                           "nativeQueryRef":  "Meta",
-                                                                                           "queryRef":  "Medidas.Meta"
-                                                                                       },
-                                                                                       {
-                                                                                           "field":  {
-                                                                                                         "Measure":  {
-                                                                                                                         "Expression":  {
-                                                                                                                                            "SourceRef":  {
-                                                                                                                                                              "Entity":  "Medidas"
-                                                                                                                                                          }
-                                                                                                                                        },
-                                                                                                                         "Property":  "% Cumplimiento metas"
-                                                                                                                     }
-                                                                                                     },
-                                                                                           "nativeQueryRef":  "% Cumplimiento metas",
-                                                                                           "queryRef":  "Medidas.% Cumplimiento metas"
-                                                                                       }
-                                                                                   ]
-                                                               }
-                                                }
-                             },
-                   "objects":  {
-                                   "values":  [
-                                                  {
-                                                      "selector":  {
-                                                                       "metadata":  "Medidas.% Cumplimiento metas",
-                                                                       "data":  [
-                                                                                    {
-                                                                                        "dataViewWildcard":  {
-                                                                                                                 "matchingOption":  1
-                                                                                                             }
-                                                                                    }
-                                                                                ]
-                                                                   },
-                                                      "properties":  {
-                                                                         "fontColor":  {
-                                                                                           "solid":  {
-                                                                                                         "color":  {
-                                                                                                                       "expr":  {
-                                                                                                                                    "Conditional":  {
-                                                                                                                                                        "Cases":  [
-                                                                                                                                                                      {
-                                                                                                                                                                          "Condition":  {
-                                                                                                                                                                                            "Comparison":  {
-                                                                                                                                                                                                               "Left":  {
-                                                                                                                                                                                                                            "Measure":  {
-                                                                                                                                                                                                                                            "Expression":  {
-                                                                                                                                                                                                                                                               "SourceRef":  {
-                                                                                                                                                                                                                                                                                 "Entity":  "Medidas"
-                                                                                                                                                                                                                                                                             }
-                                                                                                                                                                                                                                                           },
-                                                                                                                                                                                                                                            "Property":  "% Cumplimiento metas"
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                        },
-                                                                                                                                                                                                               "Right":  {
-                                                                                                                                                                                                                             "Literal":  {
-                                                                                                                                                                                                                                             "Value":  "0.6D"
-                                                                                                                                                                                                                                         }
-                                                                                                                                                                                                                         },
-                                                                                                                                                                                                               "ComparisonKind":  3
-                                                                                                                                                                                                           }
-                                                                                                                                                                                        },
-                                                                                                                                                                          "Value":  {
-                                                                                                                                                                                        "Literal":  {
-                                                                                                                                                                                                        "Value":  "\u0027#C00000\u0027"
-                                                                                                                                                                                                    }
-                                                                                                                                                                                    }
-                                                                                                                                                                      },
-                                                                                                                                                                      {
-                                                                                                                                                                          "Condition":  {
-                                                                                                                                                                                            "And":  {
-                                                                                                                                                                                                        "Left":  {
-                                                                                                                                                                                                                     "Comparison":  {
-                                                                                                                                                                                                                                        "Left":  {
-                                                                                                                                                                                                                                                     "Measure":  {
-                                                                                                                                                                                                                                                                     "Expression":  {
-                                                                                                                                                                                                                                                                                        "SourceRef":  {
-                                                                                                                                                                                                                                                                                                          "Entity":  "Medidas"
-                                                                                                                                                                                                                                                                                                      }
-                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                     "Property":  "% Cumplimiento metas"
-                                                                                                                                                                                                                                                                 }
-                                                                                                                                                                                                                                                 },
-                                                                                                                                                                                                                                        "Right":  {
-                                                                                                                                                                                                                                                      "Literal":  {
-                                                                                                                                                                                                                                                                      "Value":  "0.6D"
-                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                        "ComparisonKind":  2
-                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                 },
-                                                                                                                                                                                                        "Right":  {
-                                                                                                                                                                                                                      "Comparison":  {
-                                                                                                                                                                                                                                         "Left":  {
-                                                                                                                                                                                                                                                      "Measure":  {
-                                                                                                                                                                                                                                                                      "Expression":  {
-                                                                                                                                                                                                                                                                                         "SourceRef":  {
-                                                                                                                                                                                                                                                                                                           "Entity":  "Medidas"
-                                                                                                                                                                                                                                                                                                       }
-                                                                                                                                                                                                                                                                                     },
-                                                                                                                                                                                                                                                                      "Property":  "% Cumplimiento metas"
-                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                  },
-                                                                                                                                                                                                                                         "Right":  {
-                                                                                                                                                                                                                                                       "Literal":  {
-                                                                                                                                                                                                                                                                       "Value":  "0.8D"
-                                                                                                                                                                                                                                                                   }
-                                                                                                                                                                                                                                                   },
-                                                                                                                                                                                                                                         "ComparisonKind":  3
-                                                                                                                                                                                                                                     }
-                                                                                                                                                                                                                  }
-                                                                                                                                                                                                    }
-                                                                                                                                                                                        },
-                                                                                                                                                                          "Value":  {
-                                                                                                                                                                                        "Literal":  {
-                                                                                                                                                                                                        "Value":  "\u0027#E6A800\u0027"
-                                                                                                                                                                                                    }
-                                                                                                                                                                                    }
-                                                                                                                                                                      },
-                                                                                                                                                                      {
-                                                                                                                                                                          "Condition":  {
-                                                                                                                                                                                            "Comparison":  {
-                                                                                                                                                                                                               "Left":  {
-                                                                                                                                                                                                                            "Measure":  {
-                                                                                                                                                                                                                                            "Expression":  {
-                                                                                                                                                                                                                                                               "SourceRef":  {
-                                                                                                                                                                                                                                                                                 "Entity":  "Medidas"
-                                                                                                                                                                                                                                                                             }
-                                                                                                                                                                                                                                                           },
-                                                                                                                                                                                                                                            "Property":  "% Cumplimiento metas"
-                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                        },
-                                                                                                                                                                                                               "Right":  {
-                                                                                                                                                                                                                             "Literal":  {
-                                                                                                                                                                                                                                             "Value":  "0.8D"
-                                                                                                                                                                                                                                         }
-                                                                                                                                                                                                                         },
-                                                                                                                                                                                                               "ComparisonKind":  2
-                                                                                                                                                                                                           }
-                                                                                                                                                                                        },
-                                                                                                                                                                          "Value":  {
-                                                                                                                                                                                        "Literal":  {
-                                                                                                                                                                                                        "Value":  "\u0027#2E8B57\u0027"
-                                                                                                                                                                                                    }
-                                                                                                                                                                                    }
-                                                                                                                                                                      }
-                                                                                                                                                                  ]
-                                                                                                                                                    }
-                                                                                                                                }
-                                                                                                                   }
-                                                                                                     }
-                                                                                       }
-                                                                     }
-                                                  }
-                                              ]
-                               },
-                   "visualContainerObjects":  {
-                                                  "title":  [
-                                                                {
-                                                                    "properties":  {
-                                                                                       "text":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "\u0027Cumplimiento de ventas por vendedor\u0027"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                },
-                                                                                       "show":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "true"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                }
-                                                                                   }
-                                                                }
-                                                            ]
-                                              },
-                   "drillFilterOtherVisuals":  true
-               }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "00ede76c2e04fc432cd8",
+  "position": {
+    "x": 410,
+    "y": 218,
+    "z": 8,
+    "height": 482,
+    "width": 530,
+    "tabOrder": 8
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Vendedores"
+                    }
+                  },
+                  "Property": "Nombre Completo"
+                }
+              },
+              "nativeQueryRef": "Nombre Completo",
+              "queryRef": "Dim_Vendedores.Nombre Completo"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Facturado"
+                }
+              },
+              "nativeQueryRef": "Total Facturado",
+              "queryRef": "Medidas.Total Facturado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Meta"
+                }
+              },
+              "nativeQueryRef": "Meta",
+              "queryRef": "Medidas.Meta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Cumplimiento metas"
+                }
+              },
+              "nativeQueryRef": "% Cumplimiento metas",
+              "queryRef": "Medidas.% Cumplimiento metas"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "selector": {
+            "metadata": "Medidas.% Cumplimiento metas",
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          },
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "% Cumplimiento metas"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0.6D"
+                                }
+                              },
+                              "ComparisonKind": 3
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#C00000'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "And": {
+                              "Left": {
+                                "Comparison": {
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "Medidas"
+                                        }
+                                      },
+                                      "Property": "% Cumplimiento metas"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "0.6D"
+                                    }
+                                  },
+                                  "ComparisonKind": 2
+                                }
+                              },
+                              "Right": {
+                                "Comparison": {
+                                  "Left": {
+                                    "Measure": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "Medidas"
+                                        }
+                                      },
+                                      "Property": "% Cumplimiento metas"
+                                    }
+                                  },
+                                  "Right": {
+                                    "Literal": {
+                                      "Value": "0.8D"
+                                    }
+                                  },
+                                  "ComparisonKind": 3
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#E6A800'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "% Cumplimiento metas"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0.8D"
+                                }
+                              },
+                              "ComparisonKind": 2
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#2E8B57'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cumplimiento de ventas por vendedor'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
 }

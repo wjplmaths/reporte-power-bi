@@ -10,27 +10,28 @@
                      "tabOrder":  0
                  },
     "visual":  {
-                   "visualType":  "slicer",
+                   "visualType":  "ChicletSlicer1448559807354",
                    "query":  {
                                  "queryState":  {
-                                                    "Values":  {
-                                                                   "projections":  [
-                                                                                       {
-                                                                                           "field":  {
-                                                                                                         "Column":  {
-                                                                                                                        "Expression":  {
-                                                                                                                                           "SourceRef":  {
-                                                                                                                                                             "Entity":  "Calendario"
-                                                                                                                                                         }
-                                                                                                                                       },
-                                                                                                                        "Property":  "Año"
-                                                                                                                    }
-                                                                                                     },
-                                                                                           "queryRef":  "Calendario.Año",
-                                                                                           "nativeQueryRef":  "Año"
-                                                                                       }
-                                                                                   ]
-                                                               }
+                                                    "Category":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Column":  {
+                                                                                                                          "Expression":  {
+                                                                                                                                             "SourceRef":  {
+                                                                                                                                                               "Entity":  "Calendario"
+                                                                                                                                                           }
+                                                                                                                                         },
+                                                                                                                          "Property":  "Año"
+                                                                                                                      }
+                                                                                                       },
+                                                                                             "queryRef":  "Calendario.Año",
+                                                                                             "nativeQueryRef":  "Año",
+                                                                                             "active":  true
+                                                                                         }
+                                                                                     ]
+                                                                 }
                                                 }
                              },
                    "visualContainerObjects":  {
@@ -57,45 +58,26 @@
                                               },
                    "drillFilterOtherVisuals":  true,
                    "objects":  {
-                                   "data":  [
-                                                {
-                                                    "properties":  {
-                                                                       "mode":  {
-                                                                                    "expr":  {
-                                                                                                 "Literal":  {
-                                                                                                                 "Value":  "\u0027Basic\u0027"
-                                                                                                             }
-                                                                                             }
-                                                                                }
-                                                                   }
-                                                }
-                                            ],
                                    "general":  [
                                                    {
                                                        "properties":  {
-                                                                          "orientation":  {
-                                                                                              "expr":  {
-                                                                                                           "Literal":  {
-                                                                                                                           "Value":  "1D"
-                                                                                                                       }
-                                                                                                       }
-                                                                                          }
+                                                                          "columns":  {
+                                                                                          "expr":  {
+                                                                                                       "Literal":  {
+                                                                                                                       "Value":  "4L"
+                                                                                                                   }
+                                                                                                   }
+                                                                                      },
+                                                                          "rows":  {
+                                                                                       "expr":  {
+                                                                                                    "Literal":  {
+                                                                                                                    "Value":  "1L"
+                                                                                                                }
+                                                                                                }
+                                                                                   }
                                                                       }
                                                    }
-                                               ],
-                                   "header":  [
-                                                  {
-                                                      "properties":  {
-                                                                         "show":  {
-                                                                                      "expr":  {
-                                                                                                   "Literal":  {
-                                                                                                                   "Value":  "false"
-                                                                                                               }
-                                                                                               }
-                                                                                  }
-                                                                     }
-                                                  }
-                                              ]
+                                               ]
                                }
                },
     "filterConfig":  {
