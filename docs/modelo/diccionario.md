@@ -134,15 +134,13 @@ Aún sin validar en Desktop. Tabla de fechas con 1 461 filas (2020-01-01 a 2023-
 
 Todavía no tiene relaciones con otras tablas (se crean en el siguiente paso de OE3).
 ## Medidas (OE4, consulta `Medidas`)
-Aún sin validar en Desktop. `Medidas` es una consulta M en blanco (`#table(type table [Columna = Int64.Type], {})`) con una columna oculta; solo sirve de contenedor, como pide la guía.
+Aún sin validar en Desktop. `Medidas` es una consulta M en blanco (`#table(type table [Columna = Int64.Type], {})`) con una columna oculta; solo sirve de contenedor, como pide la guía. Las medidas están sin carpetas de visualización.
 
-| Medida | DAX | Formato | Carpeta |
-|---|---|---|---|
-| `Total Facturado` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])` | `C$#,0.00` | Ventas |
-| `Costo Total` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * RELATED(Dim_Productos[Costo Unitario]))` | `C$#,0.00` | Ventas |
-| `Utilidad Total` | `[Total Facturado] - [Costo Total]` | `C$#,0.00` | Ventas |
-| `SumMetas` (oculta) | `SUM(Dim_Metas[Meta])` | `C$#,0.00` | Metas |
-| `Meta` | `[SumMetas]` | `C$#,0.00` | Metas |
-| `% Cumplimiento metas` | `DIVIDE([Total Facturado], [SumMetas])` | `0.0%` | Metas |
-| `Ventas del Año Anterior` | `CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))` | `C$#,0.00` | Tiempo |
-| `Etiqueta % Avance` | `FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")` | texto | Etiquetas |
+| Medida | DAX | Formato |
+|---|---|---|
+| `Total Facturado` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])` | `C$#,0.00` |
+| `Costo Total` | `SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * RELATED(Dim_Productos[Costo Unitario]))` | `C$#,0.00` |
+| `Utilidad Total` | `[Total Facturado] - [Costo Total]` | `C$#,0.00` |
+| `Meta` | `SUM(Dim_Metas[Meta])` | `C$#,0.00` |
+| `% Cumplimiento metas` | `DIVIDE([Total Facturado], [Meta])` | `0.0%` |
+| `Ventas del Año Anterior` | `CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))` | `C$#,0.00` |

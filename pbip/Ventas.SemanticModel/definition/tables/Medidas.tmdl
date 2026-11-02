@@ -14,50 +14,32 @@ table Medidas
 	/// Importe vendido: suma de Cantidad por Precio Unitario de cada linea de Fact_Ventas.
 	measure 'Total Facturado' = SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])
 		formatString: "C$"#,0.00
-		displayFolder: Ventas
 		lineageTag: 6e0dd409-f6d7-496b-b1b2-41dcbbc8ddb9
 
 	/// Costo de lo vendido: suma de Cantidad por el Costo Unitario del producto (RELATED a Dim_Productos).
 	measure 'Costo Total' = SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * RELATED(Dim_Productos[Costo Unitario]))
 		formatString: "C$"#,0.00
-		displayFolder: Ventas
 		lineageTag: 7fa456a2-8f8b-4782-a6b1-ae986198cf66
 
 	/// Total Facturado menos Costo Total.
 	measure 'Utilidad Total' = [Total Facturado] - [Costo Total]
 		formatString: "C$"#,0.00
-		displayFolder: Ventas
 		lineageTag: a5d45405-452a-4d89-aa89-0f81beb441ea
 
-	/// Suma de las metas de Dim_Metas en el contexto de filtro actual (vendedor, mes, anio). Medida auxiliar oculta: se muestra como Meta.
-	measure SumMetas = SUM(Dim_Metas[Meta])
+	/// Meta de ventas: suma de Dim_Metas[Meta] en el contexto de filtro actual (vendedor, mes, anio).
+	measure Meta = SUM(Dim_Metas[Meta])
 		formatString: "C$"#,0.00
-		isHidden
-		displayFolder: Metas
-		lineageTag: 1e44ce41-1ad4-4cc1-8ca6-f5b5360bed38
-
-	/// Meta de ventas en el contexto actual (= SumMetas).
-	measure Meta = [SumMetas]
-		formatString: "C$"#,0.00
-		displayFolder: Metas
 		lineageTag: 83ecb3d5-1658-4677-bb2c-d6df6d5c6c88
 
-	/// Total Facturado dividido entre la Meta. Devuelve en blanco si no hay meta (DIVIDE).
-	measure '% Cumplimiento metas' = DIVIDE([Total Facturado], [SumMetas])
+	/// Total Facturado dividido entre la Meta (DIVIDE). Devuelve en blanco si no hay meta.
+	measure '% Cumplimiento metas' = DIVIDE([Total Facturado], [Meta])
 		formatString: 0.0%;-0.0%;0.0%
-		displayFolder: Metas
 		lineageTag: 585c0612-bbda-42a4-9f7b-96d48b27377a
 
 	/// Total Facturado del mismo periodo del anio anterior (SAMEPERIODLASTYEAR sobre Calendario[Date]).
 	measure 'Ventas del Año Anterior' = CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))
 		formatString: "C$"#,0.00
-		displayFolder: Tiempo
 		lineageTag: 33326196-a7bd-4157-a805-86045acc46a5
-
-	/// Texto con el porcentaje de avance (Total Facturado frente a Meta) para la etiqueta personalizada del medidor.
-	measure 'Etiqueta % Avance' = FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")
-		displayFolder: Etiquetas
-		lineageTag: 60403390-86f4-4b87-82a9-6aee10103d70
 
 	partition Medidas = m
 		mode: import

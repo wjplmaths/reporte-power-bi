@@ -1,0 +1,1 @@
+Imagen 1: apartado Calculos de la guia (Total Facturado, Costo Total, Utilidad Total, % Cumplimiento metas, Meta, Ventas del Año Anterior). Imagen 2: tabla Medidas con carpetas. Mensaje del usuario: 'Limitate a crear estas medidas de la primera imagen y desagrupa lo que haz hecho por carpetas'.
