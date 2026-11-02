@@ -4,10 +4,10 @@
   "position": {
     "x": 330,
     "y": 96,
-    "z": 3,
+    "z": 3000,
     "height": 150,
     "width": 300,
-    "tabOrder": 3
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -77,23 +77,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8a9a0e8f4cc641007786",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Ventas del Año Anterior"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

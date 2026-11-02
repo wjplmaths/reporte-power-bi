@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "00ede76c2e04fc432cd8",
   "position": {
-    "x": 410,
-    "y": 218,
+    "x": 405.065516578304,
+    "y": 217.72271516083839,
     "z": 8000,
-    "height": 482,
-    "width": 530,
+    "height": 482.28113067604318,
+    "width": 521.52185259456644,
     "tabOrder": 8000
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "Dim_Vendedores.Nombre Completo",
-              "nativeQueryRef": "Nombre Completo"
+              "nativeQueryRef": "Nombre ",
+              "displayName": "Nombre "
             },
             {
               "field": {
@@ -69,7 +70,8 @@
                 }
               },
               "queryRef": "Medidas.% Cumplimiento metas",
-              "nativeQueryRef": "% Cumplimiento metas"
+              "nativeQueryRef": "% Cump. metas",
+              "displayName": "% Cump. metas"
             }
           ]
         }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "b5982da9636de7dfe6ac",
   "position": {
-    "x": 20,
-    "y": 218,
+    "x": 20.2532758289152,
+    "y": 217.72271516083839,
     "z": 7000,
-    "height": 482,
-    "width": 380,
+    "height": 482.28113067604318,
+    "width": 374.68560283493122,
     "tabOrder": 7000
   },
   "visual": {
@@ -102,7 +102,7 @@
             "zoom": {
               "expr": {
                 "Literal": {
-                  "Value": "6.25D"
+                  "Value": "6.15D"
                 }
               }
             },
@@ -202,51 +202,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e5f8f3806c1168da6a58",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "0d73a50400a4d1adccd3",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Clientes"
-              }
-            },
-            "Property": "Departamento"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "b7efbb3521bcba64a608",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Dim_Clientes"
-              }
-            },
-            "Property": "País"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

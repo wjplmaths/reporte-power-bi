@@ -24,3 +24,5 @@ ref table Dim_Metas
 ref table Calendario
 ref table Medidas
 
+ref cultureInfo es-ES
+

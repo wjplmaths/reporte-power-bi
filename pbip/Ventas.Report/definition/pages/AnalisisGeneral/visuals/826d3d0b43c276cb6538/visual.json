@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "826d3d0b43c276cb6538",
   "position": {
-    "x": 939.96884369922452,
-    "y": 330.70436690731839,
+    "x": 940.51149630524958,
+    "y": 284.81169134412,
     "z": 10000,
     "height": 369.1264510293305,
     "width": 321.0988458768154,
@@ -211,20 +211,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "35e65dc6377b31807083",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

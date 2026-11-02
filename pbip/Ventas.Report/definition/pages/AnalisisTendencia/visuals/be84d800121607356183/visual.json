@@ -4,10 +4,10 @@
   "position": {
     "x": 20,
     "y": 96,
-    "z": 2,
+    "z": 2000,
     "height": 150,
     "width": 300,
-    "tabOrder": 2
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -77,23 +77,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "309664f61493b9870483",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

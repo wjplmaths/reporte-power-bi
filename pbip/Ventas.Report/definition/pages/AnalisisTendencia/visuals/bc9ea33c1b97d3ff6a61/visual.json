@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "bc9ea33c1b97d3ff6a61",
   "position": {
-    "x": 20,
-    "y": 258,
-    "z": 5,
-    "height": 442,
-    "width": 1240,
-    "tabOrder": 5
+    "x": 20.2532758289152,
+    "y": 258.2292668186688,
+    "z": 5000,
+    "height": 417.723813971376,
+    "width": 1239.2473147817489,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "lineClusteredColumnComboChart",
@@ -137,93 +137,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "77e668950a2baee0664a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "7944e9079e49d9341910",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendario"
-              }
-            },
-            "Property": "Trimestre"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "27c385a00d19a20238d6",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendario"
-              }
-            },
-            "Property": "Mes_Corto"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "70669d1eccb29d62b531",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Meta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "957114f3a244aa07a62a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f11f00082e60812aea61",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% Cumplimiento metas"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 639.453257173487,
     "y": 96.055210305030243,
-    "z": 4,
+    "z": 4000,
     "height": 149.5716846178328,
     "width": 620.242215112481,
-    "tabOrder": 4
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "kpi",
@@ -125,51 +125,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "18857f14e3d34b98c8ae",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "75aa568a8ed58ecae8d6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Ventas del Año Anterior"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "15600561143b91fc82f8",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendario"
-              }
-            },
-            "Property": "Año"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

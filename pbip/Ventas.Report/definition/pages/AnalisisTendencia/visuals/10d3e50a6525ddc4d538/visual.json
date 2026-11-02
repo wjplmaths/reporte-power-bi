@@ -4,10 +4,10 @@
   "position": {
     "x": 529.6758739677382,
     "y": 0,
-    "z": 1,
+    "z": 1000,
     "height": 80.96082011423978,
     "width": 730.01959831822978,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "ChicletSlicer1448559807354",
@@ -54,6 +54,19 @@
             }
           }
         }
+      ],
+      "header": [
+        {
+          "properties": {
+            "title": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Mes'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -63,7 +76,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -84,23 +97,5 @@
       "filterChanges": true
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "97739afc2b5d8344606d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendario"
-              }
-            },
-            "Property": "Mes_Corto"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

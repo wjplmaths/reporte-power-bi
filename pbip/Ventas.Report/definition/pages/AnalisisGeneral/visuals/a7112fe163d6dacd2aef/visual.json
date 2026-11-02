@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "a7112fe163d6dacd2aef",
   "position": {
-    "x": 939.96884369922452,
-    "y": 127.61620797668303,
+    "x": 940.51149630524958,
+    "y": 97.4688899266544,
     "z": 9000,
-    "height": 155.06055377812024,
-    "width": 319.72662858674352,
+    "height": 177.216163503008,
+    "width": 320.25492404472158,
     "tabOrder": 9000
   },
   "visual": {
@@ -155,54 +155,21 @@
             }
           }
         }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "85ad1d58057a044247da",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Meta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3e7c2180e119c83385cc",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Total Facturado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "1adc15f088080e5d62a0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Etiqueta % Avance"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
