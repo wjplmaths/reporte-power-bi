@@ -1,0 +1,58 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "bc48ce098477d50ee27e",
+    "position":  {
+                     "x":  20,
+                     "y":  106,
+                     "z":  2,
+                     "height":  64,
+                     "width":  64,
+                     "tabOrder":  2
+                 },
+    "visual":  {
+                   "visualType":  "image",
+                   "objects":  {
+                                   "image":  [
+                                                 {
+                                                     "properties":  {
+                                                                        "sourceFile":  {
+                                                                                           "image":  {
+                                                                                                         "scaling":  {
+                                                                                                                         "expr":  {
+                                                                                                                                      "Literal":  {
+                                                                                                                                                      "Value":  "\u0027Fit\u0027"
+                                                                                                                                                  }
+                                                                                                                                  }
+                                                                                                                     },
+                                                                                                         "url":  {
+                                                                                                                     "expr":  {
+                                                                                                                                  "ResourcePackageItem":  {
+                                                                                                                                                              "ItemName":  null,
+                                                                                                                                                              "PackageType":  1,
+                                                                                                                                                              "PackageName":  "RegisteredResources"
+                                                                                                                                                          }
+                                                                                                                              }
+                                                                                                                 },
+                                                                                                         "name":  {
+                                                                                                                      "expr":  {
+                                                                                                                                   "Literal":  {
+                                                                                                                                                   "Value":  "\u0027icono-facturacion9358770855875156.jpeg\u0027"
+                                                                                                                                               }
+                                                                                                                               }
+                                                                                                                  }
+                                                                                                     }
+                                                                                       }
+                                                                    }
+                                                 }
+                                             ],
+                                   "general":  [
+                                                   {
+                                                       "properties":  {
+
+                                                                      }
+                                                   }
+                                               ]
+                               },
+                   "drillFilterOtherVisuals":  true
+               }
+}

@@ -11,6 +11,9 @@
       "type": "SharedResources"
     }
   },
+  "publicCustomVisuals": [
+    "ChicletSlicer1448562802762"
+  ],
   "resourcePackages": [
     {
       "name": "RegisteredResources",

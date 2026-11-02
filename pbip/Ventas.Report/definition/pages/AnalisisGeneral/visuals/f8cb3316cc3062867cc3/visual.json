@@ -1,0 +1,38 @@
+{
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "f8cb3316cc3062867cc3",
+    "position":  {
+                     "x":  710,
+                     "y":  96,
+                     "z":  6,
+                     "height":  110,
+                     "width":  230,
+                     "tabOrder":  6
+                 },
+    "visual":  {
+                   "visualType":  "cardVisual",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Data":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "Medidas"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Utilidad Total"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "nativeQueryRef":  "Utilidad Total",
+                                                                                         "queryRef":  "Medidas.Utilidad Total"
+                                                                                     }
+                                                                                 ]
+                                                             }
+                                                }
+                             },
+                   "drillFilterOtherVisuals":  true
+               }
+}

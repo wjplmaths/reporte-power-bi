@@ -80,15 +80,15 @@ Para cada una de las cuatro consultas:
 - [ ] Logo de preferencia — *creado en PBIR (changelog 17), falta validar en Desktop*
 
 ### Página de Análisis General
-- [ ] Tarjetas (nuevas): Facturación Total, Costo Total y Utilidad
-- [ ] (Plus) Imágenes png en las tarjetas
-- [ ] Mapa con Total Facturado por Departamento
-- [ ] Tabla con el cumplimiento de ventas de cada vendedor
-- [ ] Formato condicional en `% Cumplimiento`: menor a 60% rojo, 60% a 79% amarillo, mayor a 80% verde
-- [ ] Medidor: Total Facturado vs Meta, con etiqueta personalizada en el valor que muestre el % de avance
-- [ ] Gráfico de barras agrupadas: Top 5 clientes por facturación
-- [ ] Chiclet Slicer (AppSource) por Año
-- [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num`
+- [ ] Tarjetas (nuevas): Facturación Total, Costo Total y Utilidad — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] (Plus) Imágenes png en las tarjetas — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] Mapa con Total Facturado por Departamento — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] Tabla con el cumplimiento de ventas de cada vendedor — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] Formato condicional en `% Cumplimiento`: menor a 60% rojo, 60% a 79% amarillo, mayor a 80% verde — *reglas por color en PBIR; los íconos son un paso manual (changelog 18)*
+- [ ] Medidor: Total Facturado vs Meta, con etiqueta personalizada en el valor que muestre el % de avance — *medidor creado; la etiqueta personalizada es un paso manual (changelog 18)*
+- [ ] Gráfico de barras agrupadas: Top 5 clientes por facturación — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] Chiclet Slicer (AppSource) por Año — *creado en PBIR (changelog 18), falta validar en Desktop*
+- [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num` — *creado en PBIR (changelog 18), falta validar en Desktop*
 
 ### Página de Análisis de Tendencia
 - [ ] Tarjetas (nuevas): Facturación Total y Facturación Total del Año Anterior
