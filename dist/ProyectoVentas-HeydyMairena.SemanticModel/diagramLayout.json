@@ -1,0 +1,130 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 304.70182045214983
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 251.40414861748806,
+            "y": 441.83668517868125
+          },
+          "nodeIndex": "Dim_Clientes",
+          "nodeLineageTag": "c0bfa4cd-88c5-4c0d-ac67-f792a05ca8fb",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1,
+          "expandedHeight": 72
+        },
+        {
+          "location": {
+            "x": 922.56653748841984,
+            "y": 953.44412761526939
+          },
+          "nodeIndex": "Dim_Productos",
+          "nodeLineageTag": "ae4ba91c-c12f-4d5a-a2d3-ff5f6a6419df",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2,
+          "expandedHeight": 72
+        },
+        {
+          "location": {
+            "x": 679.87484613478227,
+            "y": 542.39834462567649
+          },
+          "nodeIndex": "Fact_Ventas",
+          "nodeLineageTag": "7f941c90-8284-4051-9460-c6b78abddd9a",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 7,
+          "expandedHeight": 72
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 638.87317506650265
+          },
+          "nodeIndex": "Dim_Territorios",
+          "nodeLineageTag": "ce9bea94-cb67-4e31-8b98-13f73fd37d57",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 3,
+          "expandedHeight": 72
+        },
+        {
+          "location": {
+            "x": 1113.0816672118976,
+            "y": 315.48875930551583
+          },
+          "nodeIndex": "Dim_Metas",
+          "nodeLineageTag": "4681cebf-a18f-49d0-a5ae-896f870f4f6a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 675.1771648701058,
+            "y": 266.6034678978433
+          },
+          "nodeIndex": "Dim_Vendedores",
+          "nodeLineageTag": "2f9adb2d-0143-4dd8-9127-9a68065955d3",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1103.7816498760442,
+            "y": 568.93602054599353
+          },
+          "nodeIndex": "Calendario",
+          "nodeLineageTag": "d978f7f5-cc7c-4cb2-a189-7ffbfbf5696e",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 1397.0816672118976,
+            "y": 360.28815249132748
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "75694db5-5f30-4572-a206-63dace77f393",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 79.553182037699941,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

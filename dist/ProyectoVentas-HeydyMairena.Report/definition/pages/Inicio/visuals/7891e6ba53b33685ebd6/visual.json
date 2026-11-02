@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "7891e6ba53b33685ebd6",
+  "position": {
+    "x": 240.13802576257561,
+    "y": 425.3873599222768,
+    "z": 2000,
+    "height": 65.8664299234493,
+    "width": 800.00268011189473,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Ing. Heydy Mairena",
+                    "textStyle": {
+                      "fontSize": "22pt",
+                      "color": "#404040"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

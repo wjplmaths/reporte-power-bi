@@ -1,0 +1,106 @@
+table Fact_Ventas
+	lineageTag: 7f941c90-8284-4051-9460-c6b78abddd9a
+
+	column 'ID Transacción'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 90458f75-a642-409e-a65c-2144ae93d6c5
+		summarizeBy: none
+		sourceColumn: ID Transacción
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Vendedor'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: d5b09600-03c5-4acc-a293-54a6c082fe07
+		summarizeBy: none
+		sourceColumn: ID Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Cliente'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 5fa5fea7-4275-412b-a761-0cad64a57b4f
+		summarizeBy: none
+		sourceColumn: ID Cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'ID Producto'
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 77c6b214-659a-4643-822d-60e1d643acc2
+		summarizeBy: none
+		sourceColumn: ID Producto
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fecha de Venta'
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: f87f15ed-83bd-49a5-84e4-3bd26f45e3ee
+		summarizeBy: none
+		sourceColumn: Fecha de Venta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Cantidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b9b654b-a845-4c7a-b5e9-8f8533df08f5
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Precio Unitario'
+		dataType: double
+		formatString: #,0.###############
+		lineageTag: 83c97d11-05e9-473a-9c74-55b094f461d7
+		summarizeBy: sum
+		sourceColumn: Precio Unitario
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fact_Ventas = m
+		mode: import
+		source =
+				let
+				    // 1. Origen: hoja Fact_Ventas sin promover encabezados (la hoja trae titulo en las filas superiores)
+				    Origen = Excel.Workbook(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Fact_Ventas.xlsx"), null, false),
+				    Hoja = Origen{[Item="Fact_Ventas",Kind="Sheet"]}[Data],
+				    // 2. Eliminar las 3 filas superiores (titulo "CONSOLIDADO DE VENTAS 2020-2023" y filas vacias)
+				    FilasSuperioresEliminadas = Table.Skip(Hoja, 3),
+				    // 3. La fila 4 de la hoja trae los encabezados reales
+				    EncabezadosPromovidos = Table.PromoteHeaders(FilasSuperioresEliminadas, [PromoteAllScalars=true]),
+				    // 4. Conservar solo las columnas que usa el modelo (descarta la columna A vacia, la L sin datos,
+				    //    ID Factura, Fecha de Envio y Tasa de Impuesto)
+				    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, {"ID Transacción", "ID Vendedor", "ID Cliente", "ID Producto", "Fecha de Venta", "Cantidad", "Precio Unitario"}),
+				    // 5. Quitar filas sin ID de transaccion (filas vacias al final de la hoja, si las hubiera)
+				    SinFilasVacias = Table.SelectRows(ColumnasUtiles, each [ID Transacción] <> null),
+				    // 6. Tipos: IDs y cantidad como entero, fecha como date, precio como numero decimal
+				    TiposCorrectos = Table.TransformColumnTypes(SinFilasVacias, {
+				        {"ID Transacción", Int64.Type},
+				        {"ID Vendedor", Int64.Type},
+				        {"ID Cliente", Int64.Type},
+				        {"ID Producto", Int64.Type},
+				        {"Fecha de Venta", type date},
+				        {"Cantidad", Int64.Type},
+				        {"Precio Unitario", type number}
+				    })
+				in
+				    TiposCorrectos
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

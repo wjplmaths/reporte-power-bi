@@ -1,0 +1,47 @@
+table Dim_Metas
+	lineageTag: 4681cebf-a18f-49d0-a5ae-896f870f4f6a
+
+	column ID_Vendedor
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: 8374e2ff-3d7b-4b78-8e07-57c275fc29f6
+		summarizeBy: none
+		sourceColumn: ID_Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column Fecha
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
+		lineageTag: 929a75d7-51bb-430d-9bd2-2a6818dbf6ee
+		summarizeBy: none
+		sourceColumn: Fecha
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Meta
+		dataType: double
+		lineageTag: 3c8bb4ea-05d3-420d-86e5-db6b1025bebe
+		summarizeBy: sum
+		sourceColumn: Meta
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Metas = m
+		mode: import
+		source =
+				let
+				    // Anexar las cuatro consultas de metas anuales (equivale a "Anexar consultas como nuevas" partiendo de Metas_2020)
+				    Origen = Table.Combine({Metas_2020, Metas_2021, Metas_2022, Metas_2023}),
+				    TiposCorrectos = Table.TransformColumnTypes(Origen, {{"ID_Vendedor", Int64.Type}, {"Fecha", type date}, {"Meta", type number}})
+				in
+				    TiposCorrectos
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

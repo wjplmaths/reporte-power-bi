@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Logo de Ventas">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1F3864"/>
+      <stop offset="1" stop-color="#0F1C33"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="240" height="240" rx="48" fill="url(#fondo)"/>
+  <g>
+    <rect x="52"  y="150" width="30" height="52"  rx="6" fill="#56B4E9"/>
+    <rect x="94"  y="118" width="30" height="84"  rx="6" fill="#009E73"/>
+    <rect x="136" y="86"  width="30" height="116" rx="6" fill="#E69F00"/>
+    <rect x="178" y="54"  width="30" height="148" rx="6" fill="#FFFFFF"/>
+  </g>
+  <path d="M60 128 104 98 146 70 190 38" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 14"/>
+  <rect x="44" y="214" width="168" height="6" rx="3" fill="#FFFFFF" fill-opacity="0.35"/>
+</svg>

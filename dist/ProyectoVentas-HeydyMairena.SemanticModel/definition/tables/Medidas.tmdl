@@ -1,0 +1,64 @@
+table Medidas
+	lineageTag: 75694db5-5f30-4572-a206-63dace77f393
+
+	/// Importe vendido: suma de Cantidad por Precio Unitario de cada linea de Fact_Ventas.
+	measure 'Total Facturado' = SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])
+		formatString: "C$"#,0.00
+		lineageTag: 6e0dd409-f6d7-496b-b1b2-41dcbbc8ddb9
+
+	/// Costo de lo vendido: suma de Cantidad por el Costo Unitario del producto (RELATED a Dim_Productos).
+	measure 'Costo Total' = SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * RELATED(Dim_Productos[Costo Unitario]))
+		formatString: "C$"#,0.00
+		lineageTag: 7fa456a2-8f8b-4782-a6b1-ae986198cf66
+
+	/// Total Facturado menos Costo Total.
+	measure 'Utilidad Total' = [Total Facturado] - [Costo Total]
+		formatString: "C$"#,0.00
+		lineageTag: a5d45405-452a-4d89-aa89-0f81beb441ea
+
+	/// Meta de ventas (= SumMetas) en el contexto de filtro actual (vendedor, mes, anio).
+	measure Meta = [SumMetas]
+		formatString: "C$"#,0.00
+		lineageTag: 83ecb3d5-1658-4677-bb2c-d6df6d5c6c88
+
+	/// Total Facturado dividido entre SumMetas (DIVIDE). Devuelve en blanco si no hay meta.
+	measure '% Cumplimiento metas' = DIVIDE([Total Facturado], [SumMetas])
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 585c0612-bbda-42a4-9f7b-96d48b27377a
+
+	/// Total Facturado del mismo periodo del anio anterior (SAMEPERIODLASTYEAR sobre Calendario[Date]).
+	measure 'Ventas del Año Anterior' = CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date]))
+		formatString: "C$"#,0.00
+		lineageTag: 33326196-a7bd-4157-a805-86045acc46a5
+
+	/// Texto con el porcentaje de avance (Total Facturado frente a Meta) para la etiqueta del medidor. Muestra 0.0% si no hay meta.
+	measure 'Etiqueta % Avance' = "Avance: " & FORMAT(COALESCE([% Cumplimiento metas], 0), "0.0%")
+		lineageTag: 48b936c3-b0d5-4935-b565-5ad33426b99e
+
+	/// Suma de Dim_Metas[Meta] en el contexto de filtro actual (vendedor, mes, anio). Medida auxiliar oculta que usan Meta y % Cumplimiento metas.
+	measure SumMetas = SUM(Dim_Metas[Meta])
+		formatString: "C$"#,0.00
+		isHidden
+		lineageTag: 2c6f1a4e-9b3d-4f0a-8e57-6d1b7a90c4e2
+
+	column Columna
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e7d06966-74e7-4891-acb1-56dc91d566a7
+		summarizeBy: none
+		sourceColumn: Columna
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    // Consulta en blanco: solo sirve de contenedor de las medidas del modelo (OE4)
+				    Origen = #table(type table [Columna = Int64.Type], {})
+				in
+				    Origen
+
+	annotation PBI_ResultType = Table
+

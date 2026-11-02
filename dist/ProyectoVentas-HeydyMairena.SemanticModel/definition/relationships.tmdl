@@ -1,0 +1,33 @@
+relationship 0495765e-9418-46a4-88c5-198d0f010935
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Clientes.'Fecha de Alta'
+	toColumn: LocalDateTable_e191e5ee-7a04-450f-b11d-5745b807b04f.Date
+
+relationship 6df277a6-691a-427c-ab4f-38e63f3ed3c0
+	fromColumn: Fact_Ventas.'ID Cliente'
+	toColumn: Dim_Clientes.'ID Cliente'
+
+relationship 4674bb97-ff35-4428-b836-d65bf982326c
+	fromColumn: Fact_Ventas.'ID Producto'
+	toColumn: Dim_Productos.'ID Producto'
+
+relationship c85f9eee-bfc0-4489-98e0-8d11a2fca089
+	fromColumn: Fact_Ventas.'ID Vendedor'
+	toColumn: Dim_Vendedores.'ID Vendedor'
+
+relationship cdfea57a-f908-4171-ab68-203be41346d4
+	fromColumn: Fact_Ventas.'Fecha de Venta'
+	toColumn: Calendario.Date
+
+relationship fa067f79-bb56-4a48-a5c3-5f4867e22202
+	fromColumn: Dim_Metas.ID_Vendedor
+	toColumn: Dim_Vendedores.'ID Vendedor'
+
+relationship 0cbdba07-d8b0-442e-bd02-b438512c77df
+	fromColumn: Dim_Metas.Fecha
+	toColumn: Calendario.Date
+
+relationship 177e7263-bf9e-4ce2-abc1-7adad2c83feb
+	fromColumn: Dim_Clientes.Departamento
+	toColumn: Dim_Territorios.Departamento
+
