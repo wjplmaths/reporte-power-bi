@@ -1,8 +1,8 @@
-# Checklist final – estado tras las correcciones (changelog 35)
+# Checklist final – estado tras las correcciones (changelogs 35 y 36)
 
 **Fecha:** 2026-11-01  
 **Única fuente de verdad:** `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf` (9 páginas leídas completas, incluidas las 7 imágenes: logo, tabla de Calendario, diagrama del modelo, formato condicional, ícono de Power BI y la frase final).  
-**Alcance:** auditoría del 2026-11-01 (changelog 34) y reauditoría tras aplicar las correcciones de archivo (changelog 35). El checklist anterior no se usó como base: se construyó desde el PDF y luego se contrastó. La reauditoría vuelve a leer los archivos de `pbip/`.
+**Alcance:** auditoría del 2026-11-01 (changelog 34) reauditoría tras aplicar las correcciones de archivo (changelog 35) y ajuste del medidor (changelog 36). El checklist anterior no se usó como base: se construyó desde el PDF y luego se contrastó. La reauditoría vuelve a leer los archivos de `pbip/`.
 
 **Rutas abreviadas en la columna Evidencia:** `SM/` = `pbip/Ventas.SemanticModel/definition/`; `RP/` = `pbip/Ventas.Report/definition/pages/`. Los números son líneas del archivo.
 
@@ -18,24 +18,24 @@ La calificación excluye el requisito de publicar y compartir el enlace (OE5.27)
 | OE2 – Transformación de datos | 49 | 44 | 0 | 5 | 0 | 90 % | 90 % |
 | OE3 – Tabla Calendario + Modelado de datos | 14 | 14 | 0 | 0 | 0 | 100 % | 100 % |
 | OE4 – DAX | 8 | 8 | 0 | 0 | 0 | 100 % | 100 % |
-| OE5 – Visualizaciones + Compartir informe | 27 | 22 | 0 | 3 | 2 | 81 % | 81 % |
-| **Total** | **103** | **93** | **0** | **8** | **2** | **90 %** | **90 %** |
+| OE5 – Visualizaciones + Compartir informe | 27 | 22 | 1 | 2 | 2 | 81 % | 83 % |
+| **Total** | **103** | **93** | **1** | **7** | **2** | **90 %** | **91 %** |
 
-**Calificación nueva: 90 % cumplido (90 % ponderando los parciales).**
+**Calificación nueva: 90 % cumplido (91 % ponderando los parciales).**
 
 ### Antes y después de las correcciones
 
-| | Antes (changelog 34) | Después (changelog 35) |
+| | Antes (changelog 34) | Ahora (changelog 36) |
 |---|---:|---:|
 | Requisitos evaluados | 104 | 103 (se excluye la publicación) |
 | ✅ cumplidos | 82 | 93 |
-| 🟡 parciales | 12 | 0 |
-| 🔍 por validar en Desktop | 7 | 8 |
+| 🟡 parciales | 12 | 1 |
+| 🔍 por validar en Desktop | 7 | 7 |
 | ❌ pendientes | 3 | 2 |
 | % cumplido | 79 % | 90 % |
-| % ponderado | 85 % | 90 % |
+| % ponderado | 85 % | 91 % |
 
-Lectura del resultado: ya no quedan parciales (🟡). Lo que resta no se puede cerrar por archivo: **🔍** son validaciones en Desktop (`Dim_Territorios`, la regla roja de los íconos, el KPI y la etiqueta del medidor, que se escribió por analogía) y **❌** son el “plus” de imágenes en las tarjetas (se quitaron a propósito en Desktop y reponerlas cambia el diseño) y la entrega del `.pbix` a Classroom.
+Lectura del resultado: queda un único parcial (🟡), la etiqueta del valor del globo del medidor, que no se pudo resolver por archivo. Lo demás que resta tampoco se puede cerrar por archivo: **🔍** son validaciones en Desktop (`Dim_Territorios`, la regla roja de los íconos y el KPI) y **❌** son el “plus” de imágenes en las tarjetas (se quitaron a propósito en Desktop y reponerlas cambia el diseño) y la entrega del `.pbix` a Classroom.
 
 ## OE1 – Conexión a diferentes fuentes de datos
 
@@ -125,13 +125,13 @@ Lectura del resultado: ya no quedan parciales (🟡). Lo que resta no se puede c
 | # | Requisito (cita de la guía) | Estado | Evidencia | Acción requerida |
 |---|---|:---:|---|---|
 | OE4.1 | p.6 · OE4 · «Cree una nueva consulta llamada “Medidas” para agrupar las medidas a crear» | ✅ | `SM/tables/Medidas.tmdl:L1`; `SM/tables/Medidas.tmdl:L59` consulta M en blanco (partition `m`) | — |
-| OE4.2 | p.6 · OE4 · «Utilice las funciones SumX, Related, Divide» | ✅ | `SM/tables/Medidas.tmdl:L5`; `SM/tables/Medidas.tmdl:L9`; `SM/tables/Medidas.tmdl:L30` | — |
+| OE4.2 | p.6 · OE4 · «Utilice las funciones SumX, Related, Divide» | ✅ | `SM/tables/Medidas.tmdl:L5`; `SM/tables/Medidas.tmdl:L9`; `SM/tables/Medidas.tmdl:L24` | — |
 | OE4.3 | p.6 · OE4 · «a. Total Facturado = Cantidad * Precio Unitario (SumX)» | ✅ | `SM/tables/Medidas.tmdl:L5` SUMX(Fact_Ventas, Cantidad * Precio Unitario) | — |
 | OE4.4 | p.6 · OE4 · «b. Costo Total = Cantidad * Costo Unitario (SumX, Related)» | ✅ | `SM/tables/Medidas.tmdl:L10` SUMX + RELATED(Dim_Productos[Costo Unitario]) | — |
 | OE4.5 | p.6 · OE4 · «b. Utilidad Total = Total Facturado – Costo total» | ✅ | `SM/tables/Medidas.tmdl:L15`. Cruce de la fuente: 201,686,224.53 − 114,107,426.25 = 87,578,798.28 (Desktop muestra C$87.58 mill.) | — |
-| OE4.6 | p.6 · OE4 · «c. % Cumplimiento metas = Total Facturado / SumMetas (Divide)» | ✅ | `SM/tables/Medidas.tmdl:L31` DIVIDE([Total Facturado], [SumMetas]) | Ninguna (corregido en el changelog 35). |
-| OE4.7 | p.6 · OE4 · «d. Meta = SumMetas» | ✅ | `SM/tables/Medidas.tmdl:L26` [SumMetas]; `SM/tables/Medidas.tmdl:L20` SUM(Dim_Metas[Meta]), oculta. Suma de metas en la fuente: 269,764,999.68, igual que Desktop | Ninguna (corregido en el changelog 35). |
-| OE4.8 | p.6 · OE4 · «Utilice las funciones de inteligencia de tiempo SAMEPERIODLASTYEAR · a. Ventas del Año Anterior» | ✅ | `SM/tables/Medidas.tmdl:L36` CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date])) | — |
+| OE4.6 | p.6 · OE4 · «c. % Cumplimiento metas = Total Facturado / SumMetas (Divide)» | ✅ | `SM/tables/Medidas.tmdl:L25` DIVIDE([Total Facturado], [SumMetas]) | Ninguna (corregido en el changelog 35). |
+| OE4.7 | p.6 · OE4 · «d. Meta = SumMetas» | ✅ | `SM/tables/Medidas.tmdl:L20` [SumMetas]; `SM/tables/Medidas.tmdl:L39` SUM(Dim_Metas[Meta]), oculta. Suma de metas en la fuente: 269,764,999.68, igual que Desktop | Ninguna (corregido en el changelog 35). |
+| OE4.8 | p.6 · OE4 · «Utilice las funciones de inteligencia de tiempo SAMEPERIODLASTYEAR · a. Ventas del Año Anterior» | ✅ | `SM/tables/Medidas.tmdl:L30` CALCULATE([Total Facturado], SAMEPERIODLASTYEAR(Calendario[Date])) | — |
 
 ## OE5 – Visualizaciones + Compartir informe
 
@@ -151,7 +151,7 @@ Lectura del resultado: ya no quedan parciales (🟡). Lo que resta no se puede c
 | OE5.12 | p.7 · OE5 · Tabla · «Entre 60% al 79% Amarillo» | ✅ | `RP/AnalisisGeneral/visuals/00ede76c2e04fc432cd8/visual.json:L195` >= 0.6 y < 0.8 → ! (SymbolMedium); visto en la captura del usuario (71.5 %, 76.9 %…) | — |
 | OE5.13 | p.7 · OE5 · Tabla · «Mayor al 80% Verde» | ✅ | `RP/AnalisisGeneral/visuals/00ede76c2e04fc432cd8/visual.json:L222` >= 0.8 → ✔ (SymbolHigh), igual que la imagen de la guía; visto en la captura (84.0 %, 83.9 %, 80.5 %) | — |
 | OE5.14 | p.8 · OE5 · Uso de Medidor · «Utilice la visualización “Medidor” para representar el avance total, relacionando el Total Facturado vs Meta» | ✅ | `RP/AnalisisGeneral/visuals/a7112fe163d6dacd2aef/visual.json:L13` con Y=`Total Facturado`, Max y Objetivo=`Meta` | — |
-| OE5.15 | p.8 · OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance» | 🔍 | `RP/AnalisisGeneral/visuals/a7112fe163d6dacd2aef/visual.json:L115` etiqueta dinámica activada + `RP/AnalisisGeneral/visuals/a7112fe163d6dacd2aef/visual.json:L126` = medida `Etiqueta % Avance` | Aplicada en el changelog 35 con el formato de etiquetas dinámicas de Power BI, pero por analogía con otros visuales: confirmar en Desktop que el globo muestra “Avance: xx.x %” (paso 14). |
+| OE5.15 | p.8 · OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance» | 🟡 | El valor del globo muestra `Total Facturado` (`RP/AnalisisGeneral/visuals/a7112fe163d6dacd2aef/visual.json:L91`); el % solo está como tooltip (`Etiqueta % Avance`, `RP/AnalisisGeneral/visuals/a7112fe163d6dacd2aef/visual.json:L52`). La etiqueta dinámica probada en el changelog 35 se pintaba como “(En blanco)” en Desktop y se retiró (changelog 36) | Pendiente: etiqueta personalizada en el valor del globo. Hay que configurarla a mano en Desktop (paso 14) o aceptar que el % vaya en el tooltip. |
 | OE5.16 | p.8 · OE5 · Uso de Barras Agrupadas · «Utilice la visualización “Gráfico de barras agrupadas” para representar el Top 5 de clientes por facturación» | ✅ | `RP/AnalisisGeneral/visuals/826d3d0b43c276cb6538/visual.json:L13` con filtro `RP/AnalisisGeneral/visuals/826d3d0b43c276cb6538/visual.json:L153` TopN (Top=5, orden por Total Facturado) | — |
 | OE5.17 | p.8 · OE5 · Uso de Segmentaciones · «Utilice… “Chiclet Slicer” de AppSource… por Año» | ✅ | `RP/AnalisisGeneral/visuals/3321249c81bd226877bd/visual.json:L13` (campo `Calendario[Año]`); visual instalado: `pbip/Ventas.Report/definition/report.json:L39` publicCustomVisuals | — |
 | OE5.18 | p.8 · OE5 · Segmentaciones · «…y Mes Corto» | ✅ | `RP/AnalisisGeneral/visuals/dc3a8f8200499969ebf4/visual.json:L26` (Chiclet) | — |
@@ -182,7 +182,7 @@ Hallazgos al contrastar el checklist previo con el PDF:
 | # | Estado | Severidad | Hallazgo | Acción |
 |---|---|---|---|---|
 | H1 | Abierto | Media | El tema personalizado del changelog 29 ya no está aplicado: el informe usa `CopilotDefault`; `tema-ventas.json` no está registrado en `StaticResources`. | Es una decisión de diseño (la guía no exige tema). No se tocó para no cambiar el diseño. Aplicarlo con Vista > Temas > Examinar temas o dar de baja los changelogs 29-30. |
-| H2 | Abierto (por validar) | Media | Etiqueta del medidor: aplicada con etiqueta dinámica (`calloutValue`), pero el formato se tomó por analogía con otras etiquetas dinámicas y falta verlo en Desktop. | Paso 14 de PASOS_MANUALES_DESKTOP.md. |
+| H2 | Abierto | Media | Etiqueta del medidor: la etiqueta dinámica de `calloutValue` (changelog 35) se pintaba como “(En blanco)” en Desktop y se retiró (changelog 36). El globo vuelve a mostrar `Total Facturado`; el % solo está en el tooltip. | Configurarla a mano en Desktop (paso 14) o aceptar el tooltip. |
 | H3 | Resuelto (cl. 35) | Baja | Faltaba una medida `SumMetas`: ahora existe (oculta) y `Meta` y `% Cumplimiento metas` la usan. | — |
 | H4 | Resuelto (cl. 35) | Baja | Las consultas `Metas_AAAA` ocultaban los pasos en una función: ahora cada una muestra sus 8 pasos nombrados (filas superiores, encabezados, “Columna 1”, renombrar, anular dinamización, renombrar a Fecha y Meta, tipos). `Dim_Vendedores` también muestra el paso de filas superiores. La función `fnMetasMensuales` se eliminó. | — |
 | H5 | Resuelto (cl. 35) | Baja | Referencia residual de la portada a `logo.jpeg` (no existía): eliminada. | — |
@@ -191,8 +191,9 @@ Hallazgos al contrastar el checklist previo con el PDF:
 | H8 | Info | Info | El modelo conserva la fecha automática de Power BI (tablas ocultas y una relación desde `Fecha de Alta`). El diagrama de la guía también muestra ese ícono. | Opcional: Archivo > Opciones > Carga de datos > desmarcar “Fecha y hora automáticas”. |
 | H9 | Info | Info | El diagrama de la guía conserva columnas que el modelo quitó (`Fecha de Envío`, `ID Factura`, `Primer Nombre`, `ISO:NI`, `Densidad`). Las viñetas piden eliminar las que no se usen: no es incumplimiento. | Ninguna. |
 | H10 | Info | Info | `dist/TrabajoFinalCursoHeydyMairena.pbix` es una carpeta descomprimida en blanco, no un .pbix. | Retirarla cuando exista el .pbix real. |
-| H11 | Info | Info | Elementos extra no pedidos: páginas `TooltipMapa` y `TooltipBarras`, segunda botonera, medida `Etiqueta % Avance`. | Ninguna. |
-| H12 | Info | Info | Nombres de consultas y medidas idénticos a los de la guía; sin relaciones inactivas ni ambiguas; 0 huérfanos en los datos. | Ninguna. |
+| H11 | Abierto | Baja | Las páginas de tooltip `TooltipMapa` y `TooltipBarras` se eliminaron en Desktop (cambio guardado por el usuario tras el changelog 35, sin commitear), pero el mapa y las barras Top 5 siguen apuntando a ellas en `visualTooltip`: son referencias colgantes y Desktop muestra el tooltip normal. | Opcional: quitar `visualTooltip` de esos dos visuales para limpiar las referencias, o restaurar las páginas. Las páginas de tooltip no las pide la guía. |
+| H12 | Info | Info | Elementos extra no pedidos por la guía: segunda botonera de navegación y medida `Etiqueta % Avance` (usada en el tooltip del medidor). | Ninguna. |
+| H13 | Info | Info | Nombres de consultas y medidas idénticos a los de la guía; sin relaciones inactivas ni ambiguas; 0 huérfanos en los datos. | Ninguna. |
 
 ## Comprobaciones independientes con los datos de origen
 
@@ -213,10 +214,12 @@ Se recalcularon desde `data/raw/` y los CSV de G.Drive, sin pasar por Power BI:
 
 Todo lo corregible por archivo sin cambiar el diseño ya se aplicó (changelog 35). Quedan:
 
-1. **Validar en Desktop.** Etiqueta del medidor, KPI, `Dim_Territorios`, regla roja de los íconos y “Cerrar y aplicar” (pasos 3, 4, 10, 12 y 14 de `PASOS_MANUALES_DESKTOP.md`).  
+1. **Validar en Desktop.** KPI, `Dim_Territorios`, regla roja de los íconos y “Cerrar y aplicar” (pasos 3, 4, 10 y 12 de `PASOS_MANUALES_DESKTOP.md`).  
    Si algo falla, la causa se corrige con un prompt puntual a partir del mensaje o la captura.
-2. **Entrega.** Guardar el `.pbix` en `dist/` y subirlo a Classroom (pasos 16 y 19). La publicación y el enlace (17 y 18) quedan fuera de esta calificación.  
+2. **Etiqueta del medidor (único parcial).** El valor del globo debería mostrar el % de avance, pero la etiqueta dinámica escrita por archivo no se pinta en esta versión de Desktop.  
+   Se resuelve a mano: Formato del medidor > Valor de llamada > etiqueta con la medida `Etiqueta % Avance` (paso 14). Si prefieres no hacerlo, el % de avance sigue disponible en el tooltip del medidor.
+3. **Entrega.** Guardar el `.pbix` en `dist/` y subirlo a Classroom (pasos 16 y 19). La publicación y el enlace (17 y 18) quedan fuera de esta calificación.  
    Manual.
-3. **Decisión de diseño (opcional).** Imágenes en las tarjetas (el “plus” de OE5.8), tema `tema-ventas` y cuadrícula de tarjetas, segmentaciones y botones (H1, H6).  
+4. **Decisión de diseño (opcional).** Imágenes en las tarjetas (el “plus” de OE5.8), tema `tema-ventas` y cuadrícula de tarjetas, segmentaciones y botones (H1, H6).  
    Cambian el diseño; se hacen solo si lo pides, con prompts como: «Añade a las tarjetas de Análisis General los íconos de assets/ sin mover las tarjetas» o «Alinea tarjetas, segmentaciones y botones de las dos páginas de análisis».
 

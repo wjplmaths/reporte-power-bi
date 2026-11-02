@@ -1,6 +1,6 @@
 # Checklist del requerimiento
 
-Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la reauditoría del 2026-11-01 tras las correcciones del changelog 35 (detalle, evidencias y citas en `docs/CHECKLIST_FINAL.md`).
+Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la reauditoría del 2026-11-01 tras las correcciones de los changelogs 35 y 36 (detalle, evidencias y citas en `docs/CHECKLIST_FINAL.md`).
 
 **Leyenda:** `[x]` ✅ cumplido con evidencia en archivo · `[ ]` 🟡 parcial · ❌ pendiente · 🔍 por validar en Desktop · ➖ excluido por indicación del usuario.
 
@@ -105,7 +105,7 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la r
 - [x] ✅ OE5 · Tabla · «Entre 60% al 79% Amarillo»
 - [x] ✅ OE5 · Tabla · «Mayor al 80% Verde»
 - [x] ✅ OE5 · Uso de Medidor · «Utilice la visualización “Medidor” para representar el avance total, relacionando el Total Facturado vs Meta»
-- [ ] 🔍 OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance»
+- [ ] 🟡 OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance»
 - [x] ✅ OE5 · Uso de Barras Agrupadas · «Utilice la visualización “Gráfico de barras agrupadas” para representar el Top 5 de clientes por facturación»
 - [x] ✅ OE5 · Uso de Segmentaciones · «Utilice… “Chiclet Slicer” de AppSource… por Año»
 - [x] ✅ OE5 · Segmentaciones · «…y Mes Corto»
@@ -128,8 +128,8 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la r
 | OE2 | 49 | 44 | 0 | 5 | 0 | 90 % |
 | OE3 | 14 | 14 | 0 | 0 | 0 | 100 % |
 | OE4 | 8 | 8 | 0 | 0 | 0 | 100 % |
-| OE5 | 27 | 22 | 0 | 3 | 2 | 81 % |
-| **Total** | 103 | 93 | 0 | 8 | 2 | **90 %** |
+| OE5 | 27 | 22 | 1 | 2 | 2 | 81 % |
+| **Total** | 103 | 93 | 1 | 7 | 2 | **90 %** |
 
 ## Notas
 - El PDF define “mayor al 80%” en verde y “60% a 79%” en amarillo; la imagen del cuadro de íconos fija los límites en 0.6 y 0.8 (>=0.8 verde). El modelo usa esos límites.
