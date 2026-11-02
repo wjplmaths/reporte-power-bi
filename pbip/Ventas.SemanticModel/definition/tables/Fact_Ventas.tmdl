@@ -1,6 +1,94 @@
 table Fact_Ventas
 	lineageTag: 7f941c90-8284-4051-9460-c6b78abddd9a
 
+	column Column1
+		dataType: string
+		lineageTag: 3017ca43-e0c2-4e8b-8125-3945b06f71c0
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 2634b976-2e98-46da-82e2-bbca403990ce
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: e8957b06-16bb-4d1b-b37b-8d20a6ebc50f
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column4
+		dataType: string
+		lineageTag: 81d00816-7982-45ab-ac8e-610e0a2b109e
+		summarizeBy: none
+		sourceColumn: Column4
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column5
+		dataType: string
+		lineageTag: 9091b541-54a3-40ff-a532-eb693a9f08a4
+		summarizeBy: none
+		sourceColumn: Column5
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column6
+		dataType: string
+		lineageTag: 81031bdc-100a-4982-8d39-341598afb4c4
+		summarizeBy: none
+		sourceColumn: Column6
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column7
+		dataType: string
+		lineageTag: 288cee18-31f6-434a-b3e1-fa3ad27d2bcb
+		summarizeBy: none
+		sourceColumn: Column7
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column8
+		dataType: string
+		lineageTag: 277f01f9-1747-482f-8982-c0f4107226b6
+		summarizeBy: none
+		sourceColumn: Column8
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column9
+		dataType: string
+		lineageTag: e47dca7d-8814-4165-823e-c57e6afa2b77
+		summarizeBy: none
+		sourceColumn: Column9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column10
+		dataType: string
+		lineageTag: 62ef215b-be75-4703-a8b9-b44bb10b1590
+		summarizeBy: none
+		sourceColumn: Column10
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column11
+		dataType: string
+		lineageTag: 6e8163cc-6cbe-4b69-9470-22942c8dd534
+		summarizeBy: none
+		sourceColumn: Column11
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Fact_Ventas = m
 		mode: import
 		source =
@@ -9,3 +97,8 @@ table Fact_Ventas
 				    Hoja = Origen{[Item="Fact_Ventas",Kind="Sheet"]}[Data]
 				in
 				    Hoja
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

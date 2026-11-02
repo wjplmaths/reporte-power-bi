@@ -1,0 +1,5 @@
+relationship 0495765e-9418-46a4-88c5-198d0f010935
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Dim_Clientes.'Fecha de Alta'
+	toColumn: LocalDateTable_e191e5ee-7a04-450f-b11d-5745b807b04f.Date
+

@@ -1,11 +1,42 @@
 table 'Tabla 1'
-	lineageTag: c16d54a7-0d56-4155-904a-134c85439bdf
+	lineageTag: 2f9adb2d-0143-4dd8-9127-9a68065955d3
+
+	column 'ID Vendedor'
+		dataType: int64
+		formatString: 0
+		lineageTag: dcb15baf-49d1-442c-8d6d-235fc17a02d1
+		summarizeBy: sum
+		sourceColumn: ID Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Completo'
+		dataType: string
+		lineageTag: 7d79962f-ebad-47ab-b631-9f75d3085f23
+		summarizeBy: none
+		sourceColumn: Nombre Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Primer Nombre'
+		dataType: string
+		lineageTag: aad0caaa-b548-435a-a889-b00263027c0c
+		summarizeBy: none
+		sourceColumn: Primer Nombre
+
+		annotation SummarizationSetBy = Automatic
 
 	partition 'Tabla 1' = m
 		mode: import
 		source =
 				let
-				    Origen = GDrive_Fuente,
-				    Datos = fnBuscarTabla(Origen, {"ID Vendedor"})
+				    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=1022144234"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID Vendedor", Int64.Type}, {"Nombre Completo", type text}, {"Primer Nombre", type text}})
 				in
-				    Datos
+				    #"Tipo cambiado"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+
