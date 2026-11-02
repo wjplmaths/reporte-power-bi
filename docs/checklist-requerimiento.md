@@ -75,9 +75,9 @@ Para cada una de las cuatro consultas:
 
 ## OE5 – Visualizaciones + Compartir informe
 ### Página de inicio
-- [ ] Portada con nombre del autor y título del informe
-- [ ] Botón de navegación hacia la primera página de Análisis General
-- [ ] Logo de preferencia
+- [ ] Portada con nombre del autor y título del informe — *creado en PBIR (changelog 17), falta validar en Desktop*
+- [ ] Botón de navegación hacia la primera página de Análisis General — *creado en PBIR (changelog 17), falta validar en Desktop*
+- [ ] Logo de preferencia — *creado en PBIR (changelog 17), falta validar en Desktop*
 
 ### Página de Análisis General
 - [ ] Tarjetas (nuevas): Facturación Total, Costo Total y Utilidad

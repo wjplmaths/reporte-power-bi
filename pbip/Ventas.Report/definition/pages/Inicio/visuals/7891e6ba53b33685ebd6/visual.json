@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "3af7cf3d294656d3271c",
+  "name": "7891e6ba53b33685ebd6",
   "position": {
-    "x": 10,
-    "y": 20,
-    "z": 0,
-    "height": 280,
-    "width": 280,
-    "tabOrder": 0
+    "x": 240,
+    "y": 425,
+    "z": 2,
+    "height": 50,
+    "width": 800,
+    "tabOrder": 2
   },
   "visual": {
     "visualType": "textbox",
@@ -19,9 +19,15 @@
               {
                 "textRuns": [
                   {
-                    "value": "qew"
+                    "value": "Wilmer José Palacios López",
+                    "textStyle": {
+                      
+                      "fontSize": "22pt",
+                      "color": "#404040"
+                    }
                   }
-                ]
+                ],
+                "horizontalTextAlignment": "center"
               }
             ]
           }

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "b9bba74a5ea34ab52103",
+  "position": {
+    "x": 530,
+    "y": 80,
+    "z": 0,
+    "height": 220,
+    "width": 220,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "image",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "imageUrl": {
+              "expr": {
+                "ResourcePackageItem": {
+                  "PackageName": "RegisteredResources",
+                  "PackageType": "RegisteredResources",
+                  "ItemName": "logo.jpeg"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

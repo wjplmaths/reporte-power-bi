@@ -1,16 +1,6 @@
 table Medidas
 	lineageTag: 75694db5-5f30-4572-a206-63dace77f393
 
-	column Columna
-		dataType: int64
-		isHidden
-		formatString: 0
-		lineageTag: e7d06966-74e7-4891-acb1-56dc91d566a7
-		summarizeBy: none
-		sourceColumn: Columna
-
-		annotation SummarizationSetBy = Automatic
-
 	/// Importe vendido: suma de Cantidad por Precio Unitario de cada linea de Fact_Ventas.
 	measure 'Total Facturado' = SUMX(Fact_Ventas, Fact_Ventas[Cantidad] * Fact_Ventas[Precio Unitario])
 		formatString: "C$"#,0.00
@@ -41,6 +31,16 @@ table Medidas
 		formatString: "C$"#,0.00
 		lineageTag: 33326196-a7bd-4157-a805-86045acc46a5
 
+	column Columna
+		dataType: int64
+		isHidden
+		formatString: 0
+		lineageTag: e7d06966-74e7-4891-acb1-56dc91d566a7
+		summarizeBy: none
+		sourceColumn: Columna
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Medidas = m
 		mode: import
 		source =
@@ -51,3 +51,4 @@ table Medidas
 				    Origen
 
 	annotation PBI_ResultType = Table
+

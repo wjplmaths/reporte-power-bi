@@ -13,6 +13,17 @@
   },
   "resourcePackages": [
     {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "logo.jpeg",
+          "path": "logo.jpeg",
+          "type": "Image"
+        }
+      ]
+    },
+    {
       "name": "SharedResources",
       "type": "SharedResources",
       "items": [
