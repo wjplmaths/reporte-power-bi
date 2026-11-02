@@ -1,244 +1,244 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "826d3d0b43c276cb6538",
-    "position":  {
-                     "x":  940.51149630524958,
-                     "y":  284.81169134412,
-                     "z":  10000,
-                     "height":  369.1264510293305,
-                     "width":  321.0988458768154,
-                     "tabOrder":  10000
-                 },
-    "visual":  {
-                   "visualType":  "clusteredBarChart",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Category":  {
-                                                                     "projections":  [
-                                                                                         {
-                                                                                             "field":  {
-                                                                                                           "Column":  {
-                                                                                                                          "Expression":  {
-                                                                                                                                             "SourceRef":  {
-                                                                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                                                                           }
-                                                                                                                                         },
-                                                                                                                          "Property":  "Nombre Cliente"
-                                                                                                                      }
-                                                                                                       },
-                                                                                             "queryRef":  "Dim_Clientes.Nombre Cliente",
-                                                                                             "nativeQueryRef":  "Nombre Cliente",
-                                                                                             "active":  true
-                                                                                         }
-                                                                                     ]
-                                                                 },
-                                                    "Y":  {
-                                                              "projections":  [
-                                                                                  {
-                                                                                      "field":  {
-                                                                                                    "Measure":  {
-                                                                                                                    "Expression":  {
-                                                                                                                                       "SourceRef":  {
-                                                                                                                                                         "Entity":  "Medidas"
-                                                                                                                                                     }
-                                                                                                                                   },
-                                                                                                                    "Property":  "Total Facturado"
-                                                                                                                }
-                                                                                                },
-                                                                                      "queryRef":  "Medidas.Total Facturado",
-                                                                                      "nativeQueryRef":  "Total Facturado"
-                                                                                  }
-                                                                              ]
-                                                          }
-                                                },
-                                 "sortDefinition":  {
-                                                        "sort":  [
-                                                                     {
-                                                                         "field":  {
-                                                                                       "Measure":  {
-                                                                                                       "Expression":  {
-                                                                                                                          "SourceRef":  {
-                                                                                                                                            "Entity":  "Medidas"
-                                                                                                                                        }
-                                                                                                                      },
-                                                                                                       "Property":  "Total Facturado"
-                                                                                                   }
-                                                                                   },
-                                                                         "direction":  "Descending"
-                                                                     }
-                                                                 ],
-                                                        "isDefaultSort":  true
-                                                    }
-                             },
-                   "objects":  {
-                                   "categoryAxis":  [
-                                                        {
-                                                            "properties":  {
-                                                                               "showAxisTitle":  {
-                                                                                                     "expr":  {
-                                                                                                                  "Literal":  {
-                                                                                                                                  "Value":  "false"
-                                                                                                                              }
-                                                                                                              }
-                                                                                                 }
-                                                                           }
-                                                        }
-                                                    ]
-                               },
-                   "visualContainerObjects":  {
-                                                  "title":  [
-                                                                {
-                                                                    "properties":  {
-                                                                                       "text":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "\u0027Top 5 clientes por facturación\u0027"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                },
-                                                                                       "show":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "true"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                }
-                                                                                   }
-                                                                }
-                                                            ],
-                                                  "visualTooltip":  [
-                                                                        {
-                                                                            "properties":  {
-                                                                                               "show":  {
-                                                                                                            "expr":  {
-                                                                                                                         "Literal":  {
-                                                                                                                                         "Value":  "true"
-                                                                                                                                     }
-                                                                                                                     }
-                                                                                                        },
-                                                                                               "type":  {
-                                                                                                            "expr":  {
-                                                                                                                         "Literal":  {
-                                                                                                                                         "Value":  "\u0027ReportPage\u0027"
-                                                                                                                                     }
-                                                                                                                     }
-                                                                                                        },
-                                                                                               "section":  {
-                                                                                                               "expr":  {
-                                                                                                                            "Literal":  {
-                                                                                                                                            "Value":  "\u0027TooltipBarras\u0027"
-                                                                                                                                        }
-                                                                                                                        }
-                                                                                                           }
-                                                                                           }
-                                                                        }
-                                                                    ]
-                                              },
-                   "drillFilterOtherVisuals":  true
-               },
-    "filterConfig":  {
-                         "filters":  [
-                                         {
-                                             "name":  "d83f4c0bf4edc97e0eb5",
-                                             "field":  {
-                                                           "Column":  {
-                                                                          "Expression":  {
-                                                                                             "SourceRef":  {
-                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                           }
-                                                                                         },
-                                                                          "Property":  "Nombre Cliente"
-                                                                      }
-                                                       },
-                                             "type":  "TopN",
-                                             "filter":  {
-                                                            "Version":  2,
-                                                            "From":  [
-                                                                         {
-                                                                             "Name":  "subquery",
-                                                                             "Expression":  {
-                                                                                                "Subquery":  {
-                                                                                                                 "Query":  {
-                                                                                                                               "Version":  2,
-                                                                                                                               "From":  [
-                                                                                                                                            {
-                                                                                                                                                "Name":  "d",
-                                                                                                                                                "Entity":  "Dim_Clientes",
-                                                                                                                                                "Type":  0
-                                                                                                                                            },
-                                                                                                                                            {
-                                                                                                                                                "Name":  "m",
-                                                                                                                                                "Entity":  "Medidas",
-                                                                                                                                                "Type":  0
-                                                                                                                                            }
-                                                                                                                                        ],
-                                                                                                                               "Select":  [
-                                                                                                                                              {
-                                                                                                                                                  "Column":  {
-                                                                                                                                                                 "Expression":  {
-                                                                                                                                                                                    "SourceRef":  {
-                                                                                                                                                                                                      "Source":  "d"
-                                                                                                                                                                                                  }
-                                                                                                                                                                                },
-                                                                                                                                                                 "Property":  "Nombre Cliente"
-                                                                                                                                                             },
-                                                                                                                                                  "Name":  "field"
-                                                                                                                                              }
-                                                                                                                                          ],
-                                                                                                                               "OrderBy":  [
-                                                                                                                                               {
-                                                                                                                                                   "Direction":  2,
-                                                                                                                                                   "Expression":  {
-                                                                                                                                                                      "Measure":  {
-                                                                                                                                                                                      "Expression":  {
-                                                                                                                                                                                                         "SourceRef":  {
-                                                                                                                                                                                                                           "Source":  "m"
-                                                                                                                                                                                                                       }
-                                                                                                                                                                                                     },
-                                                                                                                                                                                      "Property":  "Total Facturado"
-                                                                                                                                                                                  }
-                                                                                                                                                                  }
-                                                                                                                                               }
-                                                                                                                                           ],
-                                                                                                                               "Top":  5
-                                                                                                                           }
-                                                                                                             }
-                                                                                            },
-                                                                             "Type":  2
-                                                                         },
-                                                                         {
-                                                                             "Name":  "d",
-                                                                             "Entity":  "Dim_Clientes",
-                                                                             "Type":  0
-                                                                         }
-                                                                     ],
-                                                            "Where":  [
-                                                                          {
-                                                                              "Condition":  {
-                                                                                                "In":  {
-                                                                                                           "Expressions":  [
-                                                                                                                               {
-                                                                                                                                   "Column":  {
-                                                                                                                                                  "Expression":  {
-                                                                                                                                                                     "SourceRef":  {
-                                                                                                                                                                                       "Source":  "d"
-                                                                                                                                                                                   }
-                                                                                                                                                                 },
-                                                                                                                                                  "Property":  "Nombre Cliente"
-                                                                                                                                              }
-                                                                                                                               }
-                                                                                                                           ],
-                                                                                                           "Table":  {
-                                                                                                                         "SourceRef":  {
-                                                                                                                                           "Source":  "subquery"
-                                                                                                                                       }
-                                                                                                                     }
-                                                                                                       }
-                                                                                            }
-                                                                          }
-                                                                      ]
-                                                        }
-                                         }
-                                     ]
-                     }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "826d3d0b43c276cb6538",
+  "position": {
+    "x": 940.51149630524958,
+    "y": 284.81169134412,
+    "z": 10000,
+    "height": 369.1264510293305,
+    "width": 321.0988458768154,
+    "tabOrder": 10000
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Clientes"
+                    }
+                  },
+                  "Property": "Nombre Cliente"
+                }
+              },
+              "queryRef": "Dim_Clientes.Nombre Cliente",
+              "nativeQueryRef": "Nombre Cliente",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Facturado"
+                }
+              },
+              "queryRef": "Medidas.Total Facturado",
+              "nativeQueryRef": "Total Facturado"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Total Facturado"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 5 clientes por facturación'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "type": {
+              "expr": {
+                "Literal": {
+                  "Value": "'ReportPage'"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'TooltipBarras'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d83f4c0bf4edc97e0eb5",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Clientes"
+              }
+            },
+            "Property": "Nombre Cliente"
+          }
+        },
+        "type": "TopN",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "d",
+                        "Entity": "Dim_Clientes",
+                        "Type": 0
+                      },
+                      {
+                        "Name": "m",
+                        "Entity": "Medidas",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "d"
+                            }
+                          },
+                          "Property": "Nombre Cliente"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Measure": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "Total Facturado"
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 5
+                  }
+                }
+              },
+              "Type": 2
+            },
+            {
+              "Name": "d",
+              "Entity": "Dim_Clientes",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "d"
+                          }
+                        },
+                        "Property": "Nombre Cliente"
+                      }
+                    }
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
 }
