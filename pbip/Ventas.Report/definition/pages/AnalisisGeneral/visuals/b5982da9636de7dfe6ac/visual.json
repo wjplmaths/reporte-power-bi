@@ -1,252 +1,252 @@
 {
-    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-    "name":  "b5982da9636de7dfe6ac",
-    "position":  {
-                     "x":  20,
-                     "y":  218,
-                     "z":  7000,
-                     "height":  482,
-                     "width":  380,
-                     "tabOrder":  7000
-                 },
-    "visual":  {
-                   "visualType":  "azureMap",
-                   "query":  {
-                                 "queryState":  {
-                                                    "Category":  {
-                                                                     "projections":  [
-                                                                                         {
-                                                                                             "field":  {
-                                                                                                           "Column":  {
-                                                                                                                          "Expression":  {
-                                                                                                                                             "SourceRef":  {
-                                                                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                                                                           }
-                                                                                                                                         },
-                                                                                                                          "Property":  "País"
-                                                                                                                      }
-                                                                                                       },
-                                                                                             "queryRef":  "Dim_Clientes.País",
-                                                                                             "nativeQueryRef":  "País",
-                                                                                             "active":  true
-                                                                                         },
-                                                                                         {
-                                                                                             "field":  {
-                                                                                                           "Column":  {
-                                                                                                                          "Expression":  {
-                                                                                                                                             "SourceRef":  {
-                                                                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                                                                           }
-                                                                                                                                         },
-                                                                                                                          "Property":  "Departamento"
-                                                                                                                      }
-                                                                                                       },
-                                                                                             "queryRef":  "Dim_Clientes.Departamento",
-                                                                                             "nativeQueryRef":  "Departamento",
-                                                                                             "active":  true
-                                                                                         }
-                                                                                     ]
-                                                                 },
-                                                    "Size":  {
-                                                                 "projections":  [
-                                                                                     {
-                                                                                         "field":  {
-                                                                                                       "Measure":  {
-                                                                                                                       "Expression":  {
-                                                                                                                                          "SourceRef":  {
-                                                                                                                                                            "Entity":  "Medidas"
-                                                                                                                                                        }
-                                                                                                                                      },
-                                                                                                                       "Property":  "Total Facturado"
-                                                                                                                   }
-                                                                                                   },
-                                                                                         "queryRef":  "Medidas.Total Facturado",
-                                                                                         "nativeQueryRef":  "Total Facturado"
-                                                                                     }
-                                                                                 ]
-                                                             }
-                                                }
-                             },
-                   "objects":  {
-                                   "mapControls":  [
-                                                       {
-                                                           "properties":  {
-                                                                              "defaultStyle":  {
-                                                                                                   "expr":  {
-                                                                                                                "Literal":  {
-                                                                                                                                "Value":  "\u0027road\u0027"
-                                                                                                                            }
-                                                                                                            }
-                                                                                               },
-                                                                              "showStylePicker":  {
-                                                                                                      "expr":  {
-                                                                                                                   "Literal":  {
-                                                                                                                                   "Value":  "false"
-                                                                                                                               }
-                                                                                                               }
-                                                                                                  },
-                                                                              "showNavigationControls":  {
-                                                                                                             "expr":  {
-                                                                                                                          "Literal":  {
-                                                                                                                                          "Value":  "false"
-                                                                                                                                      }
-                                                                                                                      }
-                                                                                                         },
-                                                                              "showSelectionControl":  {
-                                                                                                           "expr":  {
-                                                                                                                        "Literal":  {
-                                                                                                                                        "Value":  "false"
-                                                                                                                                    }
-                                                                                                                    }
-                                                                                                       },
-                                                                              "zoom":  {
-                                                                                           "expr":  {
-                                                                                                        "Literal":  {
-                                                                                                                        "Value":  "6D"
-                                                                                                                    }
-                                                                                                    }
-                                                                                       },
-                                                                              "centerLatitude":  {
-                                                                                                     "expr":  {
-                                                                                                                  "Literal":  {
-                                                                                                                                  "Value":  "12.9D"
-                                                                                                                              }
-                                                                                                              }
-                                                                                                 },
-                                                                              "centerLongitude":  {
-                                                                                                      "expr":  {
-                                                                                                                   "Literal":  {
-                                                                                                                                   "Value":  "-85.2D"
-                                                                                                                               }
-                                                                                                               }
-                                                                                                  }
-                                                                          }
-                                                       }
-                                                   ],
-                                   "bubbleLayer":  [
-                                                       {
-                                                           "properties":  {
-                                                                              "show":  {
-                                                                                           "expr":  {
-                                                                                                        "Literal":  {
-                                                                                                                        "Value":  "true"
-                                                                                                                    }
-                                                                                                    }
-                                                                                       },
-                                                                              "bubbleRadius":  {
-                                                                                                   "expr":  {
-                                                                                                                "Literal":  {
-                                                                                                                                "Value":  "6L"
-                                                                                                                            }
-                                                                                                            }
-                                                                                               },
-                                                                              "minBubbleRadius":  {
-                                                                                                      "expr":  {
-                                                                                                                   "Literal":  {
-                                                                                                                                   "Value":  "6L"
-                                                                                                                               }
-                                                                                                               }
-                                                                                                  },
-                                                                              "maxRadius":  {
-                                                                                                "expr":  {
-                                                                                                             "Literal":  {
-                                                                                                                             "Value":  "21L"
-                                                                                                                         }
-                                                                                                         }
-                                                                                            },
-                                                                              "bubbleStrokeWidth":  {
-                                                                                                        "expr":  {
-                                                                                                                     "Literal":  {
-                                                                                                                                     "Value":  "1L"
-                                                                                                                                 }
-                                                                                                                 }
-                                                                                                    },
-                                                                              "autoStrokeColor":  {
-                                                                                                      "expr":  {
-                                                                                                                   "Literal":  {
-                                                                                                                                   "Value":  "true"
-                                                                                                                               }
-                                                                                                               }
-                                                                                                  },
-                                                                              "layerPosition":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "\u0027\u0027"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                }
-                                                                          }
-                                                       }
-                                                   ]
-                               },
-                   "visualContainerObjects":  {
-                                                  "title":  [
-                                                                {
-                                                                    "properties":  {
-                                                                                       "text":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "\u0027Ventas por departamento\u0027"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                },
-                                                                                       "show":  {
-                                                                                                    "expr":  {
-                                                                                                                 "Literal":  {
-                                                                                                                                 "Value":  "true"
-                                                                                                                             }
-                                                                                                             }
-                                                                                                }
-                                                                                   }
-                                                                }
-                                                            ]
-                                              },
-                   "drillFilterOtherVisuals":  true
-               },
-    "filterConfig":  {
-                         "filters":  [
-                                         {
-                                             "name":  "e5f8f3806c1168da6a58",
-                                             "field":  {
-                                                           "Measure":  {
-                                                                           "Expression":  {
-                                                                                              "SourceRef":  {
-                                                                                                                "Entity":  "Medidas"
-                                                                                                            }
-                                                                                          },
-                                                                           "Property":  "Total Facturado"
-                                                                       }
-                                                       },
-                                             "type":  "Advanced"
-                                         },
-                                         {
-                                             "name":  "0d73a50400a4d1adccd3",
-                                             "field":  {
-                                                           "Column":  {
-                                                                          "Expression":  {
-                                                                                             "SourceRef":  {
-                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                           }
-                                                                                         },
-                                                                          "Property":  "Departamento"
-                                                                      }
-                                                       },
-                                             "type":  "Categorical"
-                                         },
-                                         {
-                                             "name":  "b7efbb3521bcba64a608",
-                                             "field":  {
-                                                           "Column":  {
-                                                                          "Expression":  {
-                                                                                             "SourceRef":  {
-                                                                                                               "Entity":  "Dim_Clientes"
-                                                                                                           }
-                                                                                         },
-                                                                          "Property":  "País"
-                                                                      }
-                                                       },
-                                             "type":  "Categorical"
-                                         }
-                                     ]
-                     }
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "b5982da9636de7dfe6ac",
+  "position": {
+    "x": 20,
+    "y": 218,
+    "z": 7000,
+    "height": 482,
+    "width": 380,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "azureMap",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Clientes"
+                    }
+                  },
+                  "Property": "País"
+                }
+              },
+              "queryRef": "Dim_Clientes.País",
+              "nativeQueryRef": "País",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Dim_Clientes"
+                    }
+                  },
+                  "Property": "Departamento"
+                }
+              },
+              "queryRef": "Dim_Clientes.Departamento",
+              "nativeQueryRef": "Departamento",
+              "active": true
+            }
+          ]
+        },
+        "Size": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Total Facturado"
+                }
+              },
+              "queryRef": "Medidas.Total Facturado",
+              "nativeQueryRef": "Total Facturado"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "mapControls": [
+        {
+          "properties": {
+            "defaultStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "'road'"
+                }
+              }
+            },
+            "showStylePicker": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showNavigationControls": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showSelectionControl": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "zoom": {
+              "expr": {
+                "Literal": {
+                  "Value": "5.16D"
+                }
+              }
+            },
+            "centerLatitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "12.38247442284073D"
+                }
+              }
+            },
+            "centerLongitude": {
+              "expr": {
+                "Literal": {
+                  "Value": "-85.56225147624963D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "bubbleLayer": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bubbleRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "minBubbleRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "6L"
+                }
+              }
+            },
+            "maxRadius": {
+              "expr": {
+                "Literal": {
+                  "Value": "21L"
+                }
+              }
+            },
+            "bubbleStrokeWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "autoStrokeColor": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "layerPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "''"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Ventas por departamento'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e5f8f3806c1168da6a58",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Total Facturado"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0d73a50400a4d1adccd3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Clientes"
+              }
+            },
+            "Property": "Departamento"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b7efbb3521bcba64a608",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Dim_Clientes"
+              }
+            },
+            "Property": "País"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
 }
