@@ -1,0 +1,1 @@
+Imagen de la guia (OE3): tabla Calendario con Date (27/1/2020), Año, Trimestre (1 Trim), Mes_Num, Mes_Corto (ENE), Mes_Largo (ENERO). Mensaje del usuario: 'Verifica si lo anterior del Calendario esta bien implementado con esta imagen'.

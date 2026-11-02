@@ -4,7 +4,7 @@ table Calendario
 
 	column Date
 		dataType: dateTime
-		formatString: Long Date
+		formatString: d/M/yyyy
 		lineageTag: 4eabf344-6c26-4b0c-90d8-e421beff70df
 		summarizeBy: none
 		isKey
