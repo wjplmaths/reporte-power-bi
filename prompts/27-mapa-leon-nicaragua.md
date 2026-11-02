@@ -1,0 +1,1 @@
+Captura del mapa de Analisis General donde Leon aparece en España. Mensaje del usuario: 'Corregi de alguna manera sin afectar al modelo de datos para que ya no se muestre en el mapa Leon (de España), lo correcto es León de Nicaragua. Usa una solucion simple. Respeta las convenciones y estructura del reporte'.
