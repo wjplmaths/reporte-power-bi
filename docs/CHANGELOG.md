@@ -38,3 +38,4 @@
 - 2026-11-01 · [34 – Auditoría final contra la guía](changelog/34-auditoria-final.md) · OE1–OE5
 - 2026-11-01 · [35 – Correcciones de la auditoría y nueva calificación](changelog/35-correcciones-auditoria.md) · OE2, OE4, OE5
 - 2026-11-01 · [36 – Medidor sin la etiqueta “(En blanco)”](changelog/36-medidor-sin-en-blanco.md) · OE5
+- 2026-11-01 · [37 – README del proyecto](changelog/37-readme.md) · documentación
