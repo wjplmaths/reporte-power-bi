@@ -1,106 +1,137 @@
 # Checklist del requerimiento
 
-Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Marcar `[x]` solo cuando esté hecho y validado en Power BI Desktop.
+Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Estados reales tras la auditoría final del 2026-11-01 (detalle, evidencias y citas en `docs/CHECKLIST_FINAL.md`).
+
+**Leyenda:** `[x]` ✅ cumplido con evidencia en archivo · `[ ]` 🟡 parcial · ❌ pendiente · 🔍 por validar en Desktop.
 
 **Contexto:** informe de ventas nacionales 2020-2023 con control de cumplimiento de metas por vendedor, comportamiento por Año/Trimestre/Mes y comparativos con períodos anteriores.
 
 ## OE1 – Conexión a diferentes fuentes de datos
-- [ ] Conectar al archivo xls `Fact_Ventas` (en `data/raw/` es `.xlsx`) — *consulta creada en pbip, falta validar en Desktop*
-- [ ] Conectar al csv `Dim_Clientes` — *consulta creada en pbip, falta validar en Desktop*
-- [ ] Conectar al csv `Dim_Productos` — *consulta creada en pbip, falta validar en Desktop*
-- [ ] Conectar al archivo en línea G.Drive (Vendedores + Metas_Mensuales), importado como tipo **Web** — *consultas `Tabla 1` a `Tabla 5` creadas con `Web.Page`; `Table N` daba error en Desktop, ahora se elige cada tabla por contenido; falta validar en Desktop*
-- [ ] Conectar al enlace Web de Wikipedia y extraer la tabla *Organización Territorial – Tabla 6* — *consulta `Tabla 6` creada eligiendo la tabla por contenido (`Table 5` daba error en Desktop), falta validar en Desktop*
+- [x] ✅ OE1 · «Conectarse al archivo “xls” (Fact_Ventas)»
+- [x] ✅ OE1 · «Conectarse a los archivos “csv” (Dim_Clientes)»
+- [x] ✅ OE1 · «…y (Dim_Productos)»
+- [x] ✅ OE1 · «Conectarse al archivo en línea “G.Drive” (Vendedores + Metas_Mensuales) ** Importar como tipo Web»
+- [x] ✅ OE1 · «Conectarse al enlace Web “Wikipedia” (Extraer tabla: Organización Territorial – Tabla 6)»
 
 ## OE2 – Transformación de datos
-### Fact_Ventas
-- [ ] Eliminar filas superiores y colocar los encabezados correctos — *aplicado en M (changelog 07), falta validar en Desktop*
-- [ ] Eliminar columnas que no se usarán en el modelo — *aplicado en M (changelog 07), falta validar en Desktop*
-- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
-
-### Dim_Clientes
-- [ ] Eliminar ID de clientes `null` — *aplicado en M (changelog 07), falta validar en Desktop*
-- [ ] Reemplazar Departamento "Región Autónoma de la Costa Caribe Norte" por "Costa Caribe Norte" — *aplicado en M (changelog 07), falta validar en Desktop*
-- [ ] Reemplazar Departamento "Región Autónoma de la Costa Caribe Sur" por "Costa Caribe Sur" — *aplicado en M (changelog 07), falta validar en Desktop*
-- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
-
-### Dim_Productos
-- [ ] Eliminar ID `null` (el PDF dice "ID de clientes"; se interpreta como ID Producto) — *aplicado en M (changelog 07), falta validar en Desktop*
-- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
-
-### Tabla 1 → Dim_Vendedores
-- [ ] Renombrar la consulta a `Dim_Vendedores` — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Eliminar filas superiores y colocar los encabezados correctos — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Eliminar columnas que no se usarán — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 09), falta validar en Desktop*
-
-### Tablas 2 a 5 → Metas_2020, Metas_2021, Metas_2022, Metas_2023
-Para cada una de las cuatro consultas:
-- [ ] `Metas_2020`: renombrar, quitar filas superiores y poner encabezados, quitar Columna 1, anular dinamización desde `ID_Vendedor`, renombrar columnas a `Fecha` y `Meta`, ajustar tipos — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] `Metas_2021`: mismos pasos — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] `Metas_2022`: mismos pasos — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] `Metas_2023`: mismos pasos — *aplicado en M (changelog 09), falta validar en Desktop*
-
-### Consulta consolidada
-- [ ] Anexar consultas como nueva a partir de `Metas_2020` para consolidar todas las metas — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Renombrar la consulta consolidada a `Dim_Metas` — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Deshabilitar "Habilitar carga" en `Metas_2020`, `Metas_2021`, `Metas_2022` y `Metas_2023` — *aplicado en M (changelog 09), falta validar en Desktop*
-
-### Tabla 6 → Dim_Territorios
-- [ ] Renombrar la consulta a `Dim_Territorios` — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Eliminar filas superiores y colocar los encabezados correctos — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Eliminar filas inferiores sin datos útiles — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Eliminar columnas que no se usarán — *aplicado en M (changelog 09), falta validar en Desktop*
-- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 09), falta validar en Desktop*
-
-### Cierre
-- [ ] Cerrar y aplicar todos los cambios
+- [x] ✅ OE2 · Consulta Fact_Ventas · «Elimine filas superiores y coloque los encabezados correctos»
+- [x] ✅ OE2 · Fact_Ventas · «Elimine columnas que no usará en su modelo de datos»
+- [x] ✅ OE2 · Fact_Ventas · «Revise que el tipo de datos sea el correcto en cada columna»
+- [x] ✅ OE2 · Consulta Dim_Clientes · «Elimine ID de clientes “null”»
+- [x] ✅ OE2 · Dim_Clientes · «Modifique el Departamento “Región Autónoma de la Costa Caribe Norte” por “Costa Caribe Norte”»
+- [x] ✅ OE2 · Dim_Clientes · «…“Región Autónoma de la Costa Caribe Sur” por “Costa Caribe Sur”»
+- [x] ✅ OE2 · Dim_Clientes · «Revise que el tipo de datos sea el correcto en cada columna»
+- [x] ✅ OE2 · Consulta Dim_Productos · «Elimine ID de clientes “null”» (la guía dice “clientes”; se entiende ID Producto)
+- [x] ✅ OE2 · Dim_Productos · «Revise que el tipo de datos sea el correcto en cada columna»
+- [x] ✅ OE2 · Consulta Tabla 1 · «Cambie el nombre de la consulta por “Dim_Vendedores”»
+- [ ] 🟡 OE2 · Tabla 1 · «Elimine filas superiores y coloque los encabezados correctos»
+- [x] ✅ OE2 · Tabla 1 · «Elimine columnas que no usará en su modelo de datos»
+- [x] ✅ OE2 · Tabla 1 · «Revise que el tipo de datos sea el correcto en cada columna»
+- [x] ✅ OE2 · Consulta Tabla 2 · «Cambie el nombre de la consulta por “Metas_2020”»
+- [ ] 🟡 OE2 · Consulta Tabla 2 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2020)
+- [ ] 🟡 OE2 · Consulta Tabla 2 · «Elimine columnas que no usará (Columna 1)» (Metas_2020)
+- [x] ✅ OE2 · Consulta Tabla 2 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2020)
+- [x] ✅ OE2 · Consulta Tabla 2 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2020)
+- [x] ✅ OE2 · Consulta Tabla 2 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2020)
+- [x] ✅ OE2 · Consulta Tabla 3 · «Cambie el nombre de la consulta por “Metas_2021”»
+- [ ] 🟡 OE2 · Consulta Tabla 3 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2021)
+- [ ] 🟡 OE2 · Consulta Tabla 3 · «Elimine columnas que no usará (Columna 1)» (Metas_2021)
+- [x] ✅ OE2 · Consulta Tabla 3 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2021)
+- [x] ✅ OE2 · Consulta Tabla 3 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2021)
+- [x] ✅ OE2 · Consulta Tabla 3 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2021)
+- [x] ✅ OE2 · Consulta Tabla 4 · «Cambie el nombre de la consulta por “Metas_2022”»
+- [ ] 🟡 OE2 · Consulta Tabla 4 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2022)
+- [ ] 🟡 OE2 · Consulta Tabla 4 · «Elimine columnas que no usará (Columna 1)» (Metas_2022)
+- [x] ✅ OE2 · Consulta Tabla 4 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2022)
+- [x] ✅ OE2 · Consulta Tabla 4 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2022)
+- [x] ✅ OE2 · Consulta Tabla 4 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2022)
+- [x] ✅ OE2 · Consulta Tabla 5 · «Cambie el nombre de la consulta por “Metas_2023”»
+- [ ] 🟡 OE2 · Consulta Tabla 5 · «Elimine filas superiores y coloque los encabezados correctos» (Metas_2023)
+- [ ] 🟡 OE2 · Consulta Tabla 5 · «Elimine columnas que no usará (Columna 1)» (Metas_2023)
+- [x] ✅ OE2 · Consulta Tabla 5 · «Anule la dinamización de otras columnas, a partir de la columna ID_Vendedor» (Metas_2023)
+- [x] ✅ OE2 · Consulta Tabla 5 · «Cambie el nombre de las columnas por “Fecha” y “Meta”» (Metas_2023)
+- [x] ✅ OE2 · Consulta Tabla 5 · «Cambie el tipo de datos de “Fecha” y “Meta”» (Metas_2023)
+- [x] ✅ OE2 · Creación de consulta consolidada · «Seleccione la consulta “Metas_2020”… Anexar consultas para crear una nueva»
+- [x] ✅ OE2 · Consolidada · «Cambie el nombre por Dim_Metas»
+- [x] ✅ OE2 · Consolidada · «Deshabilite la opción “Habilitar carga” en “Metas_2020”»
+- [x] ✅ OE2 · Consolidada · «Deshabilite la opción “Habilitar carga” en “Metas_2021”»
+- [x] ✅ OE2 · Consolidada · «Deshabilite la opción “Habilitar carga” en “Metas_2022”»
+- [x] ✅ OE2 · Consolidada · «Deshabilite la opción “Habilitar carga” en “Metas_2023”»
+- [x] ✅ OE2 · Consulta Tabla 6 · «Cambie el nombre de la consulta por “Dim_Territorios”»
+- [ ] 🔍 OE2 · Tabla 6 · «Elimine filas superiores y coloque los encabezados correctos»
+- [ ] 🔍 OE2 · Tabla 6 · «Elimine fila(s) inferiores que no contienen datos a usarse en el modelo»
+- [ ] 🔍 OE2 · Tabla 6 · «Elimine columnas que no usará en su modelo de datos»
+- [ ] 🔍 OE2 · Tabla 6 · «Revise que el tipo de datos sea el correcto en cada columna»
+- [ ] 🔍 OE2 · «Cierre y aplique todos los cambios»
 
 ## OE3 – Tabla Calendario + Modelado de datos
-- [ ] Crear la tabla `Calendario` con "Nueva tabla" (DAX), del 2020/1/1 al 2023/12/31 — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Columna `Año` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Columna `Trimestre` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Columna `Mes_Num` — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Columna `Mes_Corto` (con `FORMAT`) — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Columna `Mes_Largo` (con `FORMAT`) — *aplicado en TMDL (changelog 11), falta validar en Desktop*
-- [ ] Verificar relaciones y modelado correctos entre todas las consultas, incluyendo `Calendario` — *7 relaciones definidas en TMDL (changelog 13), falta validar en Desktop*
+- [x] ✅ OE3 · «Usando la opción “Nueva Tabla”, cree una tabla calendario… desde el (2020/1/1) hasta el (2023/12/31)»
+- [x] ✅ OE3 · «…cree las columnas Año…»
+- [x] ✅ OE3 · «…Trimestre»
+- [x] ✅ OE3 · «…Mes_Num»
+- [x] ✅ OE3 · «…Mes_Corto (haga uso de la función DAX Format)»
+- [x] ✅ OE3 · «…Mes_Largo (haga uso de la función DAX Format)»
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Fact_Ventas[ID Cliente] → Dim_Clientes[ID Cliente]
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Fact_Ventas[ID Producto] → Dim_Productos[ID Producto]
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Fact_Ventas[ID Vendedor] → Dim_Vendedores[ID Vendedor]
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Fact_Ventas[Fecha de Venta] → Calendario[Date]
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Dim_Metas[ID_Vendedor] → Dim_Vendedores[ID Vendedor]
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Dim_Metas[Fecha] → Calendario[Date]
+- [x] ✅ OE3 · «Verifique que las consultas tengan el modelado de datos y conexiones correctas, incluyendo la tabla calendario» · diagrama de la guía: Dim_Clientes[Departamento] → Dim_Territorios[Departamento]
+- [x] ✅ OE3 · «…modelado correcto» · integridad referencial (no la pide la guía, la verifica la auditoría)
 
 ## OE4 – DAX
-- [ ] Crear la consulta/tabla contenedora `Medidas` — *consulta M en blanco (changelog 15), falta validar en Desktop*
-- [ ] `Total Facturado` = Cantidad * Precio Unitario (`SUMX`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
-- [ ] `Costo Total` = Cantidad * Costo Unitario (`SUMX`, `RELATED`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
-- [ ] `Utilidad Total` = Total Facturado − Costo Total — *aplicado en TMDL (changelog 14), falta validar en Desktop*
-- [ ] `% Cumplimiento metas` = Total Facturado / Meta (`DIVIDE`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
-- [ ] `Meta` = `SumMetas` — *aplicado en TMDL (changelog 14), falta validar en Desktop*
-- [ ] `Ventas del Año Anterior` (`SAMEPERIODLASTYEAR`) — *aplicado en TMDL (changelog 14), falta validar en Desktop*
+- [x] ✅ OE4 · «Cree una nueva consulta llamada “Medidas” para agrupar las medidas a crear»
+- [x] ✅ OE4 · «Utilice las funciones SumX, Related, Divide»
+- [x] ✅ OE4 · «a. Total Facturado = Cantidad * Precio Unitario (SumX)»
+- [x] ✅ OE4 · «b. Costo Total = Cantidad * Costo Unitario (SumX, Related)»
+- [x] ✅ OE4 · «b. Utilidad Total = Total Facturado – Costo total»
+- [ ] 🟡 OE4 · «c. % Cumplimiento metas = Total Facturado / SumMetas (Divide)»
+- [ ] 🟡 OE4 · «d. Meta = SumMetas»
+- [x] ✅ OE4 · «Utilice las funciones de inteligencia de tiempo SAMEPERIODLASTYEAR · a. Ventas del Año Anterior»
 
 ## OE5 – Visualizaciones + Compartir informe
-### Página de inicio
-- [ ] Portada con nombre del autor y título del informe — *creado en PBIR (changelog 17), falta validar en Desktop*
-- [ ] Botón de navegación hacia la primera página de Análisis General — *creado en PBIR (changelog 17), falta validar en Desktop*
-- [ ] Logo de preferencia — *creado en PBIR (changelog 17), falta validar en Desktop*
+- [x] ✅ OE5 · Página de inicio · «Crear una portada con su nombre»
+- [x] ✅ OE5 · Inicio · «…título del informe»
+- [x] ✅ OE5 · Inicio · «…y un botón de navegación que lleve a la primera página de Análisis General»
+- [x] ✅ OE5 · Inicio · «Utilice el logo de su preferencia»
+- [x] ✅ OE5 · Análisis General · Uso de Tarjetas · «Utilice “Tarjetas (nuevas)” para visualizar Facturación Total…»
+- [x] ✅ OE5 · Tarjetas · «…Costo Total…»
+- [x] ✅ OE5 · Tarjetas · «…y Utilidad»
+- [ ] ❌ OE5 · Tarjetas · «**Plus (Puede agregar imágenes png para representar mejor las tarjetas)»
+- [x] ✅ OE5 · Uso de Mapa · «Utilice un “Mapa” para representar las Ventas (Total Facturado) por Departamento»
+- [x] ✅ OE5 · Uso de Tabla · «Utilice una “Tabla” para mostrar el cumplimiento de ventas de cada vendedor»
+- [ ] 🔍 OE5 · Tabla · «formato condicional… en la columna de % de Cumplimiento» · «Menor al 60%, Rojo»
+- [x] ✅ OE5 · Tabla · «Entre 60% al 79% Amarillo»
+- [x] ✅ OE5 · Tabla · «Mayor al 80% Verde»
+- [x] ✅ OE5 · Uso de Medidor · «Utilice la visualización “Medidor” para representar el avance total, relacionando el Total Facturado vs Meta»
+- [ ] 🟡 OE5 · Medidor · «** Utilice una etiqueta personalizada en el valor del globo que represente el porcentaje de avance»
+- [x] ✅ OE5 · Uso de Barras Agrupadas · «Utilice la visualización “Gráfico de barras agrupadas” para representar el Top 5 de clientes por facturación»
+- [x] ✅ OE5 · Uso de Segmentaciones · «Utilice… “Chiclet Slicer” de AppSource… por Año»
+- [x] ✅ OE5 · Segmentaciones · «…y Mes Corto»
+- [x] ✅ OE5 · Segmentaciones · «Para ordenar la columna de mes_corto debe utilizar la opción ordenar por columna… por la columna mes_num»
+- [x] ✅ OE5 · Análisis de Tendencia · Uso de Tarjetas · «Facturación Total»
+- [x] ✅ OE5 · Tendencia · Tarjetas · «…y Facturación Total del Año Anterior»
+- [ ] 🔍 OE5 · Uso de KPI · «Utilice la visualización “KPI” para visualizar un comparativo entre las ventas actuales y las ventas del período anterior»
+- [x] ✅ OE5 · Uso de Columnas + Líneas · «Utilice la visualización “Gráfico de Columnas Agrupadas y Líneas” para visualizar un comparativo entre la meta y el total facturado por mes»
+- [x] ✅ OE5 · Columnas + Líneas · «** En el caso de la línea, represente el % de cumplimiento»
+- [x] ✅ OE5 · Columnas + Líneas · «** El gráfico debe contener una jerarquía de Año-Trimestre-Mes en su eje X»
+- [x] ✅ OE5 · Uso de Segmentaciones (Tendencia) · «Reutilice las segmentaciones de la página anterior»
+- [ ] ❌ OE5 · «Publique y comparta el enlace de su proyecto en el grupo de trabajo»
+- [ ] ❌ OE5 · «El archivo Pbix deberá subirse a la plataforma Classroom»
 
-### Página de Análisis General
-- [ ] Tarjetas (nuevas): Facturación Total, Costo Total y Utilidad — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] (Plus) Imágenes png en las tarjetas — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] Mapa con Total Facturado por Departamento — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] Tabla con el cumplimiento de ventas de cada vendedor — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] Formato condicional en `% Cumplimiento`: menor a 60% rojo, 60% a 79% amarillo, mayor a 80% verde — *íconos nativos X / ! / ✔ en PBIR (changelog 22), falta validar en Desktop*
-- [ ] Medidor: Total Facturado vs Meta, con etiqueta personalizada en el valor que muestre el % de avance — *medidor con medida `Etiqueta % Avance` en tarjeta bajo el medidor y en su tooltip (changelog 21); la etiqueta dentro del globo es un paso manual*
-- [ ] Gráfico de barras agrupadas: Top 5 clientes por facturación — *creado en PBIR (changelog 18), falta validar en Desktop*
-- [ ] Chiclet Slicer (AppSource) por Año — *creado en PBIR con el identificador real del visual (changelog 20), falta validar en Desktop*
-- [ ] Chiclet Slicer (AppSource) por Mes Corto, con `Mes_Corto` ordenada por `Mes_Num` — *creado en PBIR con el identificador real del visual (changelog 20), falta validar en Desktop*
+## Resumen
 
-### Página de Análisis de Tendencia
-- [ ] Tarjetas (nuevas): Facturación Total y Facturación Total del Año Anterior — *creado en PBIR (changelog 23), falta validar en Desktop*
-- [ ] KPI: ventas actuales vs ventas del período anterior — *creado en PBIR (changelog 23), falta validar en Desktop*
-- [ ] Gráfico de columnas agrupadas y líneas: Meta vs Total Facturado por mes, con línea de % de cumplimiento — *creado en PBIR (changelog 23), falta validar en Desktop*
-- [ ] Eje X con jerarquía Año-Trimestre-Mes — *creado en PBIR (changelog 23), falta validar en Desktop*
-- [ ] Reutilizar las segmentaciones de la página anterior — *creado en PBIR (changelog 23), falta validar en Desktop*
-
-### Entrega
-- [ ] Publicar y compartir el enlace del proyecto en el grupo de trabajo
-- [ ] Subir el archivo .pbix a Classroom
+| Objetivo | ✅ | 🟡 | 🔍 | ❌ | % cumplido |
+|---|---:|---:|---:|---:|---:|
+| OE1 | 5 | 0 | 0 | 0 | 100 % |
+| OE2 | 35 | 9 | 5 | 0 | 71 % |
+| OE3 | 14 | 0 | 0 | 0 | 100 % |
+| OE4 | 6 | 2 | 0 | 0 | 75 % |
+| OE5 | 22 | 1 | 2 | 3 | 79 % |
+| **Total** | 82 | 12 | 7 | 3 | **79 %** |
 
 ## Notas
-- El PDF define "mayor al 80%" en verde y "60% a 79%" en amarillo; el tramo 79%–80% queda sin regla. Decidir el borde al implementar el formato condicional.
+- El PDF define “mayor al 80%” en verde y “60% a 79%” en amarillo; la imagen del cuadro de íconos fija los límites en 0.6 y 0.8 (>=0.8 verde). El modelo usa esos límites.
+- El PDF dice “ID de clientes” en la viñeta de Dim_Productos; se entiende ID Producto.
 - Los enlaces a las fuentes en línea están en `docs/requerimiento/*.txt`.

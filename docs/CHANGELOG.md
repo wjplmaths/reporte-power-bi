@@ -35,3 +35,4 @@
 - 2026-11-01 · [31 – Recursos gráficos en SVG](changelog/31-recursos-svg.md) · OE5
 - 2026-11-01 · [32 – Mejoras de medidor, KPI y tabla, y tooltips de página](changelog/32-medidor-kpi-tabla-tooltips.md) · OE5
 - 2026-11-01 · [33 – Corrección de los tooltips de página](changelog/33-corregir-tooltips.md) · OE5
+- 2026-11-01 · [34 – Auditoría final contra la guía](changelog/34-auditoria-final.md) · OE1–OE5
