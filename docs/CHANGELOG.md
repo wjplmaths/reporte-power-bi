@@ -30,3 +30,4 @@
 - 2026-11-01 · [26 – KPI: el eje de tendencia es el rol TrendLine](changelog/26-kpi-trendline.md) · OE5
 - 2026-11-01 · [27 – Mapa: León de Nicaragua en lugar de León (España)](changelog/27-mapa-leon-nicaragua.md) · OE5
 - 2026-11-01 · [28 – Navegación entre páginas](changelog/28-navegacion.md) · OE5
+- 2026-11-01 · [29 – Tema personalizado del informe](changelog/29-tema.md) · OE5

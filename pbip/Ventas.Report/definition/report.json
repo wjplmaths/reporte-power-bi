@@ -1,52 +1,66 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
-  "themeCollection": {
-    "baseTheme": {
-      "name": "CY24SU10",
-      "reportVersionAtImport": {
-        "visual": "1.8.95",
-        "report": "2.0.95",
-        "page": "1.3.95"
-      },
-      "type": "SharedResources"
-    }
-  },
-  "publicCustomVisuals": [
-    "ChicletSlicer1448559807354"
-  ],
-  "resourcePackages": [
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
-        {
-          "name": "icono-facturacion9358770855875156.jpeg",
-          "path": "icono-facturacion9358770855875156.jpeg",
-          "type": "Image"
-        },
-        {
-          "name": "icono-ventas.jpeg",
-          "path": "icono-ventas.jpeg",
-          "type": "Image"
-        }
-      ]
-    },
-    {
-      "name": "SharedResources",
-      "type": "SharedResources",
-      "items": [
-        {
-          "name": "CY24SU10",
-          "path": "BaseThemes/CY24SU10.json",
-          "type": "BaseTheme"
-        }
-      ]
-    }
-  ],
-  "settings": {
-    "useEnhancedTooltips": false,
-    "queryLimitOption": "None",
-    "customMemoryLimit": "1048576",
-    "customTimeoutLimit": "225"
-  }
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+    "themeCollection":  {
+                            "baseTheme":  {
+                                              "name":  "CY24SU10",
+                                              "reportVersionAtImport":  {
+                                                                            "visual":  "1.8.95",
+                                                                            "report":  "2.0.95",
+                                                                            "page":  "1.3.95"
+                                                                        },
+                                              "type":  "SharedResources"
+                                          },
+                            "customTheme":  {
+                                                "name":  "tema-ventas.json",
+                                                "reportVersionAtImport":  {
+                                                                              "visual":  "1.8.95",
+                                                                              "report":  "2.0.95",
+                                                                              "page":  "1.3.95"
+                                                                          },
+                                                "type":  "RegisteredResources"
+                                            }
+                        },
+    "publicCustomVisuals":  [
+                                "ChicletSlicer1448559807354"
+                            ],
+    "resourcePackages":  [
+                             {
+                                 "name":  "RegisteredResources",
+                                 "type":  "RegisteredResources",
+                                 "items":  [
+                                               {
+                                                   "name":  "icono-facturacion9358770855875156.jpeg",
+                                                   "path":  "icono-facturacion9358770855875156.jpeg",
+                                                   "type":  "Image"
+                                               },
+                                               {
+                                                   "name":  "icono-ventas.jpeg",
+                                                   "path":  "icono-ventas.jpeg",
+                                                   "type":  "Image"
+                                               },
+                                               {
+                                                   "name":  "tema-ventas.json",
+                                                   "path":  "tema-ventas.json",
+                                                   "type":  "CustomTheme"
+                                               }
+                                           ]
+                             },
+                             {
+                                 "name":  "SharedResources",
+                                 "type":  "SharedResources",
+                                 "items":  [
+                                               {
+                                                   "name":  "CY24SU10",
+                                                   "path":  "BaseThemes/CY24SU10.json",
+                                                   "type":  "BaseTheme"
+                                               }
+                                           ]
+                             }
+                         ],
+    "settings":  {
+                     "useEnhancedTooltips":  false,
+                     "queryLimitOption":  "None",
+                     "customMemoryLimit":  "1048576",
+                     "customTimeoutLimit":  "225"
+                 }
 }
