@@ -1,129 +1,230 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "2413073d751b166ce799",
-  "position": {
-    "x": 639.453257173487,
-    "y": 96.055210305030243,
-    "z": 4000,
-    "height": 149.5716846178328,
-    "width": 620.242215112481,
-    "tabOrder": 4000
-  },
-  "visual": {
-    "visualType": "kpi",
-    "query": {
-      "queryState": {
-        "Goal": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Ventas del Año Anterior"
-                }
-              },
-              "queryRef": "Medidas.Ventas del Año Anterior",
-              "nativeQueryRef": "Ventas del Año Anterior"
-            }
-          ]
-        },
-        "Indicator": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Total Facturado"
-                }
-              },
-              "queryRef": "Medidas.Total Facturado",
-              "nativeQueryRef": "Total Facturado"
-            }
-          ]
-        },
-        "TrendLine": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Calendario"
-                    }
-                  },
-                  "Property": "Año"
-                }
-              },
-              "queryRef": "Calendario.Año",
-              "nativeQueryRef": "Año"
-            }
-          ]
-        }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Calendario"
-                  }
-                },
-                "Property": "Año"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
-        "isDefaultSort": true
-      }
-    },
-    "objects": {
-      "indicator": [
-        {
-          "properties": {
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "30D"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Total Facturado vs año anterior'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
-  }
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "2413073d751b166ce799",
+    "position":  {
+                     "x":  639.453257173487,
+                     "y":  96.055210305030243,
+                     "z":  4000,
+                     "height":  149.5716846178328,
+                     "width":  620.242215112481,
+                     "tabOrder":  4000
+                 },
+    "visual":  {
+                   "visualType":  "kpi",
+                   "query":  {
+                                 "queryState":  {
+                                                    "Goal":  {
+                                                                 "projections":  [
+                                                                                     {
+                                                                                         "field":  {
+                                                                                                       "Measure":  {
+                                                                                                                       "Expression":  {
+                                                                                                                                          "SourceRef":  {
+                                                                                                                                                            "Entity":  "Medidas"
+                                                                                                                                                        }
+                                                                                                                                      },
+                                                                                                                       "Property":  "Ventas del Año Anterior"
+                                                                                                                   }
+                                                                                                   },
+                                                                                         "queryRef":  "Medidas.Ventas del Año Anterior",
+                                                                                         "nativeQueryRef":  "Ventas del Año Anterior"
+                                                                                     }
+                                                                                 ]
+                                                             },
+                                                    "Indicator":  {
+                                                                      "projections":  [
+                                                                                          {
+                                                                                              "field":  {
+                                                                                                            "Measure":  {
+                                                                                                                            "Expression":  {
+                                                                                                                                               "SourceRef":  {
+                                                                                                                                                                 "Entity":  "Medidas"
+                                                                                                                                                             }
+                                                                                                                                           },
+                                                                                                                            "Property":  "Total Facturado"
+                                                                                                                        }
+                                                                                                        },
+                                                                                              "queryRef":  "Medidas.Total Facturado",
+                                                                                              "nativeQueryRef":  "Total Facturado"
+                                                                                          }
+                                                                                      ]
+                                                                  },
+                                                    "TrendLine":  {
+                                                                      "projections":  [
+                                                                                          {
+                                                                                              "field":  {
+                                                                                                            "Column":  {
+                                                                                                                           "Expression":  {
+                                                                                                                                              "SourceRef":  {
+                                                                                                                                                                "Entity":  "Calendario"
+                                                                                                                                                            }
+                                                                                                                                          },
+                                                                                                                           "Property":  "Año"
+                                                                                                                       }
+                                                                                                        },
+                                                                                              "queryRef":  "Calendario.Año",
+                                                                                              "nativeQueryRef":  "Año"
+                                                                                          }
+                                                                                      ]
+                                                                  }
+                                                },
+                                 "sortDefinition":  {
+                                                        "sort":  [
+                                                                     {
+                                                                         "field":  {
+                                                                                       "Column":  {
+                                                                                                      "Expression":  {
+                                                                                                                         "SourceRef":  {
+                                                                                                                                           "Entity":  "Calendario"
+                                                                                                                                       }
+                                                                                                                     },
+                                                                                                      "Property":  "Año"
+                                                                                                  }
+                                                                                   },
+                                                                         "direction":  "Ascending"
+                                                                     }
+                                                                 ],
+                                                        "isDefaultSort":  true
+                                                    }
+                             },
+                   "objects":  {
+                                   "indicator":  [
+                                                     {
+                                                         "properties":  {
+                                                                            "fontSize":  {
+                                                                                             "expr":  {
+                                                                                                          "Literal":  {
+                                                                                                                          "Value":  "30D"
+                                                                                                                      }
+                                                                                                      }
+                                                                                         },
+                                                                            "indicatorDisplayUnits":  {
+                                                                                                          "expr":  {
+                                                                                                                       "Literal":  {
+                                                                                                                                       "Value":  "1000000D"
+                                                                                                                                   }
+                                                                                                                   }
+                                                                                                      },
+                                                                            "indicatorPrecision":  {
+                                                                                                       "expr":  {
+                                                                                                                    "Literal":  {
+                                                                                                                                    "Value":  "2L"
+                                                                                                                                }
+                                                                                                                }
+                                                                                                   }
+                                                                        }
+                                                     }
+                                                 ],
+                                   "goals":  [
+                                                 {
+                                                     "properties":  {
+                                                                        "showGoal":  {
+                                                                                         "expr":  {
+                                                                                                      "Literal":  {
+                                                                                                                      "Value":  "true"
+                                                                                                                  }
+                                                                                                  }
+                                                                                     },
+                                                                        "showDistance":  {
+                                                                                             "expr":  {
+                                                                                                          "Literal":  {
+                                                                                                                          "Value":  "true"
+                                                                                                                      }
+                                                                                                      }
+                                                                                         },
+                                                                        "distanceLabel":  {
+                                                                                              "expr":  {
+                                                                                                           "Literal":  {
+                                                                                                                           "Value":  "\u0027Percent\u0027"
+                                                                                                                       }
+                                                                                                       }
+                                                                                          },
+                                                                        "direction":  {
+                                                                                          "expr":  {
+                                                                                                       "Literal":  {
+                                                                                                                       "Value":  "\u0027High is good\u0027"
+                                                                                                                   }
+                                                                                                   }
+                                                                                      },
+                                                                        "labelPrecision":  {
+                                                                                               "expr":  {
+                                                                                                            "Literal":  {
+                                                                                                                            "Value":  "1L"
+                                                                                                                        }
+                                                                                                        }
+                                                                                           }
+                                                                    }
+                                                 }
+                                             ],
+                                   "status":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "direction":  {
+                                                                                           "expr":  {
+                                                                                                        "Literal":  {
+                                                                                                                        "Value":  "\u0027Positive\u0027"
+                                                                                                                    }
+                                                                                                    }
+                                                                                       },
+                                                                         "goodColor":  {
+                                                                                           "solid":  {
+                                                                                                         "color":  {
+                                                                                                                       "expr":  {
+                                                                                                                                    "Literal":  {
+                                                                                                                                                    "Value":  "\u0027#2E8B57\u0027"
+                                                                                                                                                }
+                                                                                                                                }
+                                                                                                                   }
+                                                                                                     }
+                                                                                       },
+                                                                         "neutralColor":  {
+                                                                                              "solid":  {
+                                                                                                            "color":  {
+                                                                                                                          "expr":  {
+                                                                                                                                       "Literal":  {
+                                                                                                                                                       "Value":  "\u0027#E6A800\u0027"
+                                                                                                                                                   }
+                                                                                                                                   }
+                                                                                                                      }
+                                                                                                        }
+                                                                                          },
+                                                                         "badColor":  {
+                                                                                          "solid":  {
+                                                                                                        "color":  {
+                                                                                                                      "expr":  {
+                                                                                                                                   "Literal":  {
+                                                                                                                                                   "Value":  "\u0027#C00000\u0027"
+                                                                                                                                               }
+                                                                                                                               }
+                                                                                                                  }
+                                                                                                    }
+                                                                                      }
+                                                                     }
+                                                  }
+                                              ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Total Facturado vs año anterior\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                }
+                                                                                   }
+                                                                }
+                                                            ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
 }

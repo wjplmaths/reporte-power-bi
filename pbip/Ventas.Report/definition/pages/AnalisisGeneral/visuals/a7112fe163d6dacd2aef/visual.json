@@ -1,175 +1,322 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "a7112fe163d6dacd2aef",
-  "position": {
-    "x": 940.51149630524958,
-    "y": 97.4688899266544,
-    "z": 9000,
-    "height": 177.216163503008,
-    "width": 320.25492404472158,
-    "tabOrder": 9000
-  },
-  "visual": {
-    "visualType": "gauge",
-    "query": {
-      "queryState": {
-        "MaxValue": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Meta"
-                }
-              },
-              "queryRef": "Medidas.Meta",
-              "nativeQueryRef": "Meta"
-            }
-          ]
-        },
-        "TargetValue": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Meta"
-                }
-              },
-              "queryRef": "Medidas.Meta",
-              "nativeQueryRef": "Meta"
-            }
-          ]
-        },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Etiqueta % Avance"
-                }
-              },
-              "queryRef": "Medidas.Etiqueta % Avance",
-              "nativeQueryRef": "Etiqueta % Avance"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Total Facturado"
-                }
-              },
-              "queryRef": "Medidas.Total Facturado",
-              "nativeQueryRef": "Total Facturado"
-            }
-          ]
-        }
-      }
-    },
-    "objects": {
-      "calloutValue": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "target": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "title": [
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Avance frente a la meta'"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'center'"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "subTitle": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "drillFilterOtherVisuals": true
-  }
+    "$schema":  "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+    "name":  "a7112fe163d6dacd2aef",
+    "position":  {
+                     "x":  940.51149630524958,
+                     "y":  97.4688899266544,
+                     "z":  9000,
+                     "height":  177.216163503008,
+                     "width":  320.25492404472158,
+                     "tabOrder":  9000
+                 },
+    "visual":  {
+                   "visualType":  "gauge",
+                   "query":  {
+                                 "queryState":  {
+                                                    "MaxValue":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Measure":  {
+                                                                                                                           "Expression":  {
+                                                                                                                                              "SourceRef":  {
+                                                                                                                                                                "Entity":  "Medidas"
+                                                                                                                                                            }
+                                                                                                                                          },
+                                                                                                                           "Property":  "Meta"
+                                                                                                                       }
+                                                                                                       },
+                                                                                             "queryRef":  "Medidas.Meta",
+                                                                                             "nativeQueryRef":  "Meta"
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "TargetValue":  {
+                                                                        "projections":  [
+                                                                                            {
+                                                                                                "field":  {
+                                                                                                              "Measure":  {
+                                                                                                                              "Expression":  {
+                                                                                                                                                 "SourceRef":  {
+                                                                                                                                                                   "Entity":  "Medidas"
+                                                                                                                                                               }
+                                                                                                                                             },
+                                                                                                                              "Property":  "Meta"
+                                                                                                                          }
+                                                                                                          },
+                                                                                                "queryRef":  "Medidas.Meta",
+                                                                                                "nativeQueryRef":  "Meta"
+                                                                                            }
+                                                                                        ]
+                                                                    },
+                                                    "Tooltips":  {
+                                                                     "projections":  [
+                                                                                         {
+                                                                                             "field":  {
+                                                                                                           "Measure":  {
+                                                                                                                           "Expression":  {
+                                                                                                                                              "SourceRef":  {
+                                                                                                                                                                "Entity":  "Medidas"
+                                                                                                                                                            }
+                                                                                                                                          },
+                                                                                                                           "Property":  "Etiqueta % Avance"
+                                                                                                                       }
+                                                                                                       },
+                                                                                             "queryRef":  "Medidas.Etiqueta % Avance",
+                                                                                             "nativeQueryRef":  "Etiqueta % Avance"
+                                                                                         }
+                                                                                     ]
+                                                                 },
+                                                    "Y":  {
+                                                              "projections":  [
+                                                                                  {
+                                                                                      "field":  {
+                                                                                                    "Measure":  {
+                                                                                                                    "Expression":  {
+                                                                                                                                       "SourceRef":  {
+                                                                                                                                                         "Entity":  "Medidas"
+                                                                                                                                                     }
+                                                                                                                                   },
+                                                                                                                    "Property":  "Total Facturado"
+                                                                                                                }
+                                                                                                },
+                                                                                      "queryRef":  "Medidas.Total Facturado",
+                                                                                      "nativeQueryRef":  "Total Facturado"
+                                                                                  }
+                                                                              ]
+                                                          }
+                                                }
+                             },
+                   "objects":  {
+                                   "calloutValue":  [
+                                                        {
+                                                            "properties":  {
+                                                                               "show":  {
+                                                                                            "expr":  {
+                                                                                                         "Literal":  {
+                                                                                                                         "Value":  "true"
+                                                                                                                     }
+                                                                                                     }
+                                                                                        },
+                                                                               "labelDisplayUnits":  {
+                                                                                                         "expr":  {
+                                                                                                                      "Literal":  {
+                                                                                                                                      "Value":  "1000000D"
+                                                                                                                                  }
+                                                                                                                  }
+                                                                                                     },
+                                                                               "labelPrecision":  {
+                                                                                                      "expr":  {
+                                                                                                                   "Literal":  {
+                                                                                                                                   "Value":  "2L"
+                                                                                                                               }
+                                                                                                               }
+                                                                                                  }
+                                                                           }
+                                                        }
+                                                    ],
+                                   "target":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "show":  {
+                                                                                      "expr":  {
+                                                                                                   "Literal":  {
+                                                                                                                   "Value":  "false"
+                                                                                                               }
+                                                                                               }
+                                                                                  }
+                                                                     }
+                                                  }
+                                              ],
+                                   "labels":  [
+                                                  {
+                                                      "properties":  {
+                                                                         "show":  {
+                                                                                      "expr":  {
+                                                                                                   "Literal":  {
+                                                                                                                   "Value":  "false"
+                                                                                                               }
+                                                                                               }
+                                                                                  }
+                                                                     }
+                                                  }
+                                              ],
+                                   "dataPoint":  [
+                                                     {
+                                                         "properties":  {
+                                                                            "fill":  {
+                                                                                         "solid":  {
+                                                                                                       "color":  {
+                                                                                                                     "expr":  {
+                                                                                                                                  "Conditional":  {
+                                                                                                                                                      "Cases":  [
+                                                                                                                                                                    {
+                                                                                                                                                                        "Condition":  {
+                                                                                                                                                                                          "Comparison":  {
+                                                                                                                                                                                                             "ComparisonKind":  3,
+                                                                                                                                                                                                             "Left":  {
+                                                                                                                                                                                                                          "Measure":  {
+                                                                                                                                                                                                                                          "Expression":  {
+                                                                                                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                                                                                                               "Entity":  "Medidas"
+                                                                                                                                                                                                                                                                           }
+                                                                                                                                                                                                                                                         },
+                                                                                                                                                                                                                                          "Property":  "% Cumplimiento metas"
+                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                      },
+                                                                                                                                                                                                             "Right":  {
+                                                                                                                                                                                                                           "Literal":  {
+                                                                                                                                                                                                                                           "Value":  "0.6D"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                       }
+                                                                                                                                                                                                         }
+                                                                                                                                                                                      },
+                                                                                                                                                                        "Value":  {
+                                                                                                                                                                                      "Literal":  {
+                                                                                                                                                                                                      "Value":  "\u0027#C00000\u0027"
+                                                                                                                                                                                                  }
+                                                                                                                                                                                  }
+                                                                                                                                                                    },
+                                                                                                                                                                    {
+                                                                                                                                                                        "Condition":  {
+                                                                                                                                                                                          "And":  {
+                                                                                                                                                                                                      "Left":  {
+                                                                                                                                                                                                                   "Comparison":  {
+                                                                                                                                                                                                                                      "ComparisonKind":  2,
+                                                                                                                                                                                                                                      "Left":  {
+                                                                                                                                                                                                                                                   "Measure":  {
+                                                                                                                                                                                                                                                                   "Expression":  {
+                                                                                                                                                                                                                                                                                      "SourceRef":  {
+                                                                                                                                                                                                                                                                                                        "Entity":  "Medidas"
+                                                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                                  },
+                                                                                                                                                                                                                                                                   "Property":  "% Cumplimiento metas"
+                                                                                                                                                                                                                                                               }
+                                                                                                                                                                                                                                               },
+                                                                                                                                                                                                                                      "Right":  {
+                                                                                                                                                                                                                                                    "Literal":  {
+                                                                                                                                                                                                                                                                    "Value":  "0.6D"
+                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                               },
+                                                                                                                                                                                                      "Right":  {
+                                                                                                                                                                                                                    "Comparison":  {
+                                                                                                                                                                                                                                       "ComparisonKind":  3,
+                                                                                                                                                                                                                                       "Left":  {
+                                                                                                                                                                                                                                                    "Measure":  {
+                                                                                                                                                                                                                                                                    "Expression":  {
+                                                                                                                                                                                                                                                                                       "SourceRef":  {
+                                                                                                                                                                                                                                                                                                         "Entity":  "Medidas"
+                                                                                                                                                                                                                                                                                                     }
+                                                                                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                                                                    "Property":  "% Cumplimiento metas"
+                                                                                                                                                                                                                                                                }
+                                                                                                                                                                                                                                                },
+                                                                                                                                                                                                                                       "Right":  {
+                                                                                                                                                                                                                                                     "Literal":  {
+                                                                                                                                                                                                                                                                     "Value":  "0.8D"
+                                                                                                                                                                                                                                                                 }
+                                                                                                                                                                                                                                                 }
+                                                                                                                                                                                                                                   }
+                                                                                                                                                                                                                }
+                                                                                                                                                                                                  }
+                                                                                                                                                                                      },
+                                                                                                                                                                        "Value":  {
+                                                                                                                                                                                      "Literal":  {
+                                                                                                                                                                                                      "Value":  "\u0027#E6A800\u0027"
+                                                                                                                                                                                                  }
+                                                                                                                                                                                  }
+                                                                                                                                                                    },
+                                                                                                                                                                    {
+                                                                                                                                                                        "Condition":  {
+                                                                                                                                                                                          "Comparison":  {
+                                                                                                                                                                                                             "ComparisonKind":  2,
+                                                                                                                                                                                                             "Left":  {
+                                                                                                                                                                                                                          "Measure":  {
+                                                                                                                                                                                                                                          "Expression":  {
+                                                                                                                                                                                                                                                             "SourceRef":  {
+                                                                                                                                                                                                                                                                               "Entity":  "Medidas"
+                                                                                                                                                                                                                                                                           }
+                                                                                                                                                                                                                                                         },
+                                                                                                                                                                                                                                          "Property":  "% Cumplimiento metas"
+                                                                                                                                                                                                                                      }
+                                                                                                                                                                                                                      },
+                                                                                                                                                                                                             "Right":  {
+                                                                                                                                                                                                                           "Literal":  {
+                                                                                                                                                                                                                                           "Value":  "0.8D"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                       }
+                                                                                                                                                                                                         }
+                                                                                                                                                                                      },
+                                                                                                                                                                        "Value":  {
+                                                                                                                                                                                      "Literal":  {
+                                                                                                                                                                                                      "Value":  "\u0027#2E8B57\u0027"
+                                                                                                                                                                                                  }
+                                                                                                                                                                                  }
+                                                                                                                                                                    }
+                                                                                                                                                                ]
+                                                                                                                                                  }
+                                                                                                                              }
+                                                                                                                 }
+                                                                                                   }
+                                                                                     }
+                                                                        },
+                                                         "selector":  {
+                                                                          "data":  [
+                                                                                       {
+                                                                                           "dataViewWildcard":  {
+                                                                                                                    "matchingOption":  1
+                                                                                                                }
+                                                                                       }
+                                                                                   ],
+                                                                          "metadata":  "Medidas.Total Facturado"
+                                                                      }
+                                                     }
+                                                 ]
+                               },
+                   "visualContainerObjects":  {
+                                                  "title":  [
+                                                                {
+                                                                    "properties":  {
+                                                                                       "text":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "\u0027Avance frente a la meta\u0027"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "show":  {
+                                                                                                    "expr":  {
+                                                                                                                 "Literal":  {
+                                                                                                                                 "Value":  "true"
+                                                                                                                             }
+                                                                                                             }
+                                                                                                },
+                                                                                       "alignment":  {
+                                                                                                         "expr":  {
+                                                                                                                      "Literal":  {
+                                                                                                                                      "Value":  "\u0027center\u0027"
+                                                                                                                                  }
+                                                                                                                  }
+                                                                                                     }
+                                                                                   }
+                                                                }
+                                                            ],
+                                                  "subTitle":  [
+                                                                   {
+                                                                       "properties":  {
+                                                                                          "show":  {
+                                                                                                       "expr":  {
+                                                                                                                    "Literal":  {
+                                                                                                                                    "Value":  "false"
+                                                                                                                                }
+                                                                                                                }
+                                                                                                   }
+                                                                                      }
+                                                                   }
+                                                               ]
+                                              },
+                   "drillFilterOtherVisuals":  true
+               }
 }

@@ -1,0 +1,1 @@
+Mejora el medidor, KPI y la tabla: colores semánticos del tema, íconos de cumplimiento, formato numérico con separador de miles y símbolo de moneda, % con un decimal, unidades de visualización en miles/millones, y tooltips de página personalizados para el mapa y las barras.
