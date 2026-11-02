@@ -105,3 +105,4 @@ table Dim_Productos
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
+

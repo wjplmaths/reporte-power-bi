@@ -77,3 +77,4 @@ table Dim_Clientes
 	annotation PBI_NavigationStepName = Navegación
 
 	annotation PBI_ResultType = Table
+

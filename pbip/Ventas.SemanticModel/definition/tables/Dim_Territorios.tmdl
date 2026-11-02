@@ -1,0 +1,65 @@
+table Dim_Territorios
+	lineageTag: ce9bea94-cb67-4e31-8b98-13f73fd37d57
+
+	column Departamento
+		dataType: string
+		lineageTag: 25d07bcc-73dc-4684-aeb7-1c9ef5935a3f
+		summarizeBy: none
+		sourceColumn: Departamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cabecera
+		dataType: string
+		lineageTag: 9bdb69bb-fb6e-4df5-a2ba-b01075b0e586
+		summarizeBy: none
+		sourceColumn: Cabecera
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Población (2023)'
+		dataType: int64
+		formatString: 0
+		lineageTag: e5a26d97-e9d1-42e0-ab8d-54da8fd5290d
+		summarizeBy: none
+		sourceColumn: Población (2023)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Superficie (km²)'
+		dataType: double
+		lineageTag: 7ee1bc90-17b5-47b6-872d-cf0cef2d2354
+		summarizeBy: sum
+		sourceColumn: Superficie (km²)
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Territorios = m
+		mode: import
+		source =
+				let
+				    Origen = Web.Page(Web.Contents("https://es.wikipedia.org/wiki/Nicaragua")),
+				    // 1. Elegir la tabla por contenido (los Id "Table N" de Web.Page no son estables): la que tiene la columna "Cabecera"
+				    Candidatas = Table.SelectRows(Origen, each try (List.Contains(Table.ColumnNames([Data]), "Cabecera") or List.AnyTrue(List.Transform(Table.ToColumns([Data]), (c) => List.Contains(c, "Cabecera")))) otherwise false),
+				    Datos = Candidatas{0}[Data],
+				    // 2. Eliminar filas superiores: todo lo que esta antes de la fila de encabezados (la que contiene "Departamento")
+				    PosEncabezado = List.PositionOf(List.Transform(Table.ToRows(Datos), (f) => List.Contains(List.Transform(f, (v) => if v = null then "" else Text.Trim(Text.From(v))), "Departamento")), true),
+				    SinFilasSuperiores = Table.Skip(Datos, PosEncabezado),
+				    EncabezadosPromovidos = Table.PromoteHeaders(SinFilasSuperiores, [PromoteAllScalars=true]),
+				    // 3. Quedarse con las columnas que usa el modelo; se buscan por prefijo porque el encabezado puede traer notas ("ISO:NI [58]")
+				    Col = (prefijo as text) as text => List.First(List.Select(Table.ColumnNames(EncabezadosPromovidos), (n) => Text.StartsWith(Text.Trim(n), prefijo))),
+				    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, {Col("Departamento"), Col("Cabecera"), Col("Población"), Col("Superficie")}),
+				    Renombradas = Table.RenameColumns(ColumnasUtiles, {{Col("Departamento"), "Departamento"}, {Col("Cabecera"), "Cabecera"}, {Col("Población"), "Población (2023)"}, {Col("Superficie"), "Superficie (km²)"}}),
+				    // 4. Eliminar filas inferiores sin datos: la nota "* Fuente: Estimación del 2023 - INIDE" y filas vacias
+				    SinFilasInferiores = Table.SelectRows(Renombradas, each [Departamento] <> null and [Departamento] <> "" and not Text.StartsWith(Text.Trim(Text.From([Departamento])), "*")),
+				    // 5. Tipos: las cifras llegan con coma de miles ("188,809"); se dejan digitos y punto decimal
+				    TiposCorrectos = Table.TransformColumns(SinFilasInferiores, {
+				        {"Departamento", each Text.Trim(Text.From(_)), type text},
+				        {"Cabecera", each Text.Trim(Text.From(_)), type text},
+				        {"Población (2023)", each Number.FromText(Text.Select(Text.From(_), {"0".."9", "."}), "en-US"), Int64.Type},
+				        {"Superficie (km²)", each Number.FromText(Text.Select(Text.From(_), {"0".."9", "."}), "en-US"), type number}
+				    })
+				in
+				    TiposCorrectos
+
+	annotation PBI_ResultType = Table

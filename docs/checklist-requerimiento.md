@@ -28,29 +28,29 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Marcar `[x]` solo cuando
 - [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
 
 ### Tabla 1 → Dim_Vendedores
-- [ ] Renombrar la consulta a `Dim_Vendedores`
-- [ ] Eliminar filas superiores y colocar los encabezados correctos
-- [ ] Eliminar columnas que no se usarán
-- [ ] Revisar el tipo de datos de cada columna
+- [ ] Renombrar la consulta a `Dim_Vendedores` — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Eliminar filas superiores y colocar los encabezados correctos — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Eliminar columnas que no se usarán — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 09), falta validar en Desktop*
 
 ### Tablas 2 a 5 → Metas_2020, Metas_2021, Metas_2022, Metas_2023
 Para cada una de las cuatro consultas:
-- [ ] `Metas_2020`: renombrar, quitar filas superiores y poner encabezados, quitar Columna 1, anular dinamización desde `ID_Vendedor`, renombrar columnas a `Fecha` y `Meta`, ajustar tipos
-- [ ] `Metas_2021`: mismos pasos
-- [ ] `Metas_2022`: mismos pasos
-- [ ] `Metas_2023`: mismos pasos
+- [ ] `Metas_2020`: renombrar, quitar filas superiores y poner encabezados, quitar Columna 1, anular dinamización desde `ID_Vendedor`, renombrar columnas a `Fecha` y `Meta`, ajustar tipos — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] `Metas_2021`: mismos pasos — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] `Metas_2022`: mismos pasos — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] `Metas_2023`: mismos pasos — *aplicado en M (changelog 09), falta validar en Desktop*
 
 ### Consulta consolidada
-- [ ] Anexar consultas como nueva a partir de `Metas_2020` para consolidar todas las metas
-- [ ] Renombrar la consulta consolidada a `Dim_Metas`
-- [ ] Deshabilitar "Habilitar carga" en `Metas_2020`, `Metas_2021`, `Metas_2022` y `Metas_2023`
+- [ ] Anexar consultas como nueva a partir de `Metas_2020` para consolidar todas las metas — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Renombrar la consulta consolidada a `Dim_Metas` — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Deshabilitar "Habilitar carga" en `Metas_2020`, `Metas_2021`, `Metas_2022` y `Metas_2023` — *aplicado en M (changelog 09), falta validar en Desktop*
 
 ### Tabla 6 → Dim_Territorios
-- [ ] Renombrar la consulta a `Dim_Territorios`
-- [ ] Eliminar filas superiores y colocar los encabezados correctos
-- [ ] Eliminar filas inferiores sin datos útiles
-- [ ] Eliminar columnas que no se usarán
-- [ ] Revisar el tipo de datos de cada columna
+- [ ] Renombrar la consulta a `Dim_Territorios` — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Eliminar filas superiores y colocar los encabezados correctos — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Eliminar filas inferiores sin datos útiles — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Eliminar columnas que no se usarán — *aplicado en M (changelog 09), falta validar en Desktop*
+- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 09), falta validar en Desktop*
 
 ### Cierre
 - [ ] Cerrar y aplicar todos los cambios

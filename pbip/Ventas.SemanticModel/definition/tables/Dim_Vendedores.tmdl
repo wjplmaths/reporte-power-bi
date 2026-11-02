@@ -1,0 +1,38 @@
+table Dim_Vendedores
+	lineageTag: 2f9adb2d-0143-4dd8-9127-9a68065955d3
+
+	column 'ID Vendedor'
+		dataType: int64
+		formatString: 0
+		lineageTag: 91ccbb2e-aead-46ce-8e78-ff6b0be4dc8f
+		summarizeBy: none
+		sourceColumn: ID Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Nombre Completo'
+		dataType: string
+		lineageTag: 572ea2c7-0eb3-479d-9232-50779d75f356
+		summarizeBy: none
+		sourceColumn: Nombre Completo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Vendedores = m
+		mode: import
+		source =
+				let
+				    // 1. Origen: hoja "Vendedores" del libro de G.Drive (publico), exportada como CSV por Web
+				    Origen = Csv.Document(Web.Contents("https://docs.google.com/spreadsheets/d/1BbiT3b81T7sEzpAFW7_ks5qU07rEeHal/export?format=csv&gid=1022144234"), [Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    // 2. Filas superiores: el CSV no trae filas basura, la primera fila ya es el encabezado
+				    EncabezadosPromovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    // 3. Quitar "Primer Nombre": repite "Nombre Completo" y trae apodos inconsistentes (Glenn/Glen, Leonor/Leo)
+				    ColumnasUtiles = Table.SelectColumns(EncabezadosPromovidos, {"ID Vendedor", "Nombre Completo"}),
+				    // 4. Quitar vendedores sin ID
+				    SinIdNulo = Table.SelectRows(ColumnasUtiles, each [ID Vendedor] <> null and [ID Vendedor] <> ""),
+				    // 5. Tipos
+				    TiposCorrectos = Table.TransformColumnTypes(SinIdNulo, {{"ID Vendedor", Int64.Type}, {"Nombre Completo", type text}})
+				in
+				    TiposCorrectos
+
+	annotation PBI_ResultType = Table

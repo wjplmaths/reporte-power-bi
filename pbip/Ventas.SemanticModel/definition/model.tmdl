@@ -9,19 +9,21 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["Fact_Ventas","Dim_Clientes","Dim_Productos","Tabla 6","Tabla 1","Tabla 2","Tabla 3","Tabla 4","Tabla 5"]
+annotation PBI_QueryOrder = ["Fact_Ventas","Dim_Clientes","Dim_Productos","Dim_Territorios","Dim_Vendedores","fnMetasMensuales","Metas_2020","Metas_2021","Metas_2022","Metas_2023","Dim_Metas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table Fact_Ventas
 ref table Dim_Clientes
 ref table Dim_Productos
-ref table 'Tabla 6'
+ref table Dim_Territorios
 ref table DateTableTemplate_24103f8a-b426-4299-9a01-e2e12dda31c2
 ref table LocalDateTable_e191e5ee-7a04-450f-b11d-5745b807b04f
-ref table 'Tabla 1'
-ref table 'Tabla 2'
-ref table 'Tabla 3'
-ref table 'Tabla 4'
-ref table 'Tabla 5'
+ref table Dim_Vendedores
+ref table Dim_Metas
 
+ref expression fnMetasMensuales
+ref expression Metas_2020
+ref expression Metas_2021
+ref expression Metas_2022
+ref expression Metas_2023

@@ -83,17 +83,17 @@ Definidas en `pbip/Ventas.SemanticModel/definition/`. Aún no hay columnas decla
 
 | Consulta | Origen | Función M | Carga |
 |---|---|---|---|
-| `fnBuscarTabla` | Función auxiliar: devuelve la tabla de `Web.Page` que contiene todos los textos pedidos | — | No |
-| `GDrive_Fuente` | Google Drive (enlace en `docs/requerimiento/Enlace G_Drive.txt`) | `Web.Page` | No |
+| `fnMetasMensuales` | Función que convierte una hoja de metas (vendedor × 12 meses) en filas ID_Vendedor, Fecha, Meta | — | No |
 | `Fact_Ventas` | `data/raw/Fact_Ventas.xlsx` (ruta absoluta dentro de la consulta), hoja `Fact_Ventas` | `Excel.Workbook` | Sí |
 | `Dim_Clientes` | `Dim_Clientes.csv` (UTF-8, coma, 5 columnas) | `Csv.Document` | Sí |
 | `Dim_Productos` | `Dim_Productos.csv` (UTF-8, coma, 9 columnas) | `Csv.Document` | Sí |
-| `Tabla 1` | `GDrive_Fuente`, tabla que contiene `ID Vendedor` (vendedores) | `Web.Page` | Sí |
-| `Tabla 2` a `Tabla 5` | `GDrive_Fuente`, tabla que contiene `ID_vendedor` y `1/1/AAAA` (metas 2020 a 2023) | `Web.Page` | Sí |
-| `Tabla 6` | Wikipedia, tabla elegida por contenido (columna `Cabecera`): Organización Territorial | `Web.Page` | Sí |
+| `Dim_Vendedores` | G.Drive, hoja Vendedores (CSV exportado, Web) | `Csv.Document` + `Web.Contents` | Sí |
+| `Metas_2020` a `Metas_2023` | G.Drive, hojas de metas (CSV exportado, Web) | `Csv.Document` + `Web.Contents` | No |
+| `Dim_Metas` | Anexo de las cuatro `Metas_AAAA` | `Table.Combine` | Sí |
+| `Dim_Territorios` | Wikipedia, tabla elegida por contenido (columna `Cabecera`): Organización Territorial | `Web.Page` | Sí |
 
-En OE2 se renombran: `Tabla 1` a `Dim_Vendedores`, `Tabla 2` a `Tabla 5` a `Metas_2020` a `Metas_2023` (sin carga) y `Tabla 6` a `Dim_Territorios`.
-### Estructura esperada de `Tabla 6` (según el HTML de Wikipedia, 2026-11-01)
+Las consultas `Tabla 1` a `Tabla 6` ya fueron renombradas en OE2 (changelog 09).
+### Estructura de la tabla de Wikipedia usada por `Dim_Territorios` (HTML de Wikipedia, 2026-11-01)
 Fila de título "Departamentos de Nicaragua", encabezados `Departamento | ISO:NI | Cabecera | Población (2023) | Superficie (km²) | Densidad`, 17 filas de departamentos y una fila final de fuente ("* Fuente: Estimación del 2023 - INIDE") que se elimina en OE2. Los departamentos usan "Costa Caribe Norte" y "Costa Caribe Sur", igual que `Dim_Clientes` tras su limpieza.
 ### Estructura del libro de G.Drive (leída de su exportación a xlsx, 2026-11-01)
 - **Vendedores:** 19 filas de datos, columnas `ID Vendedor`, `Nombre Completo`, `Primer Nombre`.
@@ -107,3 +107,15 @@ Aún sin validar en Desktop.
 **Dim_Clientes** (5 columnas): `ID Cliente` (entero), `Nombre Cliente` (texto), `Fecha de Alta` (fecha), `Departamento` (texto, con "Costa Caribe Norte" y "Costa Caribe Sur"), `País` (texto).
 
 **Dim_Productos** (9 columnas): `ID Producto` (entero), `Producto`, `Marca`, `Costo Unitario` (decimal), `Grupo Contribución`, `Grupo Margen`, `Color`, `Tiempo de Espera (dias)` (entero), `Es articulo refrigerado`.
+## Estado tras OE2 (segunda parte): vendedores, metas y territorios
+Aún sin validar en Desktop. Ahora las hojas de G.Drive se leen como CSV exportado por Web (`.../export?format=csv&gid=...`), cambio hecho por el usuario en Desktop. Ya no se usa `Web.Page` para Google.
+
+**Dim_Vendedores** (antes `Tabla 1`, 2 columnas, 19 filas): `ID Vendedor` (entero), `Nombre Completo` (texto).
+
+**Dim_Metas** (anexo de `Metas_2020` a `Metas_2023`, 4 × 19 × 12 = 912 filas esperadas): `ID_Vendedor` (entero), `Fecha` (fecha, primer día de cada mes), `Meta` (decimal).
+- `Metas_2020` a `Metas_2023` no se cargan al modelo (son consultas intermedias). Todas pasan por la función `fnMetasMensuales`.
+- Los encabezados de mes llegan como texto `d/m/aaaa` (`1/1/2020` a `1/12/2020`) y se convierten con `Date.FromText` usando formato `d/M/yyyy` y cultura `en-US`.
+- Las metas llegan como texto con formato de moneda: `251,625.83` en 2020 y `C$277,701.30` de 2021 a 2023. Se dejan solo dígitos y punto decimal.
+- El CSV trae las metas redondeadas a 2 decimales; el libro xlsx original trae más decimales.
+
+**Dim_Territorios** (antes `Tabla 6`, 4 columnas, 17 filas): `Departamento` (texto), `Cabecera` (texto), `Población (2023)` (entero), `Superficie (km²)` (decimal). Se quitaron `ISO:NI` y `Densidad`.
