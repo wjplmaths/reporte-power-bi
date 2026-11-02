@@ -1,66 +1,26 @@
 table Dim_Clientes
 	lineageTag: c0bfa4cd-88c5-4c0d-ac67-f792a05ca8fb
 
-	column 'ID Cliente'
-		dataType: int64
-		formatString: 0
-		lineageTag: f2e9d31c-655e-4e12-b13e-ef73b625236c
-		summarizeBy: sum
-		sourceColumn: ID Cliente
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Nombre Cliente'
-		dataType: string
-		lineageTag: 3fbcdd99-2e60-439d-8987-e3e1cd95d216
-		summarizeBy: none
-		sourceColumn: Nombre Cliente
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Fecha de Alta'
-		dataType: dateTime
-		formatString: Long Date
-		lineageTag: ffd307af-948e-4a42-934e-92a5a84d7dd1
-		summarizeBy: none
-		sourceColumn: Fecha de Alta
-
-		variation Variation
-			isDefault
-			relationship: 0495765e-9418-46a4-88c5-198d0f010935
-			defaultHierarchy: LocalDateTable_e191e5ee-7a04-450f-b11d-5745b807b04f.'Jerarquía de fechas'
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
-	column Departamento
-		dataType: string
-		lineageTag: 3650ca9b-4f3b-4126-94c3-5fd31aa5f250
-		summarizeBy: none
-		sourceColumn: Departamento
-
-		annotation SummarizationSetBy = Automatic
-
-	column País
-		dataType: string
-		lineageTag: 694b1daa-7e6f-4506-9843-05a3d6f01332
-		summarizeBy: none
-		sourceColumn: País
-
-		annotation SummarizationSetBy = Automatic
-
 	partition Dim_Clientes = m
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Dim_Clientes.csv"),[Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID Cliente", Int64.Type}, {"Nombre Cliente", type text}, {"Fecha de Alta", type date}, {"Departamento", type text}, {"País", type text}})
+				    // 1. Origen: CSV en UTF-8 separado por comas
+				    Origen = Csv.Document(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Dim_Clientes.csv"), [Delimiter=",", Columns=5, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    // 2. La primera fila del CSV son los encabezados
+				    EncabezadosPromovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    // 3. Eliminar clientes sin ID (null o vacio); se hace antes de tipar para no generar errores de conversion
+				    SinIdNulo = Table.SelectRows(EncabezadosPromovidos, each [ID Cliente] <> null and [ID Cliente] <> ""),
+				    // 4. Nombres cortos para las dos regiones autonomas del Caribe
+				    CaribeNorte = Table.ReplaceValue(SinIdNulo, "Región Autónoma de la Costa Caribe Norte", "Costa Caribe Norte", Replacer.ReplaceValue, {"Departamento"}),
+				    CaribeSur = Table.ReplaceValue(CaribeNorte, "Región Autónoma de la Costa Caribe Sur", "Costa Caribe Sur", Replacer.ReplaceValue, {"Departamento"}),
+				    // 5. Tipos: ID entero, fecha d/m/aaaa leida con configuracion regional es-ES, el resto texto
+				    TiposCorrectos = Table.TransformColumnTypes(CaribeSur, {
+				        {"ID Cliente", Int64.Type},
+				        {"Nombre Cliente", type text},
+				        {"Fecha de Alta", type date},
+				        {"Departamento", type text},
+				        {"País", type text}
+				    }, "es-ES")
 				in
-				    #"Tipo cambiado"
-
-	annotation PBI_NavigationStepName = Navegación
-
-	annotation PBI_ResultType = Table
-
+				    TiposCorrectos

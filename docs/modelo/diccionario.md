@@ -99,3 +99,11 @@ Fila de título "Departamentos de Nicaragua", encabezados `Departamento | ISO:NI
 - **Vendedores:** 19 filas de datos, columnas `ID Vendedor`, `Nombre Completo`, `Primer Nombre`.
 - **Metas 2020 a Metas 2023:** columna `ID_vendedor` (con v minúscula) y una columna por mes, con encabezados de texto `1/1/AAAA`, `1/2/AAAA`... (día/mes/año). El valor es la meta mensual del vendedor, con decimales largos. Hay que anular la dinamización de las columnas de mes (OE2).
 - Vista web (`Web.Page`): se espera una columna extra de numeración de filas y una fila de letras de columna. Eso explica "Columna 1" y las filas superiores de la guía; no se pudo ver desde aquí.
+## Estado tras OE2 (primera parte): tablas transformadas
+Aún sin validar en Desktop.
+
+**Fact_Ventas** (7 columnas): `ID Transacción` (entero), `ID Vendedor` (entero), `ID Cliente` (entero), `ID Producto` (entero), `Fecha de Venta` (fecha), `Cantidad` (entero), `Precio Unitario` (decimal). Se quitaron `ID Factura`, `Fecha de Envío` y `Tasa de Impuesto`, más la columna A vacía y la L.
+
+**Dim_Clientes** (5 columnas): `ID Cliente` (entero), `Nombre Cliente` (texto), `Fecha de Alta` (fecha), `Departamento` (texto, con "Costa Caribe Norte" y "Costa Caribe Sur"), `País` (texto).
+
+**Dim_Productos** (9 columnas): `ID Producto` (entero), `Producto`, `Marca`, `Costo Unitario` (decimal), `Grupo Contribución`, `Grupo Margen`, `Color`, `Tiempo de Espera (dias)` (entero), `Es articulo refrigerado`.

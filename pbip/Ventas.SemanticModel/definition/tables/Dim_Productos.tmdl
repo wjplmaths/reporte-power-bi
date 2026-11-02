@@ -1,93 +1,27 @@
 table Dim_Productos
 	lineageTag: ae4ba91c-c12f-4d5a-a2d3-ff5f6a6419df
 
-	column 'ID Producto'
-		dataType: int64
-		formatString: 0
-		lineageTag: 5eb02f58-94e4-44d9-85f7-98ed598b8851
-		summarizeBy: sum
-		sourceColumn: ID Producto
-
-		annotation SummarizationSetBy = Automatic
-
-	column Producto
-		dataType: string
-		lineageTag: f0f8c0b5-7c96-40e4-a3d6-7456e942ac26
-		summarizeBy: none
-		sourceColumn: Producto
-
-		annotation SummarizationSetBy = Automatic
-
-	column Marca
-		dataType: string
-		lineageTag: ad11576f-ef98-4751-a40d-674870f6c3c0
-		summarizeBy: none
-		sourceColumn: Marca
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Costo Unitario'
-		dataType: double
-		lineageTag: 0dabd023-7c54-4341-8c47-884d493804db
-		summarizeBy: sum
-		sourceColumn: Costo Unitario
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	column 'Grupo Contribución'
-		dataType: string
-		lineageTag: d0af6e84-a015-4d26-aa13-1510171c0e22
-		summarizeBy: none
-		sourceColumn: Grupo Contribución
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Grupo Margen'
-		dataType: string
-		lineageTag: b9170df9-3f70-4ceb-96ce-67a8fdb7badf
-		summarizeBy: none
-		sourceColumn: Grupo Margen
-
-		annotation SummarizationSetBy = Automatic
-
-	column Color
-		dataType: string
-		lineageTag: 838793ac-0bb4-4f80-b145-00f98f0596c4
-		summarizeBy: none
-		sourceColumn: Color
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Tiempo de Espera (dias)'
-		dataType: int64
-		formatString: 0
-		lineageTag: bafb0428-8230-405e-9674-b42160d2feba
-		summarizeBy: sum
-		sourceColumn: Tiempo de Espera (dias)
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'Es articulo refrigerado'
-		dataType: string
-		lineageTag: 5adf3b73-0732-4740-90ca-a21bfa4c4d2d
-		summarizeBy: none
-		sourceColumn: Es articulo refrigerado
-
-		annotation SummarizationSetBy = Automatic
-
 	partition Dim_Productos = m
 		mode: import
 		source =
 				let
-				    Origen = Csv.Document(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Dim_Productos.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
-				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ID Producto", Int64.Type}, {"Producto", type text}, {"Marca", type text}, {"Costo Unitario", type number}, {"Grupo Contribución", type text}, {"Grupo Margen", type text}, {"Color", type text}, {"Tiempo de Espera (dias)", Int64.Type}, {"Es articulo refrigerado", type text}})
+				    // 1. Origen: CSV en UTF-8 separado por comas
+				    Origen = Csv.Document(File.Contents("C:\Users\wiljo\OneDrive\Escritorio\Trabajo final de Power BI\data\raw\Dim_Productos.csv"), [Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    // 2. La primera fila del CSV son los encabezados
+				    EncabezadosPromovidos = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    // 3. Eliminar productos sin ID (null o vacio); se hace antes de tipar para no generar errores de conversion
+				    SinIdNulo = Table.SelectRows(EncabezadosPromovidos, each [ID Producto] <> null and [ID Producto] <> ""),
+				    // 4. Tipos: el costo usa punto decimal, por eso se lee con configuracion regional en-US
+				    TiposCorrectos = Table.TransformColumnTypes(SinIdNulo, {
+				        {"ID Producto", Int64.Type},
+				        {"Producto", type text},
+				        {"Marca", type text},
+				        {"Costo Unitario", type number},
+				        {"Grupo Contribución", type text},
+				        {"Grupo Margen", type text},
+				        {"Color", type text},
+				        {"Tiempo de Espera (dias)", Int64.Type},
+				        {"Es articulo refrigerado", type text}
+				    }, "en-US")
 				in
-				    #"Tipo cambiado"
-
-	annotation PBI_NavigationStepName = Navegación
-
-	annotation PBI_ResultType = Table
-
+				    TiposCorrectos

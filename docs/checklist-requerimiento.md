@@ -13,19 +13,19 @@ Fuente: `docs/requerimiento/GUIA DE TRABAJO FINAL.pdf`. Marcar `[x]` solo cuando
 
 ## OE2 – Transformación de datos
 ### Fact_Ventas
-- [ ] Eliminar filas superiores y colocar los encabezados correctos
-- [ ] Eliminar columnas que no se usarán en el modelo
-- [ ] Revisar el tipo de datos de cada columna
+- [ ] Eliminar filas superiores y colocar los encabezados correctos — *aplicado en M (changelog 07), falta validar en Desktop*
+- [ ] Eliminar columnas que no se usarán en el modelo — *aplicado en M (changelog 07), falta validar en Desktop*
+- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
 
 ### Dim_Clientes
-- [ ] Eliminar ID de clientes `null`
-- [ ] Reemplazar Departamento "Región Autónoma de la Costa Caribe Norte" por "Costa Caribe Norte"
-- [ ] Reemplazar Departamento "Región Autónoma de la Costa Caribe Sur" por "Costa Caribe Sur"
-- [ ] Revisar el tipo de datos de cada columna
+- [ ] Eliminar ID de clientes `null` — *aplicado en M (changelog 07), falta validar en Desktop*
+- [ ] Reemplazar Departamento "Región Autónoma de la Costa Caribe Norte" por "Costa Caribe Norte" — *aplicado en M (changelog 07), falta validar en Desktop*
+- [ ] Reemplazar Departamento "Región Autónoma de la Costa Caribe Sur" por "Costa Caribe Sur" — *aplicado en M (changelog 07), falta validar en Desktop*
+- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
 
 ### Dim_Productos
-- [ ] Eliminar ID `null` (el PDF dice "ID de clientes"; se interpreta como ID Producto)
-- [ ] Revisar el tipo de datos de cada columna
+- [ ] Eliminar ID `null` (el PDF dice "ID de clientes"; se interpreta como ID Producto) — *aplicado en M (changelog 07), falta validar en Desktop*
+- [ ] Revisar el tipo de datos de cada columna — *aplicado en M (changelog 07), falta validar en Desktop*
 
 ### Tabla 1 → Dim_Vendedores
 - [ ] Renombrar la consulta a `Dim_Vendedores`
