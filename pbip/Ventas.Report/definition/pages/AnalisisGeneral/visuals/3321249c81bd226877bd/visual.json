@@ -78,7 +78,12 @@
                                                                 }
                                                             ]
                                               },
-                   "drillFilterOtherVisuals":  true
+                   "drillFilterOtherVisuals":  true,
+                   "syncGroup":  {
+                                     "groupName":  "Año",
+                                     "fieldChanges":  true,
+                                     "filterChanges":  true
+                                 }
                },
     "filterConfig":  {
                          "filters":  [
@@ -97,10 +102,5 @@
                                              "type":  "Advanced"
                                          }
                                      ]
-                     },
-    "syncGroup":  {
-                      "groupName":  "Año",
-                      "fieldChanges":  true,
-                      "filterChanges":  true
-                  }
+                     }
 }

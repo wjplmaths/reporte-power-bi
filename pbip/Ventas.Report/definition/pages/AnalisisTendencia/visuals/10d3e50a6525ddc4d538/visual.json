@@ -78,11 +78,11 @@
                                                                 }
                                                             ]
                                               },
-                   "drillFilterOtherVisuals":  true
-               },
-    "syncGroup":  {
-                      "groupName":  "Mes_Corto",
-                      "fieldChanges":  true,
-                      "filterChanges":  true
-                  }
+                   "drillFilterOtherVisuals":  true,
+                   "syncGroup":  {
+                                     "groupName":  "Mes_Corto",
+                                     "fieldChanges":  true,
+                                     "filterChanges":  true
+                                 }
+               }
 }

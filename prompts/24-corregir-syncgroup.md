@@ -1,0 +1,1 @@
+Captura de Desktop: 'El informe tiene problemas que no se pudieron resolver (4): Se ha incluido una propiedad syncGroup adicional en la propiedad root de visuals/.../visual.json'. Mensaje del usuario: 'Arreglo esto'.
